@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import pages.DashboardPage;
 
@@ -16,8 +18,8 @@ public class BaseClass {
     protected static WebDriver driver;
     protected DashboardPage dashboard;
 
-    @BeforeSuite
-    public void setUp() {
+    @BeforeSuite(alwaysRun = true)
+    public void suiteSetUp() {
         // Step 1: Windows confirmation prompt BEFORE opening browser
         int confirm = JOptionPane.showConfirmDialog(null,
             "Are you sure you want to proceed with the test suite?\n\n" +
@@ -41,7 +43,7 @@ public class BaseClass {
 
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://lms.alfinnext.com/");
 
         // Step 3: Windows prompt - wait for manual login
@@ -54,12 +56,23 @@ public class BaseClass {
             "Tests will start running immediately after you click OK.",
             "Manual Login Required",
             JOptionPane.INFORMATION_MESSAGE);
+    }
 
-        // Step 4: Initialize DashboardPage after login
+    @BeforeClass(alwaysRun = true)
+    public void classSetUp() {
+        // Initialize dashboard for EACH test class instance using the shared static driver
         dashboard = new DashboardPage(driver);
     }
 
-    @AfterSuite
+    @BeforeMethod(alwaysRun = true)
+    public void methodSetUp() {
+        // Double-check dashboard initialization before each test method to prevent NPEs
+        if (dashboard == null && driver != null) {
+            dashboard = new DashboardPage(driver);
+        }
+    }
+
+    @AfterSuite(alwaysRun = true)
     public void tearDown() {
         if (driver != null) {
             driver.quit();

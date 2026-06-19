@@ -38,19 +38,27 @@ public class LenderOnboardingTest extends BaseClass {
                 "support@testcompany.com",
                 "+91-9876543210");
 
-        // onboardingPage.clickContinue(); // Navigate to next step
+        onboardingPage.clickContinue(); // Navigate to next step
 
         // -----------------------------------------
         // Step 2: Office Address
         // -----------------------------------------
-        // onboardingPage.fillOfficeAddress("123 Tech Park", "Floor 5", "560001");
-        // onboardingPage.clickAddAddress();
+        onboardingPage.clickAddAddress(); // Opens the form/modal
+        onboardingPage.fillOfficeAddress("123 Tech Park", "Floor 5", "560001", "Telangana", "Hyderabad");
+        onboardingPage.clickSaveAddress(); // Saves the form
+        onboardingPage.clickContinue(); // Navigate to next step
 
         // -----------------------------------------
         // Step 3: Branding
         // -----------------------------------------
-        // To test uploads, provide an absolute path to a local image file.
-        // onboardingPage.uploadLogo("C:\\path\\to\\your\\logo.png");
-        // onboardingPage.uploadFavicon("C:\\path\\to\\your\\favicon.png");
+        onboardingPage.uploadLogo("c:\\Users\\i-tech\\eclipse-workspace\\LMS\\src\\test\\resources\\q_logo.png");
+        onboardingPage.uploadFavicon("c:\\Users\\i-tech\\eclipse-workspace\\LMS\\src\\test\\resources\\q_logo.png");
+        
+        onboardingPage.clickSubmit();
+        
+        // Optional: Wait a bit to ensure submission completes
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {}
     }
 }

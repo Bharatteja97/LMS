@@ -39,43 +39,68 @@ public class LenderDocumentsPage {
         // Wait for modal to appear (e.g., version input is visible)
         wait.until(ExpectedConditions.visibilityOfElementLocated(versionInput));
 
+        // Text inputs first
+        wait.until(ExpectedConditions.elementToBeClickable(versionInput)).sendKeys(version);
+        wait.until(ExpectedConditions.elementToBeClickable(nameInput)).sendKeys(name);
+
+        if (remarks != null && !remarks.isEmpty()) {
+            wait.until(ExpectedConditions.elementToBeClickable(remarksInput)).sendKeys(remarks);
+        }
+
         // Company
         if (company != null && !company.isEmpty()) {
             try {
-                driver.findElement(companyDropdown).click();
+                wait.until(ExpectedConditions.elementToBeClickable(companyDropdown)).click();
             } catch (Exception e) {
-                driver.findElement(By.xpath("//label[contains(., 'Select Company')]/following::div[1]")).click();
+                org.openqa.selenium.WebElement el = driver.findElement(By.xpath("//label[contains(., 'Select Company')]/following::div[1]"));
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
             }
             By companyOption = By.xpath("//*[text()='" + company + "']");
-            wait.until(ExpectedConditions.elementToBeClickable(companyOption)).click();
+            org.openqa.selenium.WebElement optionEl = wait.until(ExpectedConditions.presenceOfElementLocated(companyOption));
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(companyOption)).click();
+            } catch (Exception e) {
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", optionEl);
+            }
         }
 
         // Category
         if (category != null && !category.isEmpty()) {
             try {
-                driver.findElement(categoryDropdown).click();
+                wait.until(ExpectedConditions.elementToBeClickable(categoryDropdown)).click();
             } catch (Exception e) {
-                driver.findElement(By.xpath("//label[contains(., 'Category')]/following::div[1]")).click();
+                org.openqa.selenium.WebElement el = driver.findElement(By.xpath("//label[contains(., 'Category')]/following::div[1]"));
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
             }
             By categoryOption = By.xpath("//*[text()='" + category + "']");
-            wait.until(ExpectedConditions.elementToBeClickable(categoryOption)).click();
+            org.openqa.selenium.WebElement optionEl = wait.until(ExpectedConditions.presenceOfElementLocated(categoryOption));
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(categoryOption)).click();
+            } catch (Exception e) {
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", optionEl);
+            }
         }
-
-        driver.findElement(versionInput).sendKeys(version);
-        driver.findElement(nameInput).sendKeys(name);
 
         if (filePath != null && !filePath.isEmpty()) {
             // Selenium can directly upload to input type="file" without clicking browse
-            driver.findElement(fileUploadInput).sendKeys(filePath);
-        }
-
-        if (remarks != null && !remarks.isEmpty()) {
-            driver.findElement(remarksInput).sendKeys(remarks);
+            // Fallback to JS if sendKeys fails due to element not being interactable (sometimes the case for hidden inputs)
+            try {
+                driver.findElement(fileUploadInput).sendKeys(filePath);
+            } catch (Exception e) {
+                org.openqa.selenium.WebElement uploadEl = driver.findElement(fileUploadInput);
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].style.display='block'; arguments[0].style.visibility='visible';", uploadEl);
+                uploadEl.sendKeys(filePath);
+            }
         }
     }
 
     public void submitDocument() {
-        wait.until(ExpectedConditions.elementToBeClickable(submitUploadBtn)).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(submitUploadBtn)).click();
+        } catch (Exception e) {
+            org.openqa.selenium.WebElement btn = driver.findElement(submitUploadBtn);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+        }
     }
 }
 

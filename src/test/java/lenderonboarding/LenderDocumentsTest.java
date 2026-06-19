@@ -17,8 +17,7 @@ public class LenderDocumentsTest extends BaseClass {
         documentsPage.clickUploadDocument();
         
         // Step 2: Fill in the document details
-        // Note: Replace this sample file path with a valid absolute path to a real test file on your system
-        String sampleFilePath = "C:\\Users\\i-tech\\eclipse-workspace\\LMS\\src\\test\\resources\\testdata\\TestData.xlsx"; 
+        String sampleFilePath = System.getProperty("user.dir") + "\\src\\test\\resources\\q_logo.png"; 
         
         documentsPage.fillDocumentDetails(
             "Krishna Enterprises", 

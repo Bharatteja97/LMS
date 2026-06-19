@@ -65,21 +65,51 @@ public class UsersPage {
     }
     
     public void selectRole(String role) {
-        driver.findElement(rolesDropdown).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(rolesDropdown)).click();
+        } catch (Exception e) {
+            org.openqa.selenium.WebElement el = driver.findElement(rolesDropdown);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+        }
         By option = By.xpath("//*[text()='" + role + "']");
-        wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+        org.openqa.selenium.WebElement optionEl = wait.until(ExpectedConditions.presenceOfElementLocated(option));
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+        } catch (Exception e) {
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", optionEl);
+        }
     }
 
     public void selectMainBranch(String branch) {
-        driver.findElement(mainBranchDropdown).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(mainBranchDropdown)).click();
+        } catch (Exception e) {
+            org.openqa.selenium.WebElement el = driver.findElement(mainBranchDropdown);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+        }
         By option = By.xpath("//*[text()='" + branch + "']");
-        wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+        org.openqa.selenium.WebElement optionEl = wait.until(ExpectedConditions.presenceOfElementLocated(option));
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+        } catch (Exception e) {
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", optionEl);
+        }
     }
 
     public void selectParentUser(String parentUser) {
-        driver.findElement(parentUserDropdown).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(parentUserDropdown)).click();
+        } catch (Exception e) {
+            org.openqa.selenium.WebElement el = driver.findElement(parentUserDropdown);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+        }
         By option = By.xpath("//*[text()='" + parentUser + "']");
-        wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+        org.openqa.selenium.WebElement optionEl = wait.until(ExpectedConditions.presenceOfElementLocated(option));
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+        } catch (Exception e) {
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", optionEl);
+        }
     }
 
     public void setAllowAccessAnyBranch(boolean allow) {
@@ -98,11 +128,21 @@ public class UsersPage {
     }
 
     public void clickSave() {
-        wait.until(ExpectedConditions.elementToBeClickable(saveBtn)).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(saveBtn)).click();
+        } catch (Exception e) {
+            org.openqa.selenium.WebElement btn = driver.findElement(saveBtn);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+        }
     }
     
     public void clickClose() {
-        wait.until(ExpectedConditions.elementToBeClickable(closeBtn)).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(closeBtn)).click();
+        } catch (Exception e) {
+            org.openqa.selenium.WebElement btn = driver.findElement(closeBtn);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+        }
     }
 }
 

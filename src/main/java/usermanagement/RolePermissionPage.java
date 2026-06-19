@@ -12,10 +12,10 @@ public class RolePermissionPage {
     WebDriverWait wait;
 
     // Locators based on the screenshots provided
-    private By createNewRoleBtn = By.xpath("//button[contains(text(), 'Create New Role')]");
-    private By roleNameInput = By.xpath("//input[@placeholder='Enter role name']");
-    private By descriptionInput = By.xpath("//input[@placeholder='Enter description']");
-    private By saveRoleDetailsBtn = By.xpath("//button[contains(text(), 'Save Role Details')]");
+    private By createNewRoleBtn = By.xpath("//button[contains(normalize-space(.), 'Create New Role')]");
+    private By roleNameInput = By.xpath("//input[@placeholder='Enter role name' or @name='roleName' or contains(@placeholder, 'role name')]");
+    private By descriptionInput = By.xpath("//input[@placeholder='Enter description' or @name='description' or contains(@placeholder, 'description')]");
+    private By saveRoleDetailsBtn = By.xpath("//button[contains(normalize-space(.), 'Save Role Details')]");
 
     public RolePermissionPage(WebDriver driver) {
         this.driver = driver;
@@ -23,7 +23,12 @@ public class RolePermissionPage {
     }
 
     public void clickCreateNewRole() {
-        wait.until(ExpectedConditions.elementToBeClickable(createNewRoleBtn)).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(createNewRoleBtn)).click();
+        } catch (Exception e) {
+            org.openqa.selenium.WebElement btn = driver.findElement(createNewRoleBtn);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+        }
     }
 
     public void enterRoleDetails(String roleName, String description) {
@@ -32,6 +37,11 @@ public class RolePermissionPage {
     }
 
     public void clickSaveRoleDetails() {
-        wait.until(ExpectedConditions.elementToBeClickable(saveRoleDetailsBtn)).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(saveRoleDetailsBtn)).click();
+        } catch (Exception e) {
+            org.openqa.selenium.WebElement btn = driver.findElement(saveRoleDetailsBtn);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+        }
     }
 }

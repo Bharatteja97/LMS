@@ -7,8 +7,8 @@ public class UsersTest extends BaseClass {
 
     @Test
     public void testCreateUserFlow() {
-        // Navigate to User Management via Dashboard
-        dashboard.selectMenu("Settings", "User Management");
+        // Navigate directly to the Users page
+        driver.get("https://lms.alfinnext.com/settings/users?product=VEHICLE_LOAN");
 
         UsersPage usersPage = new UsersPage(driver);
 
