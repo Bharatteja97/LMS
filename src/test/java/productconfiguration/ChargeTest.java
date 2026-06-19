@@ -24,9 +24,9 @@ public class ChargeTest extends BaseClass {
         
         // Step 3: Deduction & Stage
         chargePage.enterDeductionAndStageConfig(
-            "Upfront", // Provide valid dropdown option here
-            "Disbursement", // Provide valid dropdown option here
-            "Loan Amount", // Provide valid dropdown option here
+            "Pre Disburse",    // Deduction Type
+            "Loan Activation", // Application Stage
+            "Total Outstanding", // Amount Basis
             "This is a standard processing fee for vehicle loans."
         );
         
