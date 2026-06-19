@@ -1,0 +1,54 @@
+# ===== Compiled class files =====
+*.class
+
+# ===== Log files =====
+*.log
+
+# ===== Package files =====
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# ===== Maven =====
+target/
+
+# ===== Eclipse =====
+.settings/
+.classpath
+.project
+bin/
+
+# ===== IntelliJ IDEA =====
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ===== VS Code =====
+.vscode/
+
+# ===== OS generated files =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Test output =====
+reports/
+screenshots/
+test-output/
+extent-reports/
+
+# ===== PowerShell helper scripts =====
+refactor.ps1
+refactor2.ps1
+remove_bom.ps1
+
+# ===== Misc =====
+*.bak
+*.tmp
+*.swp

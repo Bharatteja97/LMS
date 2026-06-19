@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Automation Suite" verbose="1">
+    <test name="LMS Tests">
+        <classes>
+            <class name="lenderonboarding.LenderOnboardingTest"/>
+            <class name="lenderonboarding.LenderListTest"/>
+            <class name="lenderonboarding.LenderBankTest"/>
+            <class name="lenderonboarding.LenderDocumentsTest"/>
+            
+            <class name="usermanagement.UsersTest"/>
+            <class name="usermanagement.RolePermissionTest"/>
+            <class name="usermanagement.BranchTest"/>
+            <class name="usermanagement.SystemResourceTest"/>
+            
+            <class name="productconfiguration.ProductTest"/>
+            <class name="productconfiguration.SchemeTest"/>
+            <class name="productconfiguration.ChargeTest"/>
+            
+            <class name="kycmanagement.DocumentcategoryTest"/>
+            <class name="kycmanagement.DocumenttypeTest"/>
+            <class name="kycmanagement.RuleEngineTest"/>
+            
+            <class name="loansettings.TaxRateTest"/>
+            <class name="loansettings.EStampTest"/>
+            <class name="loansettings.ENachTest"/>
+        </classes>
+    </test>
+    
+    <listeners>
+        <listener class-name="listeners.TestListener" />
+    </listeners>
+</suite>

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Automation Suite" verbose="1">
+    <test name="LMS Tests">
+        <classes>
+            <class name="tests.AutomationTest"/>
+            <class name="tests.LenderOnboardingTest"/>
+            <class name="tests.UserManagementTest"/>
+        </classes>
+    </test>
+</suite>
