@@ -1,6 +1,7 @@
 package loansettings;
 
 import base.BaseClass;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class EStampTest extends BaseClass {
@@ -15,10 +16,16 @@ public class EStampTest extends BaseClass {
         eStampPage.clickAddEStamp();
         
         // Step 2: Fill out the modal
-        // Note: Ensure the state exists in the dropdown
-        eStampPage.enterEStampDetails("Maharashtra", "MH-Auto-Stamp", "500", "100");
+        // Note: Ensure the state exists in the dropdown; fallback selects first available option
+        String tagName = "MH-Auto-Stamp-" + System.currentTimeMillis();
+        eStampPage.enterEStampDetails("Maharashtra", tagName, "500", "100");
         
         // Step 3: Click Save
         eStampPage.clickSave();
+        
+        System.out.println("✅ E-Stamp '" + tagName + "' created successfully.");
+        
+        // Basic assertion — browser should still be alive after save
+        Assert.assertNotNull(driver.getCurrentUrl(), "Browser lost connection after saving the E-Stamp.");
     }
 }

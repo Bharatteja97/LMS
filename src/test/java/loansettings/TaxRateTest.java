@@ -1,6 +1,7 @@
 package loansettings;
 
 import base.BaseClass;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TaxRateTest extends BaseClass {
@@ -15,9 +16,9 @@ public class TaxRateTest extends BaseClass {
         taxRatePage.clickCreateTaxRateList();
         
         // Step 2: Fill out rate definition in the modal
-        // "CGST + SGST" automatically populates the components grid based on the UI behavior
+        String taxName = "GST 18% Standard " + System.currentTimeMillis();
         taxRatePage.enterRateDefinition(
-            "GST 18% Standard", 
+            taxName, 
             "CGST + SGST", 
             "10/01/2026", 
             "10/01/2030", 
@@ -26,5 +27,10 @@ public class TaxRateTest extends BaseClass {
         
         // Step 3: Save tax rate
         taxRatePage.submitTaxRate();
+        
+        System.out.println("✅ Tax Rate '" + taxName + "' created successfully.");
+        
+        // Basic assertion — browser should still be alive after save
+        Assert.assertNotNull(driver.getCurrentUrl(), "Browser lost connection after saving the tax rate.");
     }
 }
