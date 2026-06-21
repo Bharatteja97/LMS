@@ -115,15 +115,24 @@ public class UsersPage {
     public void setAllowAccessAnyBranch(boolean allow) {
         boolean isSelected = driver.findElement(allowAccessAnyBranchCheckbox).isSelected();
         if (isSelected != allow) {
-            // Click the label associated with the checkbox
-            driver.findElement(By.xpath("//label[contains(., 'Allow access to any branch')]")).click();
+            org.openqa.selenium.WebElement label = driver.findElement(By.xpath("//label[contains(., 'Allow access to any branch')]"));
+            try {
+                label.click();
+            } catch (Exception e) {
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", label);
+            }
         }
     }
 
     public void setMarkAsLoanOfficer(boolean mark) {
         boolean isSelected = driver.findElement(markAsLoanOfficerCheckbox).isSelected();
         if (isSelected != mark) {
-            driver.findElement(By.xpath("//label[contains(., 'Mark as loan officer')]")).click();
+            org.openqa.selenium.WebElement label = driver.findElement(By.xpath("//label[contains(., 'Mark as loan officer')]"));
+            try {
+                label.click();
+            } catch (Exception e) {
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", label);
+            }
         }
     }
 

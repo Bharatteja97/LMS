@@ -9,7 +9,6 @@
         </classes>
     </test>
     
-    <!--
     <test name="User Management Tests">
         <classes>
             <class name="usermanagement.UsersTest"/>
@@ -42,7 +41,6 @@
             <class name="loansettings.ENachTest"/>
         </classes>
     </test>
-    -->
     
     <listeners>
         <listener class-name="listeners.TestListener" />
