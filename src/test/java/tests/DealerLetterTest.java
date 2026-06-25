@@ -7,7 +7,14 @@ import pages.DealerLetterPage;
 
 public class DealerLetterTest extends BaseClass {
 
-    private static final String APPLICATION_ID = "465";
+    private String getApplicationId() {
+        String appId = System.getProperty("APPLICATION_ID");
+        if (appId == null) {
+            throw new IllegalStateException("APPLICATION_ID is not set! Run UnderWritingTest first.");
+        }
+        return appId;
+    }
+
     private static final String DEALER_EMAIL = "bharatteja09@gmail.com";
 
     @Test
@@ -17,7 +24,7 @@ public class DealerLetterTest extends BaseClass {
         System.out.println("═══════════════════════════════════════════════════════════");
 
         OperationsPage opPage = new OperationsPage(driver);
-        opPage.navigateToDetail(APPLICATION_ID);
+        opPage.navigateToDetail(getApplicationId());
         
         DealerLetterPage dealerPage = new DealerLetterPage(driver);
         dealerPage.clickDisbursementDetailsTab();

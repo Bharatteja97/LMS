@@ -127,6 +127,11 @@ public class UnderWritingTest extends BaseClass {
         Assert.assertTrue(currentUrl.contains("/vehicle/underwriting/"),
                 "URL should contain '/vehicle/underwriting/' after opening an application. Actual: " + currentUrl);
 
+        // Extract APPLICATION_ID and save to System Properties
+        String appId = currentUrl.split("/underwriting/")[1].split("\\?")[0];
+        System.setProperty("APPLICATION_ID", appId);
+        System.out.println("[INFO] Saved APPLICATION_ID to System properties: " + appId);
+
         // Verify status badge is present
         String status = uwPage.getApplicationStatus();
         System.out.println("[INFO] Application status: " + status);
@@ -256,8 +261,11 @@ public class UnderWritingTest extends BaseClass {
         System.out.println("[TEST] Direct navigation to known application detail page...");
         System.out.println("═══════════════════════════════════════════════════════════");
 
-        // Application APP52393182 maps to DB id 465 (confirmed during live inspection)
-        final String knownAppDbId = "465";
+        // Application DB ID is fetched dynamically from earlier test
+        final String knownAppDbId = System.getProperty("APPLICATION_ID");
+        if (knownAppDbId == null) {
+            throw new IllegalStateException("APPLICATION_ID is not set! Run testOpenApplicationDetail first.");
+        }
 
         UnderWritingPage uwPage = new UnderWritingPage(driver);
         uwPage.navigateToDetail(knownAppDbId);
@@ -423,7 +431,10 @@ public class UnderWritingTest extends BaseClass {
         System.out.println("[TEST] Clicking 'Approve' button on Underwriting detail page...");
         System.out.println("═══════════════════════════════════════════════════════════");
 
-        final String APP_DB_ID = "465";
+        final String APP_DB_ID = System.getProperty("APPLICATION_ID");
+        if (APP_DB_ID == null) {
+            throw new IllegalStateException("APPLICATION_ID is not set! Run testOpenApplicationDetail first.");
+        }
 
         UnderWritingPage uwPage = new UnderWritingPage(driver);
 

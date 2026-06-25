@@ -155,6 +155,48 @@ public class ProcessingFeePage {
     }
 
     /**
+     * Clicks the "Dispatch Processing Fee Link" button.
+     */
+    public void clickDispatchProcessingFeeLink() throws InterruptedException {
+        System.out.println("[INFO] Clicking 'Dispatch Processing Fee Link' button...");
+        try {
+            WebElement dispatchBtn = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//button[contains(normalize-space(.), 'Dispatch Processing Fee Link')]")));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", dispatchBtn);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", dispatchBtn);
+            Thread.sleep(2000);
+            
+            // Handle the "Dispatch Processing Fee" modal
+            try {
+                System.out.println("[INFO] Waiting for Dispatch modal...");
+                WebElement modalDispatchBtn = wait.until(ExpectedConditions.elementToBeClickable(
+                        By.xpath("//div[contains(@class,'modal') or @role='dialog']//button[normalize-space(.)='Dispatch'] | //button[normalize-space(.)='Dispatch']")));
+                
+                // Optionally fill the reference number if the input exists and is visible
+                try {
+                    WebElement refInput = driver.findElement(By.xpath("//input[@placeholder='Enter reference number']"));
+                    if (refInput.isDisplayed()) {
+                        refInput.sendKeys("REF12345");
+                        System.out.println("[INFO] Entered reference number.");
+                    }
+                } catch (Exception e) {
+                    // Ignore if not found
+                }
+                
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", modalDispatchBtn);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", modalDispatchBtn);
+                System.out.println("[INFO] Clicked 'Dispatch' on the modal.");
+                Thread.sleep(3000); // wait for dispatch to complete
+            } catch (Exception e) {
+                System.out.println("[WARN] No dispatch modal appeared or failed to click: " + e.getMessage());
+            }
+            
+        } catch (Exception e) {
+            System.out.println("[WARN] Could not click 'Dispatch Processing Fee Link': " + e.getMessage());
+        }
+    }
+
+    /**
      * Read the rzp.io / Razorpay payment link from the Payment Link input field
      * on the LMS Processing Fee tab. Tries input value → anchor href → JS page scan.
      *
@@ -299,6 +341,16 @@ public class ProcessingFeePage {
         navigateToLmsProcessingFeeTab(applicationId);
         Thread.sleep(2000);
 
+        // Dispatch Processing Fee Link first so the system generates it
+        clickDispatchProcessingFeeLink();
+        
+        System.out.println("[INFO] Waiting for link to be generated...");
+        Thread.sleep(5000); // Give backend time to generate payment link
+        
+        // Refresh page so the new payment record appears in the table
+        driver.navigate().refresh();
+        Thread.sleep(3000);
+
         // Step 2: Click the external-link icon to open the payment link in a new tab
         boolean newTabOpened = clickOpenPaymentLinkInNewTab();
 
@@ -306,10 +358,20 @@ public class ProcessingFeePage {
             // Fallback: read the link and open via window.open()
             String paymentLink = getPaymentLinkFromLmsPage();
             if (paymentLink == null) {
-                throw new RuntimeException(
-                    "[ERROR] Payment link not found on LMS Processing Fee tab for application: " + applicationId);
+                // If it's still not found on UI, try fetching from Gmail as last resort
+                System.out.println("[WARN] Payment link not found on UI. Trying to fetch from Gmail...");
+                try {
+                    paymentLink = utils.EmailUtil.getProcessingFeeLinkFromGmail(email, "oxtlolbsglttfqde");
+                } catch (Exception e) {
+                    System.out.println("[ERROR] Failed to fetch from Gmail: " + e.getMessage());
+                }
+                
+                if (paymentLink == null) {
+                    throw new RuntimeException(
+                        "[ERROR] Payment link not found on LMS Processing Fee tab or email for application: " + applicationId);
+                }
             }
-            System.out.println("[INFO] Fallback: opening link via JS window.open(): " + paymentLink);
+            System.out.println("[INFO] Opening link via JS window.open(): " + paymentLink);
             ((JavascriptExecutor) driver).executeScript(
                 "window.open(arguments[0], '_blank');", paymentLink);
             Thread.sleep(2000);

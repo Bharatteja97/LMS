@@ -15,10 +15,13 @@ public class LeadDetailsTest extends BaseClass {
 
         OriginationPage originationPage = new OriginationPage(driver);
         
-        // Search and open the newly created lead
-        String leadName = "Test User";
-        System.out.println("[INFO] Searching for lead: " + leadName);
-        originationPage.searchAndOpenLead(leadName);
+        // Search and open the newly created lead using its unique PAN
+        String searchKey = System.getProperty("LEAD_PAN");
+        if (searchKey == null) {
+            searchKey = "ABCDE"; // Fallback for standalone run
+        }
+        System.out.println("[INFO] Searching for lead by PAN: " + searchKey);
+        originationPage.searchAndOpenLead(searchKey);
 
         // Open LeadDetailsPage and verify details
         LeadDetailsPage leadDetailsPage = new LeadDetailsPage(driver);
@@ -31,6 +34,12 @@ public class LeadDetailsTest extends BaseClass {
         System.out.println("  Fetched Lead ID: " + leadId);
         System.out.println("  Fetched Lead Status: " + leadStatus);
         System.out.println("  Fetched Loan Type: " + loanType);
+
+        // Extract numeric ID from URL and save for subsequent tests
+        String currentUrl = driver.getCurrentUrl();
+        String numericId = currentUrl.split("/origination/")[1].split("\\?")[0];
+        System.setProperty("LEAD_ID", numericId);
+        System.out.println("[INFO] Saved LEAD_ID to System properties: " + numericId);
 
         // Assertions to verify correctness
         Assert.assertNotNull(leadId, "Lead ID should not be null");

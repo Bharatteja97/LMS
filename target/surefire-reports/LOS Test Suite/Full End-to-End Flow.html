@@ -1,0 +1,268 @@
+<html>
+<head>
+<title>TestNG:  Full End-to-End Flow</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Full End-to-End Flow</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>27/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jun 25 16:07:00 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>759 seconds (759156 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.OperationsTest.testDirectNavigation()'><b>testDirectNavigation</b><br>Test class: tests.OperationsTest</td>
+<td><div><pre>java.lang.AssertionError: Application 465 status should be CUSTOMER_APPROVED. Found: UNKNOWN expected [true] but found [false]
+	at tests.OperationsTest.testDirectNavigation(OperationsTest.java:129)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace274720798", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace274720798'><pre>java.lang.AssertionError: Application 465 status should be CUSTOMER_APPROVED. Found: UNKNOWN expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.OperationsTest.testDirectNavigation(OperationsTest.java:129)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>35</td>
+<td>tests.OperationsTest@6f96c77</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.DealerConfirmationTest.testDealerConfirmationFill()'><b>testDealerConfirmationFill</b><br>Test class: tests.DealerConfirmationTest</td>
+<td></td>
+<td>20</td>
+<td>tests.DealerConfirmationTest@4c9f8c13</td></tr>
+<tr>
+<td title='tests.OperationsTest.testSearchAndReset()'><b>testSearchAndReset</b><br>Test class: tests.OperationsTest</td>
+<td></td>
+<td>5</td>
+<td>tests.OperationsTest@6f96c77</td></tr>
+<tr>
+<td title='tests.SendToUnderwritingTest.testSendToUnderwriting()'><b>testSendToUnderwriting</b><br>Test class: tests.SendToUnderwritingTest</td>
+<td></td>
+<td>9</td>
+<td>tests.SendToUnderwritingTest@2473d930</td></tr>
+<tr>
+<td title='tests.ProcessingFeeTest.testProcessingFeePayment()'><b>testProcessingFeePayment</b><br>Test class: tests.ProcessingFeeTest</td>
+<td></td>
+<td>266</td>
+<td>tests.ProcessingFeeTest@49b0b76</td></tr>
+<tr>
+<td title='tests.DealerLetterTest.testDispatchMailToDealer()'><b>testDispatchMailToDealer</b><br>Test class: tests.DealerLetterTest</td>
+<td></td>
+<td>56</td>
+<td>tests.DealerLetterTest@769f71a9</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testTabNavigation()'><b>testTabNavigation</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>15</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testDispatchSanctionMail()'><b>testDispatchSanctionMail</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>24</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.LoanAgreementTest.testDispatchAndSimulateESign()'><b>testDispatchAndSimulateESign</b><br>Test class: tests.LoanAgreementTest</td>
+<td></td>
+<td>18</td>
+<td>tests.LoanAgreementTest@5ae50ce6</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testUpdateStatusModalOpens()'><b>testUpdateStatusModalOpens</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>4</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.KycPageTest.testKycPageLoadsCorrectly()'><b>testKycPageLoadsCorrectly</b><br>Test class: tests.KycPageTest</td>
+<td></td>
+<td>1</td>
+<td>tests.KycPageTest@76908cc0</td></tr>
+<tr>
+<td title='tests.KycPageTest.testFetchKycLinkFromEmail()'><b>testFetchKycLinkFromEmail</b><br>Test class: tests.KycPageTest</td>
+<td></td>
+<td>10</td>
+<td>tests.KycPageTest@76908cc0</td></tr>
+<tr>
+<td title='tests.OperationsTest.testOperationsListPageLoads()'><b>testOperationsListPageLoads</b><br>Test class: tests.OperationsTest</td>
+<td></td>
+<td>2</td>
+<td>tests.OperationsTest@6f96c77</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testBankDetailsAddCustomerBank()'><b>testBankDetailsAddCustomerBank</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>46</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.KycPageTest.testFillKycFormAndSubmit()'><b>testFillKycFormAndSubmit</b><br>Test class: tests.KycPageTest</td>
+<td></td>
+<td>75</td>
+<td>tests.KycPageTest@76908cc0</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testClickApproveButton()'><b>testClickApproveButton</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>13</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testSearchFunctionality()'><b>testSearchFunctionality</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>21</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testSubmitSanctionLetter()'><b>testSubmitSanctionLetter</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>21</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testDealParametersSetPreferredRepaymentDate()'><b>testDealParametersSetPreferredRepaymentDate</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>13</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testDirectNavigationToApplicationDetail()'><b>testDirectNavigationToApplicationDetail</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>5</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.OperationsTest.testOpenApplicationDetail()'><b>testOpenApplicationDetail</b><br>Test class: tests.OperationsTest</td>
+<td></td>
+<td>6</td>
+<td>tests.OperationsTest@6f96c77</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testUnderwritingListPageLoads()'><b>testUnderwritingListPageLoads</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>5</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testOpenApplicationDetail()'><b>testOpenApplicationDetail</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>9</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.OperationsTest.testTabNavigation()'><b>testTabNavigation</b><br>Test class: tests.OperationsTest</td>
+<td></td>
+<td>33</td>
+<td>tests.OperationsTest@6f96c77</td></tr>
+<tr>
+<td title='tests.CreateLeadTest.testCreateNewLead()'><b>testCreateNewLead</b><br>Test class: tests.CreateLeadTest</td>
+<td></td>
+<td>19</td>
+<td>tests.CreateLeadTest@78b66d36</td></tr>
+<tr>
+<td title='tests.OperationsTest.testSanctionButtonPresent()'><b>testSanctionButtonPresent</b><br>Test class: tests.OperationsTest</td>
+<td></td>
+<td>0</td>
+<td>tests.OperationsTest@6f96c77</td></tr>
+<tr>
+<td title='tests.UnderWritingTest.testApproveButtonPresent()'><b>testApproveButtonPresent</b><br>Test class: tests.UnderWritingTest</td>
+<td></td>
+<td>0</td>
+<td>tests.UnderWritingTest@35047d03</td></tr>
+<tr>
+<td title='tests.LeadDetailsTest.testVerifyLeadDetails()'><b>testVerifyLeadDetails</b><br>Test class: tests.LeadDetailsTest</td>
+<td></td>
+<td>14</td>
+<td>tests.LeadDetailsTest@6fe7aac8</td></tr>
+</table><p>
+</body>
+</html>

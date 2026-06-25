@@ -3,15 +3,15 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="tests.DealerConfirmationTest">
+      <class name="tests.SendToUnderwritingTest">
         <methods>
           <include name="tearDown"/>
+          <include name="testSendToUnderwriting"/>
           <include name="suiteSetUp"/>
           <include name="classSetUp"/>
-          <include name="testDealerConfirmationFill"/>
           <include name="methodSetUp"/>
         </methods>
-      </class> <!-- tests.DealerConfirmationTest -->
+      </class> <!-- tests.SendToUnderwritingTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

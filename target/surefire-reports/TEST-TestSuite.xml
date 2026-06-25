@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="160.317" tests="6" errors="0" skipped="2" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="793.551" tests="28" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="webdriver.chrome.driver" value="C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
     <property name="java.class.path" value="C:\Users\i-tech\eclipse-workspace\LOSProductVehilce\target\test-classes;C:\Users\i-tech\eclipse-workspace\LOSProductVehilce\target\classes;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-java\4.21.0\selenium-java-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-api\4.21.0\selenium-api-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.21.0\selenium-chrome-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.21.0\selenium-chromium-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-json\4.21.0\selenium-json-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.21.0\selenium-manager-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.21.0\selenium-devtools-v123-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.21.0\selenium-devtools-v124-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.21.0\selenium-devtools-v125-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.21.0\selenium-devtools-v85-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.21.0\selenium-edge-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.21.0\selenium-firefox-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-http\4.21.0\selenium-http-4.21.0.jar;C:\Users\i-tech\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.21.0\selenium-ie-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.21.0\selenium-remote-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\com\google\guava\guava\33.2.0-jre\guava-33.2.0-jre.jar;C:\Users\i-tech\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\i-tech\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\i-tech\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\i-tech\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\i-tech\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\i-tech\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-api\1.38.0\opentelemetry-api-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-context\1.38.0\opentelemetry-context-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.38.0\opentelemetry-exporter-logging-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.38.0\opentelemetry-sdk-common-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.38.0\opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.38.0\opentelemetry-sdk-extension-autoconfigure-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.38.0-alpha\opentelemetry-api-incubator-1.38.0-alpha.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.38.0\opentelemetry-sdk-trace-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.38.0\opentelemetry-sdk-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.38.0\opentelemetry-sdk-metrics-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.38.0\opentelemetry-sdk-logs-1.38.0.jar;C:\Users\i-tech\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-os\4.21.0\selenium-os-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.21.0\selenium-safari-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-support\4.21.0\selenium-support-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\i-tech\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\i-tech\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\i-tech\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\i-tech\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\i-tech\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\i-tech\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\i-tech\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\i-tech\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\i-tech\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\i-tech\.m2\repository\org\apache\poi\poi\5.2.5\poi-5.2.5.jar;C:\Users\i-tech\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\i-tech\.m2\repository\commons-io\commons-io\2.15.0\commons-io-2.15.0.jar;C:\Users\i-tech\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\Users\i-tech\.m2\repository\org\apache\poi\poi-ooxml\5.2.5\poi-ooxml-5.2.5.jar;C:\Users\i-tech\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.5\poi-ooxml-lite-5.2.5.jar;C:\Users\i-tech\.m2\repository\org\apache\xmlbeans\xmlbeans\5.2.0\xmlbeans-5.2.0.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\Users\i-tech\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\Users\i-tech\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\i-tech\.m2\repository\org\apache\logging\log4j\log4j-core\2.23.1\log4j-core-2.23.1.jar;C:\Users\i-tech\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\i-tech\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\i-tech\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\i-tech\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\i-tech\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\i-tech\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\i-tech\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\i-tech\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\i-tech\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\i-tech\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\i-tech\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\i-tech\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\i-tech\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\i-tech\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\i-tech\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;"/>
+    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
+    <property name="LEAD_ID" value="916"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
     <property name="os.name" value="Windows 11"/>
@@ -17,7 +18,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\i-tech\AppData\Local\Temp\surefire1538986079039162241\surefirebooter-20260624122242356_3.jar C:\Users\i-tech\AppData\Local\Temp\surefire1538986079039162241 2026-06-24T12-22-41_893-jvmRun1 surefire-20260624122242356_1tmp surefire_0-20260624122242356_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\i-tech\AppData\Local\Temp\surefire7792994799184254049\surefirebooter-20260625160626168_3.jar C:\Users\i-tech\AppData\Local\Temp\surefire7792994799184254049 2026-06-25T16-06-25_812-jvmRun1 surefire-20260625160626168_1tmp surefire_0-20260625160626168_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\i-tech\eclipse-workspace\LOSProductVehilce\target\test-classes;C:\Users\i-tech\eclipse-workspace\LOSProductVehilce\target\classes;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-java\4.21.0\selenium-java-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-api\4.21.0\selenium-api-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.21.0\selenium-chrome-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.21.0\selenium-chromium-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-json\4.21.0\selenium-json-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.21.0\selenium-manager-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.21.0\selenium-devtools-v123-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.21.0\selenium-devtools-v124-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.21.0\selenium-devtools-v125-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.21.0\selenium-devtools-v85-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.21.0\selenium-edge-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.21.0\selenium-firefox-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-http\4.21.0\selenium-http-4.21.0.jar;C:\Users\i-tech\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.21.0\selenium-ie-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.21.0\selenium-remote-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\com\google\guava\guava\33.2.0-jre\guava-33.2.0-jre.jar;C:\Users\i-tech\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\i-tech\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\i-tech\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\i-tech\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\i-tech\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\i-tech\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-api\1.38.0\opentelemetry-api-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-context\1.38.0\opentelemetry-context-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.38.0\opentelemetry-exporter-logging-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.38.0\opentelemetry-sdk-common-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.38.0\opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.38.0\opentelemetry-sdk-extension-autoconfigure-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.38.0-alpha\opentelemetry-api-incubator-1.38.0-alpha.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.38.0\opentelemetry-sdk-trace-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.38.0\opentelemetry-sdk-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.38.0\opentelemetry-sdk-metrics-1.38.0.jar;C:\Users\i-tech\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.38.0\opentelemetry-sdk-logs-1.38.0.jar;C:\Users\i-tech\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-os\4.21.0\selenium-os-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.21.0\selenium-safari-driver-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\seleniumhq\selenium\selenium-support\4.21.0\selenium-support-4.21.0.jar;C:\Users\i-tech\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\i-tech\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\i-tech\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\i-tech\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\i-tech\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\i-tech\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\i-tech\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\i-tech\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\i-tech\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\i-tech\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\i-tech\.m2\repository\org\apache\poi\poi\5.2.5\poi-5.2.5.jar;C:\Users\i-tech\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\i-tech\.m2\repository\commons-io\commons-io\2.15.0\commons-io-2.15.0.jar;C:\Users\i-tech\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\Users\i-tech\.m2\repository\org\apache\poi\poi-ooxml\5.2.5\poi-ooxml-5.2.5.jar;C:\Users\i-tech\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.5\poi-ooxml-lite-5.2.5.jar;C:\Users\i-tech\.m2\repository\org\apache\xmlbeans\xmlbeans\5.2.0\xmlbeans-5.2.0.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\Users\i-tech\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\Users\i-tech\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\i-tech\.m2\repository\org\apache\logging\log4j\log4j-core\2.23.1\log4j-core-2.23.1.jar;C:\Users\i-tech\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\i-tech\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\i-tech\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\i-tech\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\i-tech\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\i-tech\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\i-tech\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\i-tech\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\i-tech\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\i-tech\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\i-tech\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\i-tech\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\i-tech\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\i-tech\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\i-tech\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\i-tech\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\i-tech\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,15 +33,17 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\i-tech\AppData\Local\Temp\surefire1538986079039162241\surefirebooter-20260624122242356_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\i-tech\AppData\Local\Temp\surefire7792994799184254049\surefirebooter-20260625160626168_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="APPLICATION_ID" value="470"/>
     <property name="java.runtime.version" value="25.0.2+10-LTS-69"/>
     <property name="user.name" value="i-tech"/>
     <property name="stdout.encoding" value="Cp1252"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="LEAD_NAME" value="Test User 1782383822784"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\i-tech\.m2\repository"/>
@@ -61,8 +64,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testCreateNewLead" classname="tests.CreateLeadTest" time="24.408">
-    <system-out><![CDATA[[INFO] Vehicle Type selected successfully: NEW TWO WHEELER
+  <testcase name="testCreateNewLead" classname="tests.CreateLeadTest" time="19.823">
+    <system-out><![CDATA[[INFO] Generated unique Lead Name: Test User 1782383822784
+[INFO] Generated unique PAN: ABCDE7500E
+[INFO] Vehicle Type selected successfully: NEW TWO WHEELER
 Could not interact natively with element (might be readonly/calculated). Attempting JS fallback...
 [INFO] Entered Vehicle Brand 'Toyota' successfully.
 Lead creation script executed successfully.
@@ -70,71 +75,477 @@ Lead creation script executed successfully.
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Jun 25, 2026 4:06:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 149
+Jun 25, 2026 4:06:33 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="testVerifyLeadDetails" classname="tests.LeadDetailsTest" time="7.758">
-    <failure message="Lead Status should be &apos;NEW&apos; expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Lead Status should be 'NEW' expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at tests.LeadDetailsTest.testVerifyLeadDetails(LeadDetailsTest.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></failure>
-    <system-out><![CDATA[[INFO] Searching for lead: Test User
+  <testcase name="testVerifyLeadDetails" classname="tests.LeadDetailsTest" time="14.863">
+    <system-out><![CDATA[[INFO] Searching for lead by PAN: ABCDE
 [INFO] Successfully opened Lead Details page.
-  Fetched Lead ID: Lead No: LD58715649
-  Fetched Lead Status: KYC_UPDATED
+  Fetched Lead ID: Lead No: LD42100707
+  Fetched Lead Status: NEW
   Fetched Loan Type: Loan type: NEW TWO WHEELER
+[INFO] Saved LEAD_ID to System properties: 916
+[INFO] Clicked Re-Dispatch KYC Link button.
+[INFO] Clicked Confirm Dispatch button in the dialog.
+[INFO] KYC link dispatched. Waiting for confirmation...
+[INFO] KYC dispatch completed. Email verification will be done in KycPageTest.
 ]]></system-out>
   </testcase>
-  <testcase name="testFetchKycLinkFromEmail" classname="tests.KycPageTest" time="11.049">
+  <testcase name="testFetchKycLinkFromEmail" classname="tests.KycPageTest" time="10.215">
     <system-out><![CDATA[═══════════════════════════════════════════════════════════
 [TEST] Fetching KYC link from Gmail inbox via IMAP...
 ═══════════════════════════════════════════════════════════
 [INFO] Attempt 1 to fetch KYC link from email...
 [INFO] Connecting to IMAP server: imap.gmail.com as bharatteja09@gmail.com
-[INFO] Total messages in inbox: 593
-[INFO] Searching for email with subject: "Action Required: Complete Your KYC for Your Vehicle Loan with Alphaware"
-[INFO] Matched email subject: "Action Required: Complete Your KYC for Your Vehicle Loan with Alphaware"
-[INFO] Found KYC link in email: https://client-lms.alfinnext.com/pager?data=v2%253A5zOHpB74VnvnWlEwZgpTS9j0re%252Fng8hunq0yc1JvAc5w4NLeUweQk5j%252FsWZEnoASET81X4mC8MkHcEOTeKXehTX%252BAqDu2l3BWtnaEoGX%252BcSQtwGYEhsNTKyfFgUqRuGU%252FZx%252FSMx2czzzEjT5%252FgVK56c8PigIpAHWUw2l783uvITDlKWA2sCjsKyznvRCcofLEMB0qmzQGFJooXfOJff%252FOJM0kGOTe7x46LabRMhVHcvNYzEJptIsAYidjjt33K%252BHMhP%252FpMswL0NXSA%253D%253D&hmac=4bwcADIa-8bTPcot5LCWyewYWkYnBNkEPAdN0k4CFGE
-[INFO] KYC Link retrieved: https://client-lms.alfinnext.com/pager?data=v2%253A5zOHpB74VnvnWlEwZgpTS9j0re%252Fng8hunq0yc1JvAc5w4NLeUweQk5j%252FsWZEnoASET81X4mC8MkHcEOTeKXehTX%252BAqDu2l3BWtnaEoGX%252BcSQtwGYEhsNTKyfFgUqRuGU%252FZx%252FSMx2czzzEjT5%252FgVK56c8PigIpAHWUw2l783uvITDlKWA2sCjsKyznvRCcofLEMB0qmzQGFJooXfOJff%252FOJM0kGOTe7x46LabRMhVHcvNYzEJptIsAYidjjt33K%252BHMhP%252FpMswL0NXSA%253D%253D&hmac=4bwcADIa-8bTPcot5LCWyewYWkYnBNkEPAdN0k4CFGE
+[INFO] Total messages in folder INBOX: 662
+[INFO] Searching for email with subject: "Action Required: Complete Your KYC for Your Vehicle Loan with Alphaware" in INBOX
+[INFO] Matched email subject: "Action Required: Complete Your KYC for Your Vehicle Loan with Alphaware" in folder: INBOX
+[DEBUG] Message body length: 4147
+[DEBUG] Message body snippet: <!doctype html><html lang="en"><head><meta charset="UTF-8"/><title>Action Required: Complete Your KYC for Vehicle Loan with Alphaware</title></head><body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,sans-serif;color:#333333;"><div style="width:100%;max-width:600px;margin:30px auto;background-color:#ffffff;border-radius:8px;padding:15px;"><div style="text-align:center;padding:15px 0;background-color:#e5e7eb;border-radius:6px;"><p style="margin:0;font-size:22px;font-weight:
+[INFO] Found KYC/Payment link: https://client-lms.alfinnext.com/pager?data=v2%253Ar%252Bc68d4e5kK6f2lBuU3t3Zr0Oi97RD2yiFwMucHLEpQomx0VsENBT%252Fq5eWLKM18HHgiykj%252BcQYZAEzOKSfjOqiMLmg7glsqVwjpOdQbtpDOkMgRY2EZIWENclZKY27ZzKwX3nD7gzfMhjGWh3jQtzMMRJ8ky8%252BiIn4ISPNMVUU2dPFHQJ7KXDm796hLSGSilyBIH4QbEMdaoGMBHAjWOAPeDUmEyliraUUeA06GXG0iWsBAhQqjt2l4jxzETfoqGhOlJkK9J7TM6ola1x%252FZ4I9nfsOEP&hmac=3JHoO9hEWT_TeY3AjyYYkWCGy17dkSAOspgak9Sx-88
+[INFO] KYC Link retrieved: https://client-lms.alfinnext.com/pager?data=v2%253Ar%252Bc68d4e5kK6f2lBuU3t3Zr0Oi97RD2yiFwMucHLEpQomx0VsENBT%252Fq5eWLKM18HHgiykj%252BcQYZAEzOKSfjOqiMLmg7glsqVwjpOdQbtpDOkMgRY2EZIWENclZKY27ZzKwX3nD7gzfMhjGWh3jQtzMMRJ8ky8%252BiIn4ISPNMVUU2dPFHQJ7KXDm796hLSGSilyBIH4QbEMdaoGMBHAjWOAPeDUmEyliraUUeA06GXG0iWsBAhQqjt2l4jxzETfoqGhOlJkK9J7TM6ola1x%252FZ4I9nfsOEP&hmac=3JHoO9hEWT_TeY3AjyYYkWCGy17dkSAOspgak9Sx-88
 ]]></system-out>
   </testcase>
-  <testcase name="testKycPageLoadsCorrectly" classname="tests.KycPageTest" time="46.154">
-    <failure message="Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[contains(text(),&apos;KYC Verification&apos;)]&apos; (tried for 30 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[contains(text(),'KYC Verification')]' (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.KycVerificationPage.waitForPageLoad(KycVerificationPage.java:67)
-	at tests.KycPageTest.testKycPageLoadsCorrectly(KycPageTest.java:89)
+  <testcase name="testKycPageLoadsCorrectly" classname="tests.KycPageTest" time="1.72">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Navigating to KYC Verification page...
+═══════════════════════════════════════════════════════════
+[INFO] Navigated to: https://client-lms.alfinnext.com/pager?data=v2%253Ar%252Bc68d4e5kK6f2lBuU3t3Zr0Oi97RD2yiFwMucHLEpQomx0VsENBT%252Fq5eWLKM18HHgiykj%252BcQYZAEzOKSfjOqiMLmg7glsqVwjpOdQbtpDOkMgRY2EZIWENclZKY27ZzKwX3nD7gzfMhjGWh3jQtzMMRJ8ky8%252BiIn4ISPNMVUU2dPFHQJ7KXDm796hLSGSilyBIH4QbEMdaoGMBHAjWOAPeDUmEyliraUUeA06GXG0iWsBAhQqjt2l4jxzETfoqGhOlJkK9J7TM6ola1x%252FZ4I9nfsOEP&hmac=3JHoO9hEWT_TeY3AjyYYkWCGy17dkSAOspgak9Sx-88
+[INFO] KYC Verification page loaded. Header visible.
+[INFO] Page title: Client Accertify
+[INFO] Found 17 upload zones on KYC page.
+[INFO] Document upload zones found: 17
+[INFO] 'Submit Form' button is visible.
+═══════════════════════════════════════════════════════════
+[PASS] KYC Verification page loaded and verified successfully!
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testFillKycFormAndSubmit" classname="tests.KycPageTest" time="75.853">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Uploading documents and filling out KYC fields...
+═══════════════════════════════════════════════════════════
+[INFO] Uploading document for label: Borrower Pan
+[INFO] Successfully uploaded file for label Borrower Pan
+[INFO] Uploading document for label: Borrower Aadhar Front
+[INFO] Successfully uploaded file for label Borrower Aadhar Front
+[INFO] Uploading document for label: Borrower Aadhaar Back
+[INFO] Successfully uploaded file for label Borrower Aadhaar Back
+[INFO] Uploading document for label: Co-borrower pan
+[INFO] Successfully uploaded file for label Co-borrower pan
+[INFO] Uploading document for label: Co-borrower Aadhar front
+[INFO] Successfully uploaded file for label Co-borrower Aadhar front
+[INFO] Uploading document for label: Co-borrower-Aadhar back
+[INFO] Successfully uploaded file for label Co-borrower-Aadhar back
+[INFO] Filling input for label: Residential Stability
+[INFO] Filling input for label: Borrower Age
+[INFO] Clicking 'Verify' near label: Borrower PAN
+[INFO] Handling alert: Pan Validation Failed
+[INFO] Filling input for label: Co-Borrower Name (As Per PAN)
+[INFO] Filling input for label: Co-Borrower PAN
+[INFO] Clicking 'Verify' near label: Co-Borrower PAN
+[INFO] Filling input for label: Co-Borrower Age
+[INFO] Filling input for label: Co-Borrower Email
+[INFO] Filling input for label: Co-Borrower contact
+[INFO] Uploading document for label: Borrower Image
+[INFO] Successfully uploaded file for label Borrower Image
+[INFO] Uploading document for label: Bank statement (PDF Only)
+[INFO] Successfully uploaded file for label Bank statement (PDF Only)
+[INFO] Waiting 5 seconds for bank statement to be parsed before validating...
+[INFO] Waiting for 'Validate Bank Statement' modal...
+[INFO] Clicked 'Validate Statement' button.
+[INFO] Waiting 5 seconds after validation for the server to process it...
+[INFO] Handling alert: Unable to verify the bank statement. Kindly confirm the password is correct and that the document has not been modified. There may be a possible technical issue. You may proceed with the form.
+[INFO] Attempting to close any open modals...
+✅ Selected 'OWNED' from dropdown 'residentialType'
+✅ Selected 'SALARIED' from dropdown 'employmentType'
+═══════════════════════════════════════════════════════════
+[INFO] Form filled. Submitting KYC Form...
+[INFO] Clicked 'Submit Form' button.
+═══════════════════════════════════════════════════════════
+[PASS] Document uploads and form submission completed successfully!
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testSendToUnderwriting" classname="tests.SendToUnderwritingTest" time="9.424">
+    <system-out><![CDATA[[TEST] Navigating to lead: https://lms.alfinnext.com/vehicle/origination/916?product=VEHICLE_LOAN
+[INFO] Clicking 'Send to Underwriting' button...
+[INFO] Confirmation modal appeared. Clicking confirm button...
+[PASS] Lead sent to Underwriting. Current URL: https://lms.alfinnext.com/vehicle/origination/916?product=VEHICLE_LOAN
+]]></system-out>
+  </testcase>
+  <testcase name="testUnderwritingListPageLoads" classname="tests.UnderWritingTest" time="5.607">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Navigating to Underwriting list page...
+═══════════════════════════════════════════════════════════
+[INFO] Applications displayed in table: 9
+[INFO] Application numbers visible: [APP40925125, APP62513928, APP48906094, APP85367749, APP91798681, APP71603153, APP55676963, APP51076883, APP93353442]
+[INFO] Application statuses visible: [In Processing, In Processing, Underwriter Approved, Underwriter Approved, In Processing, Underwriter Approved, Underwriter Approved, In Processing, In Processing]
+═══════════════════════════════════════════════════════════
+[PASS] Underwriting list page loaded with 9 application(s).
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testSearchFunctionality" classname="tests.UnderWritingTest" time="21.57">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Testing quick-search filter...
+═══════════════════════════════════════════════════════════
+[INFO] Searched for: ZZZZZ_NONEXISTENT_9999
+[INFO] 'No results' displayed for junk search: false
+[INFO] Filters reset.
+[INFO] After reset, row count: 9
+═══════════════════════════════════════════════════════════
+[PASS] Search and Reset functionality working correctly.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testOpenApplicationDetail" classname="tests.UnderWritingTest" time="9.07">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Opening first application from the list...
+═══════════════════════════════════════════════════════════
+[INFO] Underwriting detail page loaded. URL: https://lms.alfinnext.com/vehicle/underwriting/470?product=VEHICLE_LOAN
+[INFO] Opened first application: APP40925125
+[INFO] Current URL after opening application: https://lms.alfinnext.com/vehicle/underwriting/470?product=VEHICLE_LOAN
+[INFO] Saved APPLICATION_ID to System properties: 470
+[INFO] Application status: In Processing
+═══════════════════════════════════════════════════════════
+[PASS] Opened application 'APP40925125' | Status: In Processing
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testTabNavigation" classname="tests.UnderWritingTest" time="15.387">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Navigating through detail page tabs...
+═══════════════════════════════════════════════════════════
+[INFO] Clicked tab: Borrower Details
+[INFO] Borrower Details tab clicked – OK
+[INFO] Clicked tab: Asset Details
+[INFO] Asset Details tab clicked – OK
+[INFO] Clicked tab: Loan Details
+[INFO] Loan Details tab clicked – OK
+[INFO] Clicked tab: Documents
+[INFO] Documents tab clicked – OK
+[INFO] Clicked tab: Tracking History
+[INFO] Tracking History tab clicked – OK
+[INFO] Clicked tab: Borrower Details
+═══════════════════════════════════════════════════════════
+[PASS] All tabs navigated successfully.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateStatusModalOpens" classname="tests.UnderWritingTest" time="4.697">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Opening 'Update status' modal...
+═══════════════════════════════════════════════════════════
+[INFO] Clicked 'Update status' button.
+[INFO] Status-update modal is visible.
+[INFO] Modal is open.
+[INFO] Available status options: [Select lead status, Withdrawn, Postponed, Rejected]
+[INFO] Cancelled status update.
+[INFO] Modal closed after Cancel.
+═══════════════════════════════════════════════════════════
+[PASS] Update status modal works correctly.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testApproveButtonPresent" classname="tests.UnderWritingTest" time="0.193">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Verifying 'Approve' button is present and enabled...
+═══════════════════════════════════════════════════════════
+[INFO] Approve button enabled: true
+═══════════════════════════════════════════════════════════
+[PASS] 'Approve' button is present and enabled.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testDirectNavigationToApplicationDetail" classname="tests.UnderWritingTest" time="5.108">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Direct navigation to known application detail page...
+═══════════════════════════════════════════════════════════
+[INFO] Underwriting detail page loaded. URL: https://lms.alfinnext.com/vehicle/underwriting/470?product=VEHICLE_LOAN
+[INFO] Navigated to Underwriting detail: https://lms.alfinnext.com/vehicle/underwriting/470?product=VEHICLE_LOAN
+[INFO] URL after direct navigation: https://lms.alfinnext.com/vehicle/underwriting/470?product=VEHICLE_LOAN
+[INFO] Application status: In Processing
+═══════════════════════════════════════════════════════════
+[PASS] Direct navigation to application 470 succeeded. Status: In Processing
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testDealParametersSetPreferredRepaymentDate" classname="tests.UnderWritingTest" time="13.681">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Deal parameters — set Preferred Repayment Date & save...
+═══════════════════════════════════════════════════════════
+[INFO] Clicking 'Deal parameters' tab...
+[INFO] Clicked tab: Deal Parameters
+[INFO] Clicking 'Update parameters' button...
+[INFO] Clicked 'Update parameters' — edit form is now open.
+[INFO] Setting Preferred Repayment Date to: 2026-07-02
+[INFO] Set Preferred Repayment Date to: 2026-07-02
+[INFO] Date value in input after entry: 2026-07-02
+[INFO] Clicking 'Save' to persist Deal parameters...
+[INFO] Clicked 'Save' — Deal parameters saved.
+═══════════════════════════════════════════════════════════
+[PASS] Preferred Repayment Date set to '2026-07-02' and saved successfully.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testBankDetailsAddCustomerBank" classname="tests.UnderWritingTest" time="46.91">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Bank Details — Add Customer Bank...
+═══════════════════════════════════════════════════════════
+[INFO] Clicking 'Bank Details' tab...
+[INFO] Clicked tab: Bank Details
+[INFO] Bank table rows before adding: 0
+[INFO] Clicking 'Add Customer bank' button...
+[INFO] Clicked 'Add Customer bank' — Create bank modal should open.
+[INFO] 'Create bank' modal is open.
+[INFO] Account type options: [Current, Savings]
+[INFO] Filling Bank name: HDFC Bank
+[INFO] Bank name: HDFC Bank
+[INFO] Filling Name as per cheque: Ramesh Kumar
+[INFO] Name as per cheque: Ramesh Kumar
+[INFO] Filling Account number: 50100123456789
+[INFO] Account number: 50100123456789
+[INFO] Filling Branch: Koramangala
+[INFO] Branch: Koramangala
+[INFO] Filling City: Bangalore
+[INFO] City: Bangalore
+[INFO] Filling IFSC code: HDFC0001234
+[INFO] IFSC code: HDFC0001234
+[INFO] Selecting Account type: Current
+[INFO] Account type selected: Current
+[INFO] Mark default checkbox already set to: true
+[INFO] Mark default: true
+[INFO] Clicking 'Save' to create the bank record...
+[INFO] Clicked 'Save' — bank record submitted.
+[INFO] Bank table rows after adding: 2
+═══════════════════════════════════════════════════════════
+[PASS] Customer bank 'HDFC Bank' added successfully.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testClickApproveButton" classname="tests.UnderWritingTest" time="13.411">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Clicking 'Approve' button on Underwriting detail page...
+═══════════════════════════════════════════════════════════
+[INFO] Navigating to application detail: 470
+[INFO] Underwriting detail page loaded. URL: https://lms.alfinnext.com/vehicle/underwriting/470?product=VEHICLE_LOAN
+[INFO] Navigated to Underwriting detail: https://lms.alfinnext.com/vehicle/underwriting/470?product=VEHICLE_LOAN
+[INFO] URL: https://lms.alfinnext.com/vehicle/underwriting/470?product=VEHICLE_LOAN
+[INFO] Application status BEFORE approve: In Processing
+[INFO] 'Approve' button is enabled — clicking...
+[INFO] Clicked 'Approve' button.
+[INFO] Confirmation dialog appeared — button text: 'Approve'. Clicking confirm...
+[INFO] Application status AFTER approve: UNDERWRITER_APPROVED
+═══════════════════════════════════════════════════════════
+[PASS] 'Approve' button clicked successfully.
+       Status: In Processing → UNDERWRITER_APPROVED
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testDispatchSanctionMail" classname="tests.UnderWritingTest" time="24.926">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Dispatching Sanction Mail...
+═══════════════════════════════════════════════════════════
+[INFO] Clicking 'Dispatch Sanction Mail' button...
+[INFO] Clicked 'Dispatch/Re-Dispatch Sanction Mail' button.
+[INFO] Sanction Mail confirmation dialog is visible.
+[INFO] Clicking Send inside confirmation dialog...
+[INFO] Clicked 'Send' inside Sanction Mail confirmation dialog.
+[INFO] Sanction Mail confirmation dialog closed.
+[INFO] Sanction Mail button text after sending: Re-Dispatch Sanction Mail
+[INFO] Sent status text: First sent at: Today at 4:11 PM | Last sent at: Today at 4:11 PM | 
+═══════════════════════════════════════════════════════════
+[PASS] Dispatch Sanction Mail flow verified successfully.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testSubmitSanctionLetter" classname="tests.UnderWritingTest" time="21.425">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Retrieving Sanction Letter Link & Submitting Approval...
+═══════════════════════════════════════════════════════════
+[INFO] Waiting for sanction email to arrive...
+[INFO] Attempt 1 to fetch Sanction link from email...
+[INFO] Connecting to IMAP server: imap.gmail.com as bharatteja09@gmail.com
+[INFO] Total messages in folder INBOX: 664
+[INFO] Searching for email with subject: "Congratulations! Your Loan Has Been Sanctioned – Approve to Proceed" in INBOX
+[INFO] Matched email subject: "Congratulations! Your Loan Has Been Sanctioned – Approve to Proceed" in folder: INBOX
+[DEBUG] Message body length: 5068
+[DEBUG] Message body snippet: <!doctype html><html lang="en"><head><meta charset="UTF-8"/><title>Congratulations! Your Loan Application Has Been Approved</title></head><body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,sans-serif;color:#333333;"><div style="width:100%;max-width:600px;margin:30px auto;background-color:#ffffff;border-radius:8px;padding:15px;"><div style="text-align:center;padding:15px 0;background-color:#e5e7eb;border-radius:6px;"><p style="margin:0;font-size:22px;font-weight:bold;color
+[INFO] Found KYC/Payment link: https://client-lms.alfinnext.com/sanction-letter?data=v2%253Al9G%252FbyNix0xAQ72SL2Hr%252BJeaUsUO%252BcLUDnf7tDHcfYhywcO9jLAM7UipCrJCX39irbDWJcZ8DQyW6uhsu4kVRwflYHcVRwrnNp0Wy5QBPukvoyDh3pQh95jBrBfvibxNfFEz6vOztiCoG7aGr8kxH5bzFkLDXH5UB1O7DrMFHZL5UvvKjJkhAQaXb4%252Bj9E6Hc4KZD1CC%252BrYHH4SEwtz7exodcR17bmcJeY4VbSCrV4ag12GE8g9kU6AqI3um3pC6e%252B41Gt2UpbGSI1bLMxNvCmIeHx%252B%252BiASczkW1A%252BmZMry9LUvce44YMZ%252BKkZNbnHpkrVOZibZag%252FgyjujC5G2rrnNYTzuFxI93Q0s%253D&hmac=z1W6Cm9iSdlZiUvymuFD9GIdnRx0oV3buv9xBBocO84
+[INFO] Navigating to Sanction Letter URL: https://client-lms.alfinnext.com/sanction-letter?data=v2%253Al9G%252FbyNix0xAQ72SL2Hr%252BJeaUsUO%252BcLUDnf7tDHcfYhywcO9jLAM7UipCrJCX39irbDWJcZ8DQyW6uhsu4kVRwflYHcVRwrnNp0Wy5QBPukvoyDh3pQh95jBrBfvibxNfFEz6vOztiCoG7aGr8kxH5bzFkLDXH5UB1O7DrMFHZL5UvvKjJkhAQaXb4%252Bj9E6Hc4KZD1CC%252BrYHH4SEwtz7exodcR17bmcJeY4VbSCrV4ag12GE8g9kU6AqI3um3pC6e%252B41Gt2UpbGSI1bLMxNvCmIeHx%252B%252BiASczkW1A%252BmZMry9LUvce44YMZ%252BKkZNbnHpkrVOZibZag%252FgyjujC5G2rrnNYTzuFxI93Q0s%253D&hmac=z1W6Cm9iSdlZiUvymuFD9GIdnRx0oV3buv9xBBocO84
+[INFO] Loan Sanction Details page loaded.
+[INFO] Clicked 'View Sanction Letter'.
+[INFO] Terms and Conditions checkbox checked.
+[INFO] Clicked 'Submit Sanction'.
+═══════════════════════════════════════════════════════════
+[PASS] Sanction letter submitted and approved successfully.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testProcessingFeePayment" classname="tests.ProcessingFeeTest" time="266.856">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Navigating to Operations Detail page: https://lms.alfinnext.com/vehicle/operations/470?product=VEHICLE_LOAN
+═══════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════
+[INFO] Starting LMS-direct payment for application: 470
+═══════════════════════════════════════════════════════════
+[INFO] Navigating to LMS Processing Fee tab: https://lms.alfinnext.com/vehicle/operations/470?tab=processing-fee&product=VEHICLE
+[INFO] Current URL: https://lms.alfinnext.com/vehicle/operations/470?tab=processing-fee&product=VEHICLE
+[INFO] Clicking 'Dispatch Processing Fee Link' button...
+[INFO] Waiting for Dispatch modal...
+[INFO] Entered reference number.
+[INFO] Clicked 'Dispatch' on the modal.
+[INFO] Waiting for link to be generated...
+[INFO] Clicking 'Open in new tab' icon for payment link...
+[INFO] Clicked external link icon.
+[INFO] Switched to new tab: https://razorpay.com/payment-link/plink_T5ppdm6swsbdU1/test
+[INFO] Switched to Razorpay iframe.
+[INFO] Filled mobile number: 9704283625
+[INFO] Field 'email' not found or not needed, skipping.
+[WARN] Button 'Proceed button' not found: Expected condition failed: waiting for element to be clickable: By.xpath: //button[contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'proceed') or contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'continue') or @type='submit'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\i-tech\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65150}, goog:processID: 22224, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65150/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d2db0d2a4bbc64a9b47dd3a91e6aaf4
+[INFO] Clicked payment option: Netbanking
+[INFO] Clicked payment option: Bank of Baroda
+[WARN] Button 'Pay button' not found: Expected condition failed: waiting for element to be clickable: By.xpath: //button[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'pay')] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\i-tech\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65150}, goog:processID: 22224, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65150/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d2db0d2a4bbc64a9b47dd3a91e6aaf4
+[INFO] Handling test bank simulator page...
+[WARN] Simulator URL not found, switched to last window: https://razorpay.com/payment-link/plink_T5ppdm6swsbdU1/test
+[WARN] Success button not found on simulator. Trying JS fallback...
+[INFO] Payment simulation completed. Current URL: https://lms.alfinnext.com/vehicle/operations/470?tab=processing-fee&product=VEHICLE
+═══════════════════════════════════════════════════════════
+[PASS] LMS-direct payment completed successfully.
+═══════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════
+[PASS] Processing fee payment completed (Approach 2 - LMS Direct).
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testDispatchMailToDealer" classname="tests.DealerLetterTest" time="56.383">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Navigating to Operations application to dispatch dealer mail...
+═══════════════════════════════════════════════════════════
+[INFO] Navigated directly to Operations detail ID: 470
+[INFO] Clicked Disbursement Details tab.
+[INFO] Clicked 'Dispatch mail to dealer/seller for bank details' button.
+═══════════════════════════════════════════════════════════
+[INFO] Filling email in the modal...
+═══════════════════════════════════════════════════════════
+[INFO] Entered email: bharatteja09@gmail.com
+[WARN] Dispatch button in modal not found.
+═══════════════════════════════════════════════════════════
+[PASS] Dealer mail dispatch completed successfully.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testDealerConfirmationFill" classname="tests.DealerConfirmationTest" time="20.507">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Navigating to Dealer Confirmation URL...
+═══════════════════════════════════════════════════════════
+[INFO] Waiting for dealer email to arrive...
+[INFO] Connecting to IMAP server: imap.gmail.com as bharatteja09@gmail.com
+[INFO] Total messages in folder INBOX: 666
+[INFO] Searching for email with subject: "Finance confirmation" in INBOX
+[INFO] Matched email subject: "Finance confirmation for New Two Wheeler Loan to Test User Test User" in folder: INBOX
+[DEBUG] Message body length: 4629
+[DEBUG] Message body snippet: <!doctype html><html lang="en"><head><meta charset="UTF-8"/><title>Finance Confirmation</title></head><body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,sans-serif;color:#333333;"><div style="width:100%;max-width:600px;margin:30px auto;background-color:#ffffff;border-radius:8px;padding:15px;"><div style="text-align:center;padding:15px 0;background-color:#e5e7eb;border-radius:6px;"><p style="margin:0;font-size:22px;font-weight:bold;color:#1d4ed8;">Alphaware</p></div><div s
+[INFO] Found KYC/Payment link: https://client-lms.alfinnext.com/dealer?data=v2%253AqvDQruv9hiTuSQU2GaUy%252FBl7wvV2W4A5G0e71c7HnsZqpdvWK93HCgQgXfexv5FTPaeDXQlbraX5vG%252BOvIwYh5zegDGnUHg3Z8UCR245QKQjln1HO389GNEgD5dLdHYIB%252Brfv9qoYgx%252F1n3m7%252Fjy4uas3%252BYswSYFb6BKnd%252Bxj5YkVnj5CEg%253D&hmac=8SpB-NHGyKU3a4TU91qRSrkWapWiXEvi0OSORZ1mcE0
+[INFO] Fetched Dealer URL: https://client-lms.alfinnext.com/dealer?data=v2%253AqvDQruv9hiTuSQU2GaUy%252FBl7wvV2W4A5G0e71c7HnsZqpdvWK93HCgQgXfexv5FTPaeDXQlbraX5vG%252BOvIwYh5zegDGnUHg3Z8UCR245QKQjln1HO389GNEgD5dLdHYIB%252Brfv9qoYgx%252F1n3m7%252Fjy4uas3%252BYswSYFb6BKnd%252Bxj5YkVnj5CEg%253D&hmac=8SpB-NHGyKU3a4TU91qRSrkWapWiXEvi0OSORZ1mcE0
+[INFO] Filling bank details...
+[INFO] Submitting Dealer Confirmation form...
+═══════════════════════════════════════════════════════════
+[PASS] Dealer Confirmation form filled and submitted successfully.
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testDispatchAndSimulateESign" classname="tests.LoanAgreementTest" time="18.364">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Navigating to Operations application to dispatch loan agreement...
+═══════════════════════════════════════════════════════════
+[INFO] Navigated directly to Operations detail ID: 470
+[INFO] Clicked 'Loan Agreement' tab.
+[INFO] Clicked 'Dispatch Loan Agreement' button.
+[INFO] Clicked 'Send' inside dispatch modal.
+[INFO] Calling webhook callback API natively via Java...
+[INFO] Webhook POST Response Status: 200
+[INFO] Webhook POST Response Body: {"message":"SUCCESS","httpStatus":"OK"}
+═══════════════════════════════════════════════════════════
+[PASS] Loan Agreement Webhook Callback executed!
+═══════════════════════════════════════════════════════════
+]]></system-out>
+  </testcase>
+  <testcase name="testOperationsListPageLoads" classname="tests.OperationsTest" time="2.227">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Navigating to Operations list page...
+═══════════════════════════════════════════════════════════
+[INFO] Navigated to Operations list page.
+[INFO] Operations table row count: 10
+]]></system-out>
+  </testcase>
+  <testcase name="testSearchAndReset" classname="tests.OperationsTest" time="5.617">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Testing quick-search and reset filters...
+═══════════════════════════════════════════════════════════
+[INFO] Searched Operations table for: ZZZZZ_NONEXISTENT_9999
+[INFO] Rows after searching junk: 10
+[INFO] Clicked Operations Reset button.
+[INFO] Rows after reset: 10
+]]></system-out>
+  </testcase>
+  <testcase name="testOpenApplicationDetail" classname="tests.OperationsTest" time="6.012">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Opening first application from the list...
+═══════════════════════════════════════════════════════════
+[INFO] Navigated to Operations list page.
+[INFO] Opened first application: APP40925125
+[INFO] Detail page URL: https://lms.alfinnext.com/vehicle/operations/470?product=VEHICLE_LOAN
+]]></system-out>
+  </testcase>
+  <testcase name="testTabNavigation" classname="tests.OperationsTest" time="33.655">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Navigating through detail page tabs...
+═══════════════════════════════════════════════════════════
+[INFO] Clicked tab: Borrower Details
+[INFO] Clicked tab: Asset Details
+[INFO] Clicked tab: Loan Details
+[INFO] Clicked tab: Deal Parameter
+[INFO] Clicked tab: Bank Details
+[INFO] Clicked tab: Documents
+[INFO] Clicked tab: Processing Fee
+[INFO] Clicked tab: Disbursement Details
+[INFO] Clicked tab: Loan Agreement
+[INFO] Clicked tab: NACH Registration
+[INFO] Clicked tab: Repayment Schedule
+[INFO] Clicked tab: Tracking History
+[INFO] Clicked tab: Application Stepper
+[INFO] Clicked tab: AI Insights
+[INFO] All tabs clicked successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="testSanctionButtonPresent" classname="tests.OperationsTest" time="0.188">
+    <system-out><![CDATA[═══════════════════════════════════════════════════════════
+[TEST] Verifying 'Sanction' button status...
+═══════════════════════════════════════════════════════════
+[INFO] Sanction button enabled: true
+]]></system-out>
+  </testcase>
+  <testcase name="testDirectNavigation" classname="tests.OperationsTest" time="35.18">
+    <failure message="Application 465 status should be CUSTOMER_APPROVED. Found: UNKNOWN expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Application 465 status should be CUSTOMER_APPROVED. Found: UNKNOWN expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.OperationsTest.testDirectNavigation(OperationsTest.java:129)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -165,48 +576,12 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'KYC Verification')]"}
-  (Session info: chrome=149.0.7827.115)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d0b8ffcdc29c2d2f9f166ca301c3e690, findElement {value=//*[contains(text(),'KYC Verification')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\i-tech\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53438}, goog:processID: 18048, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53438/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d0b8ffcdc29c2d2f9f166ca301c3e690
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 32 more
 ]]></failure>
     <system-out><![CDATA[═══════════════════════════════════════════════════════════
-[TEST] Navigating to KYC Verification page...
+[TEST] Direct navigation to known operations application 465...
 ═══════════════════════════════════════════════════════════
-[INFO] Navigated to: https://client-lms.alfinnext.com/pager?data=v2%253A5zOHpB74VnvnWlEwZgpTS9j0re%252Fng8hunq0yc1JvAc5w4NLeUweQk5j%252FsWZEnoASET81X4mC8MkHcEOTeKXehTX%252BAqDu2l3BWtnaEoGX%252BcSQtwGYEhsNTKyfFgUqRuGU%252FZx%252FSMx2czzzEjT5%252FgVK56c8PigIpAHWUw2l783uvITDlKWA2sCjsKyznvRCcofLEMB0qmzQGFJooXfOJff%252FOJM0kGOTe7x46LabRMhVHcvNYzEJptIsAYidjjt33K%252BHMhP%252FpMswL0NXSA%253D%253D&hmac=4bwcADIa-8bTPcot5LCWyewYWkYnBNkEPAdN0k4CFGE
+[INFO] Navigated directly to Operations detail ID: 465
+[INFO] Application 465 status on Operations page: UNKNOWN
 ]]></system-out>
-  </testcase>
-  <testcase name="testFillKycFormAndSubmit" classname="tests.KycPageTest" time="0.0">
-    <skipped message="Method tests.KycPageTest.testFillKycFormAndSubmit() on instance tests.KycPageTest@4386f16 depends on not successfully finished methods &#10;[tests.KycPageTest.testKycPageLoadsCorrectly() on instance tests.KycPageTest@4386f16]"/>
-  </testcase>
-  <testcase name="testSendToUnderwriting" classname="tests.KycPageTest" time="0.0">
-    <skipped message="Method tests.KycPageTest.testSendToUnderwriting() on instance tests.KycPageTest@4386f16 depends on not successfully finished methods &#10;[tests.KycPageTest.testFillKycFormAndSubmit() on instance tests.KycPageTest@4386f16]"/>
   </testcase>
 </testsuite>

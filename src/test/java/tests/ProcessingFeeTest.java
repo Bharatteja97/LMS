@@ -22,30 +22,26 @@ public class ProcessingFeeTest extends BaseClass {
     private static final String TEST_MOBILE = "9704283625";
     private static final String TEST_EMAIL  = "bharatteja09@gmail.com";
 
-    // ─── LMS application details ─────────────────────────────────────────
-    private static final String APPLICATION_ID = "465";
+    private String getApplicationId() {
+        String appId = System.getProperty("APPLICATION_ID");
+        if (appId == null) {
+            throw new IllegalStateException("APPLICATION_ID is not set! Run UnderWritingTest first.");
+        }
+        return appId;
+    }
 
-    // =========================================================================
-    // APPROACH 2 – Copy link directly from the LMS page (no Gmail needed)
-    // =========================================================================
-
-    /**
-     * LMS-Direct approach:
-     *  - Goes to LMS Operations → application 465 → Processing Fee tab.
-     *  - Reads the rzp.io link from the "Payment Link" input field.
-     *  - Clicks the external-link icon to open the link in a new tab
-     *    (fallback: opens it via JS window.open if icon click doesn't work).
-     *  - Completes the Razorpay test checkout: Netbanking → Bank of Baroda → Success.
-     */
-    @Test(priority = 3)
-    public void testPayFromLmsPageDirect() throws Exception {
+    @Test
+    public void testProcessingFeePayment() throws Exception {
+        String appId = getApplicationId();
+        String opsDetailUrl = "https://lms.alfinnext.com/vehicle/operations/" + appId + "?product=VEHICLE_LOAN";
+        
         System.out.println("═══════════════════════════════════════════════════════════");
-        System.out.println("[TEST] LMS-Direct: Reading payment link from LMS tab...");
-        System.out.println("[INFO] Application ID: " + APPLICATION_ID);
+        System.out.println("[TEST] Navigating to Operations Detail page: " + opsDetailUrl);
         System.out.println("═══════════════════════════════════════════════════════════");
+        driver.get(opsDetailUrl);
 
         ProcessingFeePage feePage = new ProcessingFeePage(driver);
-        feePage.payFromLmsPage(APPLICATION_ID, TEST_MOBILE, TEST_EMAIL);
+        feePage.payFromLmsPage(appId, TEST_MOBILE, TEST_EMAIL);
 
         System.out.println("═══════════════════════════════════════════════════════════");
         System.out.println("[PASS] Processing fee payment completed (Approach 2 - LMS Direct).");

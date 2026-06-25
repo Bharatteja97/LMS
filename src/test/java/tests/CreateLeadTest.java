@@ -29,11 +29,19 @@ public class CreateLeadTest extends BaseClass {
 
         CreateLeadPage createLeadPage = new CreateLeadPage(driver);
 
+        String uniqueName = "Test User " + System.currentTimeMillis();
+        System.setProperty("LEAD_NAME", uniqueName);
+        System.out.println("[INFO] Generated unique Lead Name: " + uniqueName);
+
+        // Generate a random PAN number (ABCDE + 4 random digits + E) to avoid duplicates
+        String randomPan = "ABCDE" + String.format("%04d", new java.util.Random().nextInt(10000)) + "E";
+        System.out.println("[INFO] Generated unique PAN: " + randomPan);
+
         createLeadPage.createNewLead(
                 "NEW TWO WHEELER", // vehicleType
-                "ABCDE1234R", // pan
-                "Test User", // name
-                "9876543210", // contact
+                randomPan, // pan
+                uniqueName, // name
+                "8962866849", // contact
                 "bharatteja09@gmail.com", // email
                 "100000", // estCost
                 "70000", // loanAmt

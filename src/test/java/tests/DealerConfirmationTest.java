@@ -11,15 +11,26 @@ import java.nio.file.Path;
 
 public class DealerConfirmationTest extends BaseClass {
 
-    private static final String DEALER_URL = "https://client-lms.alfinnext.com/dealer?data=v2%253AX%252BWFUk0U5bOnDlHRBvcDzEBobDCg5NUITgOQqNnXu3lvEm6tCg9L0aNRcin%252FaUETFtT56KNS0yAuo%252FZU6EuPbmdhHILS1AnAICMf%252FOBLhxMCEiPM0m5Tyju9MYQ2vceJTFiGAQfe1ip6tAvgoVH6YS2KWbYg7NerE8tHyQUNH09pDwyNQfc%253D&hmac=kHtDQzLsOutYsh7CXGGVHb8p4PnFpGpIGUgwTBrHLQ4";
-
     @Test
-    public void testDealerConfirmationFill() throws InterruptedException, IOException {
+    public void testDealerConfirmationFill() throws Exception {
         System.out.println("═══════════════════════════════════════════════════════════");
         System.out.println("[TEST] Navigating to Dealer Confirmation URL...");
         System.out.println("═══════════════════════════════════════════════════════════");
 
-        driver.get(DEALER_URL);
+        System.out.println("[INFO] Waiting for dealer email to arrive...");
+        Thread.sleep(7000);
+        String dealerUrl = null;
+        for (int attempt = 1; attempt <= 3; attempt++) {
+            dealerUrl = utils.EmailUtil.getDealerLinkFromGmail("bharatteja09@gmail.com", "oxtlolbsglttfqde");
+            if (dealerUrl != null) break;
+            Thread.sleep(10000);
+        }
+        
+        if (dealerUrl == null) {
+            throw new IllegalStateException("Failed to retrieve Dealer Confirmation link from email.");
+        }
+        System.out.println("[INFO] Fetched Dealer URL: " + dealerUrl);
+        driver.get(dealerUrl);
         
         // Create a dummy PDF file for the hypothecation letter upload
         Path dummyFile = Files.createTempFile("dummy_hypothecation", ".pdf");

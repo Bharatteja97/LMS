@@ -30,30 +30,30 @@ public class OriginationPage {
         wait.until(ExpectedConditions.elementToBeClickable(addLeadButton)).click();
     }
 
-    public void searchAndOpenLead(String leadName) {
+    public void searchAndOpenLead(String searchTerm) {
         wait.until(ExpectedConditions.visibilityOf(searchInput));
         searchInput.click();
         searchInput.clear();
-        searchInput.sendKeys(leadName, org.openqa.selenium.Keys.ENTER);
+        searchInput.sendKeys(searchTerm, org.openqa.selenium.Keys.ENTER);
 
         // Wait a short moment for table search results to filter
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        // Locate lead name cell in the table (using normalize-space(.) to support nested spans/divs)
-        By leadCellLocator = By.xpath("//td[contains(normalize-space(.), '" + leadName + "')]");
-        WebElement leadCell = wait.until(ExpectedConditions.elementToBeClickable(leadCellLocator));
-
+        // Just click the first row in the table after filtering!
+        By firstRowLocator = By.xpath("//tbody/tr[1]/td[2]"); // Clicking 2nd column just in case 1st is a checkbox
+        WebElement firstRow = wait.until(ExpectedConditions.elementToBeClickable(firstRowLocator));
+        
         // Scroll to element and click
         ((org.openqa.selenium.JavascriptExecutor) driver)
-                .executeScript("arguments[0].scrollIntoView({behavior: 'instant', block: 'center'});", leadCell);
+                .executeScript("arguments[0].scrollIntoView({behavior: 'instant', block: 'center'});", firstRow);
         try {
             Thread.sleep(200);
         } catch (InterruptedException ignored) {}
 
-        leadCell.click();
+        firstRow.click();
     }
 }

@@ -14,14 +14,17 @@ import java.time.Duration;
  */
 public class SendToUnderwritingTest extends BaseClass {
 
-    private static final String LEAD_NUMERIC_ID = "907";
-    private static final String LEAD_DETAIL_URL =
-            "https://lms.alfinnext.com/vehicle/origination/" + LEAD_NUMERIC_ID + "?product=VEHICLE_LOAN";
-
     @Test
     public void testSendToUnderwriting() throws InterruptedException {
-        System.out.println("[TEST] Navigating to lead: " + LEAD_DETAIL_URL);
-        driver.get(LEAD_DETAIL_URL);
+        String leadId = System.getProperty("LEAD_ID");
+        if (leadId == null) {
+            System.out.println("[WARNING] LEAD_ID is not set! Using fallback '915'.");
+            leadId = "915";
+        }
+        String leadDetailUrl = "https://lms.alfinnext.com/vehicle/origination/" + leadId + "?product=VEHICLE_LOAN";
+        
+        System.out.println("[TEST] Navigating to lead: " + leadDetailUrl);
+        driver.get(leadDetailUrl);
         Thread.sleep(4000);
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -34,11 +37,11 @@ public class SendToUnderwritingTest extends BaseClass {
                 .executeScript("arguments[0].click();", driver.findElement(sendBtn));
 
         // Step 2: Wait for the confirmation modal and click the green confirm button
-        // Modal button text: "Send To Underwriting" (inside the dialog)
+        // Modal button text: "Send to Underwriting" (inside the dialog)
         By confirmBtn = By.xpath(
             "//div[contains(@class,'modal') or contains(@class,'dialog') or @role='dialog']" +
-            "//button[contains(normalize-space(.), 'Send To Underwriting')] | " +
-            "//button[contains(normalize-space(.), 'Send To Underwriting')]");
+            "//button[contains(translate(normalize-space(.), 'TO', 'to'), 'Send to Underwriting')] | " +
+            "//button[contains(translate(normalize-space(.), 'TO', 'to'), 'Send to Underwriting')]");
         wait.until(ExpectedConditions.elementToBeClickable(confirmBtn));
         System.out.println("[INFO] Confirmation modal appeared. Clicking confirm button...");
         ((org.openqa.selenium.JavascriptExecutor) driver)

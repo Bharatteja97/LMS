@@ -64,6 +64,11 @@ public class EmailUtil {
         return link;
     }
 
+    public static String getDealerLinkFromGmail(String username, String password) throws Exception {
+        // Look for an email with "Finance confirmation" in the subject
+        return getKycLinkFromEmail("imap.gmail.com", username, password, "Finance confirmation");
+    }
+
     /**
      * Connects to the IMAP server and retrieves the KYC verification link from the most recent emails.
      * Matches on the exact subject string {@link #KYC_EMAIL_SUBJECT}.

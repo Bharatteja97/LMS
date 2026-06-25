@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Surefire suite]" verbose="0">
-  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+<suite name="Failed suite [LOS Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Full End-to-End Flow(failed)" verbose="0">
     <classes>
-      <class name="tests.DealerConfirmationTest">
+      <class name="tests.OperationsTest">
         <methods>
           <include name="tearDown"/>
+          <include name="testDirectNavigation"/>
           <include name="suiteSetUp"/>
           <include name="classSetUp"/>
-          <include name="testDealerConfirmationFill"/>
           <include name="methodSetUp"/>
         </methods>
-      </class> <!-- tests.DealerConfirmationTest -->
+      </class> <!-- tests.OperationsTest -->
     </classes>
-  </test> <!-- Surefire test(failed) -->
-</suite> <!-- Failed suite [Surefire suite] -->
+  </test> <!-- Full End-to-End Flow(failed) -->
+</suite> <!-- Failed suite [LOS Test Suite] -->

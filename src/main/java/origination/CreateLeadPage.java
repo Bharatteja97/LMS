@@ -392,6 +392,13 @@ public class CreateLeadPage {
         selectState(state);
         selectCity(city);
         enterVehicleBrand(brand);
+        
+        // Wait briefly for any async autofills to finish, then forcefully re-enter the unique name
+        try {
+            Thread.sleep(3000);
+        } catch(Exception e) {}
+        enterName(name);
+
         submitLead();
     }
 }
