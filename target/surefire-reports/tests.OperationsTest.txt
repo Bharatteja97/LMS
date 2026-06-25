@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: tests.OperationsTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 123.0 s -- in tests.OperationsTest

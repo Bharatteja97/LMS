@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LOS Test Suite">
+    <test name="Origination Tests">
+        <classes>
+            <class name="tests.CreateLeadTest"/>
+            <class name="tests.LeadDetailsTest"/>
+            <class name="tests.KycPageTest"/>
+        </classes>
+    </test>
+</suite>

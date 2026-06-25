@@ -1,0 +1,7 @@
+origination\CreateLeadPage.class
+utils\EmailUtil.class
+pages\DashboardPage.class
+pages\HostingerMailPage.class
+origination\OriginationPage.class
+pages\KycVerificationPage.class
+origination\LeadDetailsPage.class
