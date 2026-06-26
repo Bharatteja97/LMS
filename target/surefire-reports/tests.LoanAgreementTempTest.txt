@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: tests.LoanAgreementTempTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 48.85 s -- in tests.LoanAgreementTempTest

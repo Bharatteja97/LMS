@@ -78,6 +78,13 @@
             <version>1.6.2</version>
         </dependency>
 
+        <!-- REST Assured for API testing -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -92,6 +99,8 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
+
+            
             
             <!-- Maven Surefire Plugin to execute TestNG suite -->
             <plugin>

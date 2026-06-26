@@ -7,10 +7,8 @@ import org.testng.annotations.Test;
 import operations.OperationsPage;
 import pages.LoanAgreementPage;
 
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.time.Duration;
@@ -43,35 +41,26 @@ public class LoanAgreementTest extends BaseClass {
             loanPage.confirmDispatchModal();
         }
 
-        // Extract Token and Tenant-ID to call GET API using JS Fetch
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        String realDocId = (String) js.executeScript("return window._realDigioDocId;");
-        if (realDocId == null || realDocId.trim().isEmpty()) {
-            System.out.println("[WARNING] Real Digio Doc ID not intercepted, attempting to read from error message...");
-            try {
-                driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(10));
-                String fetchScript = 
-                    "var callback = arguments[arguments.length - 1];" +
-                    "fetch('https://vehicle-product.alfinnext.com/api/los-vehicle/operation/loan-agreement?applicationId=" + appId + "', {" +
-                    "  headers: { 'Authorization': 'Bearer ' + (localStorage.getItem('token') || localStorage.getItem('access_token') || sessionStorage.getItem('token') || '') }" +
-                    "})" +
-                    ".then(response => response.text())" +
-                    ".then(text => callback(text))" +
-                    ".catch(err => callback(err.toString()));";
-                String body = (String) js.executeAsyncScript(fetchScript);
-                Matcher m = Pattern.compile("(DID[a-zA-Z0-9]{15,})").matcher(body);
-                if (m.find()) {
-                    realDocId = m.group(1);
-                    System.out.println("[INFO] Successfully extracted Doc ID from JS fetch error message: " + realDocId);
-                }
-            } catch (Exception e) {
-                System.out.println("[ERROR] Failed to fetch doc ID via JS: " + e.getMessage());
-            }
-            if (realDocId == null || realDocId.trim().isEmpty()) {
-                System.out.println("[WARNING] Falling back to mock.");
-                realDocId = "DID_MOCK_" + appId;
-            }
+        System.out.println("[INFO] Getting Token from browser cookies...");
+        org.openqa.selenium.Cookie tokenCookie = driver.manage().getCookieNamed("token");
+        String token = tokenCookie != null ? tokenCookie.getValue() : null;
+        
+        if (token == null || token.isEmpty()) {
+             System.out.println("[WARNING] Could not extract token from cookies. Using dummy token.");
+             token = "YOUR_BEARER_TOKEN";
+        }
+        
+        System.out.println("[INFO] Calling ApiUtils.getLoanAgreement...");
+        String responseBody = utils.ApiUtils.getLoanAgreement(Integer.parseInt(appId), token);
+        
+        String realDocId = null;
+        Matcher m = Pattern.compile("(DID[a-zA-Z0-9]{15,})").matcher(responseBody);
+        if (m.find()) {
+            realDocId = m.group(1);
+            System.out.println("[INFO] Successfully extracted Doc ID using ApiUtils: " + realDocId);
+        } else {
+            System.out.println("[WARNING] Falling back to mock.");
+            realDocId = "DID_MOCK_" + appId;
         }
         System.out.println("[INFO] Using Document ID for webhook: " + realDocId);
 
@@ -104,19 +93,19 @@ public class LoanAgreementTest extends BaseClass {
             "}" +
         "}";
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create("https://vehicle-product.alfinnext.com/api/los-vehicle/operation/esign-callback"))
+        Response response = RestAssured
+            .given()
+            .baseUri("https://vehicle-product.alfinnext.com")
             .header("Content-Type", "application/json")
-            .POST(HttpRequest.BodyPublishers.ofString(payload))
-            .build();
+            .body(payload)
+            .when()
+            .post("/api/los-vehicle/operation/esign-callback");
 
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println("[INFO] Webhook POST Response Status: " + response.statusCode());
-        System.out.println("[INFO] Webhook POST Response Body: " + response.body());
+        System.out.println("[INFO] Webhook POST Response Status: " + response.getStatusCode());
+        System.out.println("[INFO] Webhook POST Response Body: " + response.getBody().asPrettyString());
         
-        if (response.statusCode() != 200) {
-            throw new RuntimeException("Webhook failed with status " + response.statusCode());
+        if (response.getStatusCode() != 200) {
+            throw new RuntimeException("Webhook failed with status " + response.getStatusCode());
         }
 
         System.out.println("═══════════════════════════════════════════════════════════");
