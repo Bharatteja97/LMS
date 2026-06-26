@@ -87,7 +87,7 @@ public class OperationsPage {
     @FindBy(xpath = "//div[normalize-space(.)='Loan Agreement']")
     private WebElement tabLoanAgreement;
 
-    @FindBy(xpath = "//div[normalize-space(.)='Nach Registration' or normalize-space(.)='NACH Registration']")
+    @FindBy(xpath = "//div[normalize-space(.)='Nach Registration' or normalize-space(.)='NACH Registration' or normalize-space(.)='Nach Activation' or normalize-space(.)='NACH Activation']")
     private WebElement tabNachRegistration;
 
     @FindBy(xpath = "//div[normalize-space(.)='Repayment schedule' or normalize-space(.)='Repayment Schedule']")
@@ -289,7 +289,8 @@ public class OperationsPage {
     public void waitForDetailPageToLoad() {
         wait.until(ExpectedConditions.or(
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space(.)='Sanction']")),
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space(.)='Update status' or normalize-space(.)='Update Status']"))
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space(.)='Update status' or normalize-space(.)='Update Status']")),
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space(.)='Borrower Details']"))
         ));
     }
 

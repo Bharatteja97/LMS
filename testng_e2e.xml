@@ -11,6 +11,7 @@
             <class name="tests.DealerLetterTest"/>
             <class name="tests.DealerConfirmationTest"/>
             <class name="tests.LoanAgreementTest"/>
+            <class name="tests.NachRegistrationTest"/>
         </classes>
     </test>
 </suite>

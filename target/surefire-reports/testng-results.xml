@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-26T11:38:10 IST" name="Surefire suite" finished-at="2026-06-26T11:39:09 IST" duration-ms="59363">
+  <suite started-at="2026-06-26T16:46:32 IST" name="Surefire suite" finished-at="2026-06-26T16:46:45 IST" duration-ms="12689">
     <groups>
     </groups>
-    <test started-at="2026-06-26T11:38:10 IST" name="Surefire test" finished-at="2026-06-26T11:39:09 IST" duration-ms="59363">
-      <class name="tests.LoanAgreementTest">
-        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:tests.LoanAgreementTest@37e547da]" started-at="2026-06-26T11:37:38 IST" name="suiteSetUp" finished-at="2026-06-26T11:38:10 IST" duration-ms="32055" status="PASS">
+    <test started-at="2026-06-26T16:46:32 IST" name="Surefire test" finished-at="2026-06-26T16:46:45 IST" duration-ms="12689">
+      <class name="tests.NachRegistrationTest">
+        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:tests.NachRegistrationTest@3e3047e6]" started-at="2026-06-26T16:45:53 IST" name="suiteSetUp" finished-at="2026-06-26T16:46:32 IST" duration-ms="38959" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.LoanAgreementTest@37e547da]" started-at="2026-06-26T11:38:10 IST" name="classSetUp" finished-at="2026-06-26T11:38:10 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.NachRegistrationTest@3e3047e6]" started-at="2026-06-26T16:46:32 IST" name="classSetUp" finished-at="2026-06-26T16:46:32 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.LoanAgreementTest@37e547da]" started-at="2026-06-26T11:38:10 IST" name="methodSetUp" finished-at="2026-06-26T11:38:10 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.NachRegistrationTest@3e3047e6]" started-at="2026-06-26T16:46:32 IST" name="methodSetUp" finished-at="2026-06-26T16:46:32 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testDispatchAndSimulateESign()[pri:0, instance:tests.LoanAgreementTest@37e547da]" started-at="2026-06-26T11:38:10 IST" name="testDispatchAndSimulateESign" finished-at="2026-06-26T11:39:09 IST" duration-ms="59262" status="PASS">
+        <test-method signature="testNachRegistration()[pri:0, instance:tests.NachRegistrationTest@3e3047e6]" started-at="2026-06-26T16:46:32 IST" name="testNachRegistration" finished-at="2026-06-26T16:46:45 IST" duration-ms="12593" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDispatchAndSimulateESign -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoanAgreementTest@37e547da]" started-at="2026-06-26T11:39:09 IST" name="tearDown" finished-at="2026-06-26T11:39:10 IST" duration-ms="328" status="PASS">
+        </test-method> <!-- testNachRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.NachRegistrationTest@3e3047e6]" started-at="2026-06-26T16:46:45 IST" name="tearDown" finished-at="2026-06-26T16:46:45 IST" duration-ms="406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.LoanAgreementTest -->
+      </class> <!-- tests.NachRegistrationTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
