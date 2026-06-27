@@ -29,12 +29,25 @@ public class CreateLeadTest extends BaseClass {
 
         CreateLeadPage createLeadPage = new CreateLeadPage(driver);
 
-        String uniqueName = "Test User " + System.currentTimeMillis();
+        java.util.Random rng = new java.util.Random();
+        String vowels = "aeiou";
+        String consonants = "bcdfghjklmnprstvwy";
+        java.util.function.Supplier<String> namePart = () -> {
+            char[] c = consonants.toCharArray();
+            char[] v = vowels.toCharArray();
+            return "" + Character.toUpperCase(c[rng.nextInt(c.length)])
+                    + v[rng.nextInt(v.length)]
+                    + c[rng.nextInt(c.length)]
+                    + v[rng.nextInt(v.length)]
+                    + c[rng.nextInt(c.length)];
+        };
+        String uniqueName = namePart.get() + " " + namePart.get();
         System.setProperty("LEAD_NAME", uniqueName);
         System.out.println("[INFO] Generated unique Lead Name: " + uniqueName);
 
         // Generate a random PAN number (ABCDE + 4 random digits + E) to avoid duplicates
         String randomPan = "ABCDE" + String.format("%04d", new java.util.Random().nextInt(10000)) + "E";
+        System.setProperty("LEAD_PAN", randomPan);
         System.out.println("[INFO] Generated unique PAN: " + randomPan);
 
         createLeadPage.createNewLead(
@@ -51,6 +64,32 @@ public class CreateLeadTest extends BaseClass {
                 "Mumbai", // city
                 "Toyota" // vehicleBrand
         );
-        System.out.println("Lead creation script executed successfully.");
+        System.out.println("[INFO] Lead form submitted.");
+
+        // Wait for the Create New Lead modal to close
+        new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(15))
+                .until(org.openqa.selenium.support.ui.ExpectedConditions
+                        .invisibilityOfElementLocated(
+                                org.openqa.selenium.By.xpath("//h2[contains(text(),'Create New Lead')] | //h1[contains(text(),'Create New Lead')]")));
+        System.out.println("[INFO] Create New Lead modal closed — lead created successfully.");
+
+        // Navigate to list and click the first row — newest lead is always at the top
+        try { Thread.sleep(3000); } catch (InterruptedException ignored) {}
+        driver.get("https://lms.alfinnext.com/vehicle/origination?product=VEHICLE_LOAN");
+        try { Thread.sleep(3000); } catch (InterruptedException ignored) {}
+
+        org.openqa.selenium.WebElement firstRow = new org.openqa.selenium.support.ui.WebDriverWait(
+                driver, java.time.Duration.ofSeconds(15))
+                .until(org.openqa.selenium.support.ui.ExpectedConditions
+                        .elementToBeClickable(org.openqa.selenium.By.xpath("//tbody/tr[1]/td[2]")));
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", firstRow);
+        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+
+        String leadUrl = driver.getCurrentUrl();
+        String leadId = leadUrl.contains("/origination/")
+                ? leadUrl.split("/origination/")[1].split("\\?")[0]
+                : "";
+        System.setProperty("LEAD_ID", leadId);
+        System.out.println("[INFO] Captured LEAD_ID: " + leadId + " from URL: " + leadUrl);
     }
 }

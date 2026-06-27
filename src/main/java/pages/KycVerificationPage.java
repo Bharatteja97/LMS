@@ -152,13 +152,15 @@ public class KycVerificationPage {
             ((org.openqa.selenium.JavascriptExecutor) driver)
                     .executeScript("arguments[0].scrollIntoView({behavior:'instant',block:'center'});", element);
             Thread.sleep(300);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
         } catch (Exception ignored) {
         }
     }
 
     /**
      * Uploads a document to the n-th file input on the page.
-     * 
+     *
      * @param index            1-based index of the file input
      * @param absoluteFilePath Absolute path to the file to upload
      */
@@ -176,6 +178,9 @@ public class KycVerificationPage {
             fileInput.sendKeys(absoluteFilePath);
             System.out.println("[INFO] Successfully uploaded file to input index " + index);
             Thread.sleep(2000); // Allow time for upload to process visually
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            System.out.println("[WARN] Upload interrupted at index " + index);
         } catch (Exception e) {
             System.out.println("[ERROR] Failed to upload document at index " + index + ": " + e.getMessage());
         }
@@ -197,6 +202,9 @@ public class KycVerificationPage {
             fileInput.sendKeys(absoluteFilePath);
             System.out.println("[INFO] Successfully uploaded file for label " + labelText);
             Thread.sleep(2000);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            System.out.println("[WARN] Upload interrupted for label: " + labelText);
         } catch (Exception e) {
             System.out.println("[ERROR] Failed to upload document for label " + labelText + ": " + e.getMessage());
         }
@@ -204,14 +212,26 @@ public class KycVerificationPage {
 
     /**
      * Fills an input field based on its preceding label text.
+     * Skips hidden inputs so React state inputs do not cause a 30s timeout.
+     * Uses JS value setter so React number/text inputs register the change.
      */
     public void fillInputByLabel(String labelText, String value) {
         System.out.println("[INFO] Filling input for label: " + labelText);
-        String xpath = "//label[contains(normalize-space(.), '" + labelText + "')]/following::input[1]";
+        // [not(@type='hidden')] skips hidden React state inputs
+        String xpath = "//label[contains(normalize-space(.), '" + labelText
+                + "')]/following::input[not(@type='hidden')][1]";
         try {
             WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-            input.clear();
-            input.sendKeys(value);
+            scrollToElement(input);
+            // JS setter fires React synthetic events; sendKeys alone can miss them on number inputs
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                    "var el = arguments[0]; var val = arguments[1];" +
+                    "var setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;" +
+                    "setter.call(el, val);" +
+                    "el.dispatchEvent(new Event('input',  {bubbles:true}));" +
+                    "el.dispatchEvent(new Event('change', {bubbles:true}));",
+                    input, value);
+            System.out.println("[INFO] Successfully filled '" + labelText + "' with value: " + value);
         } catch (Exception e) {
             System.out.println("[ERROR] Failed to fill input for label " + labelText + ": " + e.getMessage());
         }
@@ -219,29 +239,33 @@ public class KycVerificationPage {
 
     /**
      * Selects an option from a dropdown (select) based on its preceding label.
+     * Uses JavaScript to set the value and fires both 'input' and 'change' events
+     * so React's synthetic event system picks up the change.
      */
-    public void selectDropdownByLabel(String labelText, String visibleText) {
-        System.out.println("[INFO] Selecting '" + visibleText + "' for dropdown: " + labelText);
+    public void selectDropdownByLabel(String labelText, String value) {
+        System.out.println("[INFO] Selecting '" + value + "' for dropdown: " + labelText);
         String xpath = "//label[contains(normalize-space(.), '" + labelText + "')]/following::select[1]";
         try {
             WebElement selectElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            scrollToElement(selectElement);
 
-            // Click the select element to open it
-            selectElement.click();
-            Thread.sleep(500); // Give it a brief moment
-
-            // Find and click the specific option
-            String optionXpath = ".//option[normalize-space(text())='" + visibleText + "']";
-            WebElement option = selectElement.findElement(By.xpath(optionXpath));
-            option.click();
-
-            // Force React's change event just in case
+            // Use JavaScript to set value and trigger React-compatible events.
+            // NOTE: 'newVal' is used instead of 'value' to avoid shadowing
+            // HTMLSelectElement.value in the nativeInputValueSetter call.
             ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
-                    "var evt = new Event('change', { bubbles: true }); " +
-                            "arguments[0].dispatchEvent(evt);",
-                    selectElement);
+                    "var select = arguments[0];" +
+                    "var newVal = arguments[1];" +
+                    "var setter = Object.getOwnPropertyDescriptor(window.HTMLSelectElement.prototype, 'value').set;" +
+                    "setter.call(select, newVal);" +
+                    "select.dispatchEvent(new Event('input',  { bubbles: true }));" +
+                    "select.dispatchEvent(new Event('change', { bubbles: true }));",
+                    selectElement, value);
 
-            System.out.println("[INFO] Successfully selected '" + visibleText + "'");
+            Thread.sleep(500);
+            System.out.println("\u2705 Selected '" + value + "' for dropdown label '" + labelText + "'");
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            System.out.println("[WARN] selectDropdownByLabel interrupted for label: " + labelText);
         } catch (Exception e) {
             System.out.println("[ERROR] Failed to select dropdown for label " + labelText + ": " + e.getMessage());
         }
@@ -260,18 +284,23 @@ public class KycVerificationPage {
 
             scrollToElement(selectElement);
 
-            // Use JavaScript to set value and trigger React-compatible events
+            // Use JavaScript to set value and trigger React-compatible events.
+            // NOTE: 'newVal' is used instead of 'value' to avoid shadowing
+            // HTMLSelectElement.value in the native setter call.
             ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
                     "var select = arguments[0];" +
-                    "var value  = arguments[1];" +
-                    "var nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLSelectElement.prototype, 'value').set;" +
-                    "nativeInputValueSetter.call(select, value);" +
+                    "var newVal = arguments[1];" +
+                    "var setter = Object.getOwnPropertyDescriptor(window.HTMLSelectElement.prototype, 'value').set;" +
+                    "setter.call(select, newVal);" +
                     "select.dispatchEvent(new Event('input',  { bubbles: true }));" +
                     "select.dispatchEvent(new Event('change', { bubbles: true }));",
                     selectElement, value);
 
             Thread.sleep(500);
             System.out.println("\u2705 Selected '" + value + "' from dropdown '" + name + "'");
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            System.out.println("[WARN] selectDropdownByNameAndValue interrupted for name: " + name);
         } catch (Exception e) {
             System.out.println("\u26a0\ufe0f Failed to select Dropdown '" + name + "': " + e.getMessage());
         }
@@ -283,45 +312,46 @@ public class KycVerificationPage {
     public void clickButtonNearLabel(String labelText, String buttonText) {
         System.out.println("[INFO] Clicking '" + buttonText + "' near label: " + labelText);
         String xpath = "//label[contains(normalize-space(.), '" + labelText
-                + "')]/following::button[contains(normalize-space(.),'" + buttonText + "')][1]";
+                + "')]/following::button[contains(normalize-space(.), '" + buttonText + "')][1]";
         try {
             WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+            scrollToElement(btn);
             ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+            System.out.println("[INFO] Successfully clicked '" + buttonText + "' near label '" + labelText + "'");
         } catch (Exception e) {
             System.out.println("[ERROR] Failed to click button '" + buttonText + "' near label " + labelText + ": "
                     + e.getMessage());
         }
     }
 
-    /**
-     * Handles any unexpected alerts (like "Pan Validation Failed")
-     */
+    // Handles any unexpected alerts. Uses a 3-second timeout so valid PAN (no alert) does not add a 30s delay.
     public void handleAlertIfExists() {
         try {
-            org.openqa.selenium.Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(3));
+            org.openqa.selenium.Alert alert = shortWait.until(ExpectedConditions.alertIsPresent());
             System.out.println("[INFO] Handling alert: " + alert.getText());
             alert.accept();
-        } catch (org.openqa.selenium.TimeoutException | org.openqa.selenium.NoAlertPresentException e) {
-            // No alert present, ignore
+        } catch (Exception e) {
+            // No alert present - move on immediately
         }
     }
 
-    /**
-     * Handles the 'Validate Bank Statement' modal that appears after uploading a
-     * bank statement.
-     * Clicks the 'Validate Statement' button, leaving the password empty for
-     * non-protected PDFs.
-     */
+    // Clicks 'Validate Statement' in the bank statement modal.
+    // Uses a 10-second timeout so it skips if the modal does not appear.
     public void clickValidateStatement() {
         System.out.println("[INFO] Waiting for 'Validate Bank Statement' modal...");
         String xpath = "//button[contains(normalize-space(.), 'Validate Statement')]";
         try {
-            WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+            WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement btn = shortWait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
             ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
             System.out.println("[INFO] Clicked 'Validate Statement' button.");
-            Thread.sleep(2000); // Give it time to close the modal
+            Thread.sleep(2000);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            System.out.println("[WARN] clickValidateStatement interrupted.");
         } catch (Exception e) {
-            System.out.println("[ERROR] Failed to click 'Validate Statement': " + e.getMessage());
+            System.out.println("[INFO] Validate Statement modal not found - skipping.");
         }
     }
 
@@ -332,17 +362,21 @@ public class KycVerificationPage {
     public void closeModalIfOpen() {
         System.out.println("[INFO] Attempting to close any open modals...");
         try {
+            // Try to click the close (X) button, or remove the dialog from DOM as a fallback
             ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
                     "var dialog = document.querySelector('div[role=\"dialog\"]');" +
                             "if (dialog) {" +
                             "  var btns = dialog.querySelectorAll('button');" +
                             "  if (btns.length > 0) {" +
-                            "    btns[0].click();" + // The X button is usually the first button
+                            "    btns[0].click();" +
                             "  } else {" +
-                            "    dialog.remove();" + // Fallback: just delete the modal from DOM
+                            "    dialog.remove();" +
                             "  }" +
                             "}");
-            Thread.sleep(1000); // Give time for animation
+            Thread.sleep(1000);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            System.out.println("[WARN] closeModalIfOpen interrupted.");
         } catch (Exception e) {
             System.out.println("[INFO] Could not close modal: " + e.getMessage());
         }

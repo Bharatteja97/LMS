@@ -1,0 +1,16 @@
+tests\UnderWritingTest.class
+tests\NachRegistrationTest.class
+tests\CheckEmails.class
+tests\SendToUnderwritingTest.class
+tests\KycPageTest.class
+tests\LeadDetailsTest.class
+tests\LoanAgreementTest.class
+tests\DealerConfirmationTest.class
+tests\OperationsTest.class
+tests\DealerLetterTest.class
+tests\SanctionLetterTest.class
+tests\CreateLeadTest.class
+tests\DisbursementTest.class
+tests\LoanAgreementTempTest.class
+tests\DealerConfirmationTempTest.class
+tests\ProcessingFeeTest.class

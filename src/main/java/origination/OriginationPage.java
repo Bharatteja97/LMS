@@ -47,13 +47,13 @@ public class OriginationPage {
         By firstRowLocator = By.xpath("//tbody/tr[1]/td[2]"); // Clicking 2nd column just in case 1st is a checkbox
         WebElement firstRow = wait.until(ExpectedConditions.elementToBeClickable(firstRowLocator));
         
-        // Scroll to element and click
+        // Scroll and JS-click to avoid ElementClickInterceptedException from overlapping elements
         ((org.openqa.selenium.JavascriptExecutor) driver)
                 .executeScript("arguments[0].scrollIntoView({behavior: 'instant', block: 'center'});", firstRow);
         try {
             Thread.sleep(200);
         } catch (InterruptedException ignored) {}
 
-        firstRow.click();
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", firstRow);
     }
 }

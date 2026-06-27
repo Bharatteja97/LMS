@@ -50,17 +50,22 @@ public class LoanAgreementTest extends BaseClass {
              token = "YOUR_BEARER_TOKEN";
         }
         
-        System.out.println("[INFO] Calling ApiUtils.getLoanAgreement...");
-        String responseBody = utils.ApiUtils.getLoanAgreement(Integer.parseInt(appId), token);
-        
+        System.out.println("[INFO] Calling ApiUtils.getLoanAgreement (with retry)...");
         String realDocId = null;
-        Matcher m = Pattern.compile("(DID[a-zA-Z0-9]{15,})").matcher(responseBody);
-        if (m.find()) {
-            realDocId = m.group(1);
-            System.out.println("[INFO] Successfully extracted Doc ID using ApiUtils: " + realDocId);
-        } else {
-            System.out.println("[WARNING] Falling back to mock.");
-            realDocId = "DID_MOCK_" + appId;
+        for (int attempt = 1; attempt <= 6 && realDocId == null; attempt++) {
+            Thread.sleep(5000); // wait before each attempt for backend to generate the doc
+            String responseBody = utils.ApiUtils.getLoanAgreement(Integer.parseInt(appId), token);
+            System.out.println("[DEBUG] Attempt " + attempt + " - Response: " + responseBody);
+            Matcher m = Pattern.compile("(DID[a-zA-Z0-9]{15,})").matcher(responseBody);
+            if (m.find()) {
+                realDocId = m.group(1);
+                System.out.println("[INFO] Successfully extracted Doc ID using ApiUtils: " + realDocId);
+            } else {
+                System.out.println("[INFO] Doc ID not found yet (attempt " + attempt + "/6). Retrying...");
+            }
+        }
+        if (realDocId == null) {
+            throw new RuntimeException("Could not retrieve Loan Agreement Doc ID after 6 attempts. Check dispatch step.");
         }
         System.out.println("[INFO] Using Document ID for webhook: " + realDocId);
 

@@ -45,18 +45,22 @@ public class NachRegistrationTest extends BaseClass {
              token = "YOUR_BEARER_TOKEN";
         }
 
-        System.out.println("[INFO] Calling ApiUtils.getMandateDetails...");
-        String responseBody = ApiUtils.getMandateDetails(Integer.parseInt(appId), token);
-        System.out.println("[DEBUG] Mandate Details API Response: " + responseBody);
-        
+        System.out.println("[INFO] Calling ApiUtils.getMandateDetails (with retry)...");
         String mandateId = null;
-        Matcher m = Pattern.compile("\"mandateId\"\\s*:\\s*\"([A-Z0-9]{20,})\"").matcher(responseBody);
-        if (m.find()) {
-            mandateId = m.group(1);
-            System.out.println("[INFO] Successfully extracted Mandate ID using ApiUtils: " + mandateId);
-        } else {
-            System.out.println("[WARNING] Falling back to mock mandate ID.");
-            mandateId = "ENA_MOCK_" + appId;
+        for (int attempt = 1; attempt <= 6 && mandateId == null; attempt++) {
+            try { Thread.sleep(5000); } catch (InterruptedException ignored) {}
+            String responseBody = ApiUtils.getMandateDetails(Integer.parseInt(appId), token);
+            System.out.println("[DEBUG] Attempt " + attempt + " - Mandate Details Response: " + responseBody);
+            Matcher m = Pattern.compile("\"mandateId\"\\s*:\\s*\"([A-Za-z0-9_\\-]{10,})\"").matcher(responseBody);
+            if (m.find()) {
+                mandateId = m.group(1);
+                System.out.println("[INFO] Successfully extracted Mandate ID: " + mandateId);
+            } else {
+                System.out.println("[INFO] Mandate ID not found yet (attempt " + attempt + "/6). Retrying...");
+            }
+        }
+        if (mandateId == null) {
+            throw new RuntimeException("Could not retrieve Mandate ID after 6 attempts. Check E-Mandate creation step.");
         }
         
         System.out.println("[INFO] Using Mandate ID for webhook: " + mandateId);
