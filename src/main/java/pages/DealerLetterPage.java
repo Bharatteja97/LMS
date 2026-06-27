@@ -23,7 +23,7 @@ public class DealerLetterPage {
     @FindBy(xpath = "//input[@type='email' or contains(translate(@placeholder,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'email') or @name='email']")
     private WebElement emailInput;
 
-    @FindBy(xpath = "//div[@role='dialog']//button[normalize-space(.)='Dispatch' or normalize-space(.)='Send' or normalize-space(.)='Submit' or normalize-space(.)='Save'] | //button[contains(@class,'submit') and not(contains(@class,'hidden'))]")
+    @FindBy(xpath = "//div[@role='dialog']//button[contains(normalize-space(.),'Dispatch Mail') or contains(normalize-space(.),'Dispatch mail') or contains(normalize-space(.),'Dispatch') or contains(normalize-space(.),'Send')]")
     private WebElement modalDispatchBtn;
 
     public DealerLetterPage(WebDriver driver) {
@@ -53,40 +53,39 @@ public class DealerLetterPage {
     }
 
     public void clickDispatchMailToDealer() {
-        wait.until(ExpectedConditions.elementToBeClickable(dispatchMailToDealerBtn));
-        js.executeScript("arguments[0].scrollIntoView({behavior:'instant',block:'center'});", dispatchMailToDealerBtn);
-        js.executeScript("arguments[0].click();", dispatchMailToDealerBtn);
+        By btnLocator = By.xpath(
+            "//button[contains(normalize-space(.),'Dispatch mail') or contains(normalize-space(.),'Dispatch Mail')]");
+        WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(btnLocator));
+        js.executeScript("arguments[0].scrollIntoView({behavior:'instant',block:'center'});", btn);
+        js.executeScript("arguments[0].click();", btn);
         System.out.println("[INFO] Clicked 'Dispatch mail to dealer/seller for bank details' button.");
         sleep(2000);
     }
 
     public void enterEmailAndDispatch(String email) {
+        By emailLocator = By.xpath(
+            "//div[@role='dialog']//input[@type='email' " +
+            "or contains(translate(@placeholder,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'email') " +
+            "or @name='email']");
+        By dispatchLocator = By.xpath(
+            "//div[@role='dialog']//button[contains(normalize-space(.),'Dispatch Mail') " +
+            "or contains(normalize-space(.),'Dispatch mail') " +
+            "or contains(normalize-space(.),'Dispatch') " +
+            "or contains(normalize-space(.),'Send')]");
+
         try {
-            wait.until(ExpectedConditions.visibilityOf(emailInput));
-            emailInput.clear();
-            emailInput.sendKeys(email);
+            WebElement emailEl = wait.until(ExpectedConditions.visibilityOfElementLocated(emailLocator));
+            emailEl.clear();
+            emailEl.sendKeys(email);
             System.out.println("[INFO] Entered email: " + email);
         } catch (Exception e) {
-            System.out.println("[WARN] Email input not found. If this is unexpected, verify the modal locator.");
+            System.out.println("[WARN] Email input not found.");
         }
-        
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(modalDispatchBtn));
-            js.executeScript("arguments[0].click();", modalDispatchBtn);
-            System.out.println("[INFO] Clicked Dispatch/Send/Submit in modal.");
-            sleep(3000);
-        } catch (Exception e) {
-            System.out.println("[WARN] Dispatch button in modal not found.");
-            try {
-                // ultimate fallback
-                ((JavascriptExecutor) driver).executeScript(
-                    "document.querySelectorAll('div[role=dialog] button').forEach(function(b){" +
-                    "  if(b.textContent.toLowerCase().includes('dispatch')){b.click();}" +
-                    "});"
-                );
-                sleep(3000);
-            } catch (Exception ex) {}
-        }
+
+        WebElement dispatchBtn = wait.until(ExpectedConditions.elementToBeClickable(dispatchLocator));
+        js.executeScript("arguments[0].click();", dispatchBtn);
+        System.out.println("[INFO] Clicked 'Dispatch Mail' button in modal.");
+        sleep(3000);
     }
 
     private void sleep(long ms) {

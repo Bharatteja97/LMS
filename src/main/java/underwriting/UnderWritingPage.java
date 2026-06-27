@@ -91,7 +91,7 @@ public class UnderWritingPage {
     // ════════════════════════════════════════════════════════════════════════════
 
     /** "Approve" button in the detail header */
-    @FindBy(xpath = "//button[normalize-space(.)='Approve']")
+    @FindBy(xpath = "//button[contains(normalize-space(.),'Approve') and not(contains(normalize-space(.),'Update'))]")
     private WebElement approveButton;
 
     /** "Update status" button in the detail header */
@@ -448,9 +448,10 @@ public class UnderWritingPage {
      * Waits for it to be clickable first.
      */
     public void clickApprove() {
-        wait.until(ExpectedConditions.elementToBeClickable(approveButton));
-        scrollToElement(approveButton);
-        jsClick(approveButton);
+        By approveLocator = By.xpath(
+            "//button[contains(normalize-space(.),'Approve') and not(contains(normalize-space(.),'Update'))]");
+        WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(approveLocator));
+        jsClick(btn);
         System.out.println("[INFO] Clicked 'Approve' button.");
         sleep(1500);
     }
@@ -1074,10 +1075,9 @@ public class UnderWritingPage {
     public void waitForDetailPageToLoad() {
         wait.until(ExpectedConditions.or(
                 ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//button[normalize-space(.)='Approve']")),
+                        By.xpath("//button[contains(normalize-space(.),'Approve') and not(contains(normalize-space(.),'Update'))]")),
                 ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//button[normalize-space(.)='Update status' " +
-                                 "or normalize-space(.)='Update Status']"))
+                        By.xpath("//button[contains(normalize-space(.),'Update status') or contains(normalize-space(.),'Update Status')]"))
         ));
         System.out.println("[INFO] Underwriting detail page loaded. URL: " + driver.getCurrentUrl());
     }
