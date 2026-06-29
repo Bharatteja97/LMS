@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Random;
 import java.util.Set;
 
 /**
@@ -39,6 +40,16 @@ public class ProcessingFeePage {
     private static final By BANK_OF_BARODA_OPTION  = By.xpath("//*[contains(text(),'Bank of Baroda') or contains(text(),'BOB') or @value='BARB']");
     private static final By PAY_BUTTON             = By.xpath("//button[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'pay')]");
     private static final By SUCCESS_BUTTON         = By.xpath("//button[contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'), 'success') or contains(@class, 'success') or @type='submit'] | //input[@type='submit']");
+
+    // ─── Wallet payment locators ─────────────────────────────────────────
+    private static final By WALLET_OPTION    = By.xpath(
+        "//p[normalize-space(text())='Wallet'] | //span[normalize-space(text())='Wallet'] | //div[normalize-space(text())='Wallet']");
+    private static final By MOBIKWIK_OPTION  = By.xpath(
+        "//p[normalize-space(text())='Mobikwik'] | //span[normalize-space(text())='Mobikwik'] | //button[contains(normalize-space(.),'Mobikwik')]");
+    private static final By OTP_INPUT        = By.cssSelector(
+        "input[placeholder*='OTP'], input[placeholder*='otp'], input[name='otp'], " +
+        "input[type='number'][maxlength='6'], input[type='number'][maxlength='4'], input[type='tel'][maxlength='6']");
+    private static final String WALLET_EMAIL = "bharat.teja@alphawarenext.com";
 
     // Razorpay checkout popup window title/URL fragment
     private static final String RAZORPAY_URL_FRAGMENT = "razorpay";
@@ -382,11 +393,24 @@ public class ProcessingFeePage {
             System.out.println("[INFO] Switched to new tab: " + driver.getCurrentUrl());
         }
 
-        // Step 3: Complete the Razorpay checkout in the new tab
+        // Step 3: Complete the Razorpay checkout via Wallet (Mobikwik) in the new tab
         Thread.sleep(2000);
+        String razorpayTabHandle = driver.getWindowHandle();
         switchToRazorpayIframe();
-        fillCheckoutAndPay(mobileNumber, email);
+        fillCheckoutAndPayViaWallet();
         driver.switchTo().defaultContent();
+
+        // Close the Razorpay tab and switch back to the original LMS tab
+        try {
+            driver.close();
+            Set<String> remaining = driver.getWindowHandles();
+            if (!remaining.isEmpty()) {
+                driver.switchTo().window(remaining.iterator().next());
+                System.out.println("[INFO] Closed Razorpay tab. Switched back to: " + driver.getCurrentUrl());
+            }
+        } catch (Exception e) {
+            System.out.println("[WARN] Could not close Razorpay tab: " + e.getMessage());
+        }
 
         System.out.println("═══════════════════════════════════════════════════════════");
         System.out.println("[PASS] LMS-direct payment completed successfully.");
@@ -427,6 +451,152 @@ public class ProcessingFeePage {
 
         // Handle the test bank simulator page
         handleTestBankSimulator();
+    }
+
+    /**
+     * Complete a Razorpay checkout using Wallet > Mobikwik.
+     *
+     * Flow (matches UI screenshots):
+     *  Step 1 — Contact details page: enter mobile → Continue  (stay in iframe)
+     *  Step 2 — Payment options: click Wallet row              (stay in iframe)
+     *  Step 3 — Click Mobikwik sub-option                     (stay in iframe)
+     *  Step 4 — Email dialog: clear autofill → WALLET_EMAIL → Continue
+     *            (tries iframe first, then defaultContent)
+     *  Step 5 — OTP screen: enter 4-digit OTP → Continue
+     *            (tries iframe first, then defaultContent)
+     */
+    private void fillCheckoutAndPayViaWallet() throws InterruptedException {
+        Thread.sleep(3000);
+
+        By continueBtn = By.xpath(
+            "//button[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'continue')]");
+
+        // ── Step 1: Contact details — mobile number (inside iframe) ───────────
+        System.out.println("[INFO] Step 1: Entering mobile number...");
+        By mobileLocator = By.xpath(
+            "//input[contains(@placeholder,'Mobile') or contains(@placeholder,'mobile') or @type='tel']");
+        try {
+            WebElement mobileEl = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(mobileLocator));
+            jsSetValue(mobileEl, "9704283625");
+            System.out.println("[INFO] Entered mobile: 9704283625");
+            Thread.sleep(500);
+            WebElement cont = wait.until(ExpectedConditions.elementToBeClickable(continueBtn));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cont);
+            System.out.println("[INFO] Clicked Continue after mobile.");
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            System.out.println("[INFO] Mobile step not present — already on payment options.");
+        }
+
+        // ── Step 2: Click Wallet row (inside iframe — do NOT switch frame) ────
+        System.out.println("[INFO] Step 2: Clicking Wallet section...");
+        try {
+            WebElement walletEl = new WebDriverWait(driver, Duration.ofSeconds(15))
+                .until(ExpectedConditions.elementToBeClickable(WALLET_OPTION));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", walletEl);
+            System.out.println("[INFO] Clicked Wallet — waiting for sub-options...");
+            Thread.sleep(2000);
+        } catch (Exception e) {
+            System.out.println("[WARN] Wallet section not found in current frame: " + e.getMessage());
+        }
+
+        // ── Step 3: Click Mobikwik (inside iframe — sub-options now visible) ──
+        System.out.println("[INFO] Step 3: Clicking Mobikwik...");
+        try {
+            WebElement mobEl = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(MOBIKWIK_OPTION));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", mobEl);
+            System.out.println("[INFO] Clicked Mobikwik — waiting for email dialog...");
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            System.out.println("[WARN] Mobikwik not found in current frame: " + e.getMessage());
+        }
+
+        // ── Step 4: Email dialog (may render outside iframe) ─────────────────
+        System.out.println("[INFO] Step 4: Handling Mobikwik email dialog...");
+        By emailLocator = By.xpath(
+            "//input[@type='email'] | " +
+            "//input[@placeholder='Email address'] | " +
+            "//input[contains(@placeholder,'mail') or contains(@placeholder,'Mail')]");
+        WebElement emailEl = findInCurrentOrDefault(emailLocator, "email input");
+        if (emailEl != null) {
+            jsSetValue(emailEl, WALLET_EMAIL);
+            System.out.println("[INFO] Set email: " + WALLET_EMAIL);
+            Thread.sleep(500);
+            WebElement cont = findInCurrentOrDefault(continueBtn, "Continue (email)");
+            if (cont != null) {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cont);
+                System.out.println("[INFO] Clicked Continue after email.");
+            }
+            Thread.sleep(3000);
+        } else {
+            System.out.println("[WARN] Email dialog not found in any frame.");
+        }
+
+        // ── Step 5: OTP screen ────────────────────────────────────────────────
+        System.out.println("[INFO] Step 5: Entering OTP...");
+        By otpLocator = By.xpath(
+            "//input[contains(@placeholder,'OTP') or contains(@placeholder,'otp') or @name='otp'] | " +
+            "//input[@type='number' and (@maxlength='6' or @maxlength='4')] | " +
+            "//input[@type='tel' and (@maxlength='6' or @maxlength='4')]");
+        WebElement otpEl = findInCurrentOrDefault(otpLocator, "OTP input");
+        if (otpEl != null) {
+            String otp = String.valueOf(1000 + new Random().nextInt(9000));
+            jsSetValue(otpEl, otp);
+            System.out.println("[INFO] Entered OTP: " + otp);
+            Thread.sleep(500);
+            WebElement cont = findInCurrentOrDefault(continueBtn, "Continue (OTP)");
+            if (cont != null) {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cont);
+                System.out.println("[INFO] Clicked Continue after OTP.");
+            }
+            Thread.sleep(3000);
+        } else {
+            System.out.println("[WARN] OTP input not found in any frame.");
+        }
+
+        System.out.println("[INFO] Wallet (Mobikwik) payment flow completed.");
+    }
+
+    /** Use the React-compatible native value setter to set a field value, then fire input+change. */
+    private void jsSetValue(WebElement el, String value) {
+        ((JavascriptExecutor) driver).executeScript(
+            "var el=arguments[0], v=arguments[1];" +
+            "var setter=Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set;" +
+            "setter.call(el,'');" +
+            "el.dispatchEvent(new Event('input',{bubbles:true}));" +
+            "setter.call(el,v);" +
+            "el.dispatchEvent(new Event('input',{bubbles:true}));" +
+            "el.dispatchEvent(new Event('change',{bubbles:true}));",
+            el, value);
+    }
+
+    /**
+     * Search for {@code locator} in the current frame first.
+     * If not found within 5 s, switch to defaultContent and try again.
+     * Returns the visible element, or null if not found in either context.
+     */
+    private WebElement findInCurrentOrDefault(By locator, String description) {
+        // Try current frame (likely iframe)
+        try {
+            WebElement el = new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
+            System.out.println("[INFO] Found '" + description + "' in current frame.");
+            return el;
+        } catch (Exception ignored) {}
+
+        // Fall back to default content (parent page)
+        try {
+            driver.switchTo().defaultContent();
+            WebElement el = new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
+            System.out.println("[INFO] Found '" + description + "' in default content.");
+            return el;
+        } catch (Exception e) {
+            System.out.println("[WARN] '" + description + "' not found in any frame: " + e.getMessage());
+            return null;
+        }
     }
 
     /**

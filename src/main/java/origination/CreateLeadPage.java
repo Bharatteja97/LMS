@@ -118,7 +118,14 @@ public class CreateLeadPage {
                 wait.until(ExpectedConditions.visibilityOf(element));
                 scrollToElement(element);
                 element.click();
-                element.clear();
+                // React-controlled inputs ignore native clear(); use the native value setter
+                // so React picks up the change event and resets internal state to empty.
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                    "var el = arguments[0];" +
+                    "var setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;" +
+                    "setter.call(el, '');" +
+                    "el.dispatchEvent(new Event('input', { bubbles: true }));",
+                    element);
                 element.sendKeys(text);
                 break;
             } catch (org.openqa.selenium.StaleElementReferenceException e) {
@@ -312,7 +319,25 @@ public class CreateLeadPage {
     }
 
     public void enterDownPayment(String downPayment) {
-        enterText(downPaymentInput, downPayment);
+        try {
+            WebElement el = wait.until(ExpectedConditions.visibilityOf(downPaymentInput));
+            scrollToElement(el);
+            el.click();
+            // React-controlled input: use native value setter so React picks up the change
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "var el = arguments[0], val = arguments[1];" +
+                "var setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;" +
+                "setter.call(el, '');" +
+                "el.dispatchEvent(new Event('input', { bubbles: true }));" +
+                "setter.call(el, val);" +
+                "el.dispatchEvent(new Event('input',  { bubbles: true }));" +
+                "el.dispatchEvent(new Event('change', { bubbles: true }));",
+                el, downPayment);
+            System.out.println("[INFO] Entered Down Payment: " + downPayment);
+        } catch (Exception e) {
+            System.out.println("[WARN] JS setter failed for Down Payment, falling back to sendKeys: " + e.getMessage());
+            enterText(downPaymentInput, downPayment);
+        }
     }
 
     public void enterTenure(String tenure) {
@@ -392,13 +417,6 @@ public class CreateLeadPage {
         selectState(state);
         selectCity(city);
         enterVehicleBrand(brand);
-        
-        // Wait briefly for any async autofills to finish, then forcefully re-enter the unique name
-        try {
-            Thread.sleep(3000);
-        } catch(Exception e) {}
-        enterName(name);
-
         submitLead();
     }
 }
