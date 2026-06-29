@@ -524,10 +524,33 @@ public class ProcessingFeePage {
             jsSetValue(emailEl, WALLET_EMAIL);
             System.out.println("[INFO] Set email: " + WALLET_EMAIL);
             Thread.sleep(500);
-            WebElement cont = findInCurrentOrDefault(continueBtn, "Continue (email)");
-            if (cont != null) {
-                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cont);
-                System.out.println("[INFO] Clicked Continue after email.");
+            // Use JS DOM traversal to click the button CLOSEST to the email field —
+            // avoids ambiguity with the Razorpay bottom "Continue" button.
+            Boolean clicked = (Boolean) ((JavascriptExecutor) driver).executeScript(
+                "var el = arguments[0];" +
+                "var parent = el.parentElement;" +
+                "while (parent) {" +
+                "  var buttons = parent.querySelectorAll('button');" +
+                "  for (var i = 0; i < buttons.length; i++) {" +
+                "    var b = buttons[i];" +
+                "    if (b.offsetParent !== null) {" +
+                "      b.click();" +
+                "      return true;" +
+                "    }" +
+                "  }" +
+                "  parent = parent.parentElement;" +
+                "}" +
+                "return false;",
+                emailEl);
+            if (Boolean.TRUE.equals(clicked)) {
+                System.out.println("[INFO] Clicked Continue (nearest button to email input).");
+            } else {
+                System.out.println("[WARN] No visible button found near email input — falling back.");
+                WebElement cont = findInCurrentOrDefault(continueBtn, "Continue (email)");
+                if (cont != null) {
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cont);
+                    System.out.println("[INFO] Clicked Continue (fallback).");
+                }
             }
             Thread.sleep(3000);
         } else {
@@ -537,7 +560,7 @@ public class ProcessingFeePage {
         // ── Step 5: OTP screen ────────────────────────────────────────────────
         System.out.println("[INFO] Step 5: Entering OTP...");
         By otpLocator = By.xpath(
-            "//input[contains(@placeholder,'OTP') or contains(@placeholder,'otp') or @name='otp'] | " +
+            "//input[contains(@placeholder,'OTP') or contains(@placeholder,'otp') or @name='otp' or contains(@placeholder,'Enter OTP')] | " +
             "//input[@type='number' and (@maxlength='6' or @maxlength='4')] | " +
             "//input[@type='tel' and (@maxlength='6' or @maxlength='4')]");
         WebElement otpEl = findInCurrentOrDefault(otpLocator, "OTP input");
@@ -546,10 +569,33 @@ public class ProcessingFeePage {
             jsSetValue(otpEl, otp);
             System.out.println("[INFO] Entered OTP: " + otp);
             Thread.sleep(500);
-            WebElement cont = findInCurrentOrDefault(continueBtn, "Continue (OTP)");
-            if (cont != null) {
-                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cont);
-                System.out.println("[INFO] Clicked Continue after OTP.");
+            // Use JS DOM traversal from the OTP input to click the nearest visible button —
+            // avoids matching the Razorpay checkout's other "Continue" buttons.
+            Boolean otpClicked = (Boolean) ((JavascriptExecutor) driver).executeScript(
+                "var el = arguments[0];" +
+                "var parent = el.parentElement;" +
+                "while (parent) {" +
+                "  var buttons = parent.querySelectorAll('button');" +
+                "  for (var i = 0; i < buttons.length; i++) {" +
+                "    var b = buttons[i];" +
+                "    if (b.offsetParent !== null) {" +
+                "      b.click();" +
+                "      return true;" +
+                "    }" +
+                "  }" +
+                "  parent = parent.parentElement;" +
+                "}" +
+                "return false;",
+                otpEl);
+            if (Boolean.TRUE.equals(otpClicked)) {
+                System.out.println("[INFO] Clicked Continue (nearest button to OTP input).");
+            } else {
+                System.out.println("[WARN] No visible button near OTP input — falling back.");
+                WebElement cont = findInCurrentOrDefault(continueBtn, "Continue (OTP)");
+                if (cont != null) {
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cont);
+                    System.out.println("[INFO] Clicked Continue after OTP (fallback).");
+                }
             }
             Thread.sleep(3000);
         } else {
