@@ -24,6 +24,7 @@ public class ProcessingFeePage {
     private final WebDriver driver;
     private final WebDriverWait wait;
     private final WebDriverWait longWait;
+    private final WebDriverWait shortWait;
 
     // ─── Main page locators ───────────────────────────────────────────────
     private static final By PAY_NOW_BUTTON = By.xpath(
@@ -46,9 +47,6 @@ public class ProcessingFeePage {
         "//p[normalize-space(text())='Wallet'] | //span[normalize-space(text())='Wallet'] | //div[normalize-space(text())='Wallet']");
     private static final By MOBIKWIK_OPTION  = By.xpath(
         "//p[normalize-space(text())='Mobikwik'] | //span[normalize-space(text())='Mobikwik'] | //button[contains(normalize-space(.),'Mobikwik')]");
-    private static final By OTP_INPUT        = By.cssSelector(
-        "input[placeholder*='OTP'], input[placeholder*='otp'], input[name='otp'], " +
-        "input[type='number'][maxlength='6'], input[type='number'][maxlength='4'], input[type='tel'][maxlength='6']");
     private static final String WALLET_EMAIL = "bharat.teja@alphawarenext.com";
 
     // Razorpay checkout popup window title/URL fragment
@@ -58,8 +56,9 @@ public class ProcessingFeePage {
 
     public ProcessingFeePage(WebDriver driver) {
         this.driver = driver;
-        this.wait     = new WebDriverWait(driver, Duration.ofSeconds(30));
-        this.longWait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        this.wait      = new WebDriverWait(driver, Duration.ofSeconds(30));
+        this.longWait  = new WebDriverWait(driver, Duration.ofSeconds(60));
+        this.shortWait = new WebDriverWait(driver, Duration.ofSeconds(4));
     }
 
     // ─────────────────────────────────────────────────────────────────────
@@ -161,7 +160,7 @@ public class ProcessingFeePage {
         String url = String.format(LMS_PROCESSING_FEE_URL, applicationId);
         System.out.println("[INFO] Navigating to LMS Processing Fee tab: " + url);
         driver.get(url);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         System.out.println("[INFO] Current URL: " + driver.getCurrentUrl());
     }
 
@@ -197,7 +196,7 @@ public class ProcessingFeePage {
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", modalDispatchBtn);
                 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", modalDispatchBtn);
                 System.out.println("[INFO] Clicked 'Dispatch' on the modal.");
-                Thread.sleep(3000); // wait for dispatch to complete
+                Thread.sleep(2000); // wait for dispatch to complete
             } catch (Exception e) {
                 System.out.println("[WARN] No dispatch modal appeared or failed to click: " + e.getMessage());
             }
@@ -216,23 +215,17 @@ public class ProcessingFeePage {
     public String getPaymentLinkFromLmsPage() {
         System.out.println("[INFO] Extracting payment link from LMS Processing Fee tab...");
 
-        // Strategy 1: input element whose value is a rzp/razorpay URL
-        String[] inputXpaths = {
-            "//input[contains(@value,'rzp')]",
-            "//input[contains(@value,'razorpay')]",
-            "//input[contains(@value,'payment-link')]",
-            "//input[@readonly and contains(@value,'http')]"
-        };
-        for (String xpath : inputXpaths) {
-            try {
-                WebElement el = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
-                String val = el.getAttribute("value");
-                if (val != null && !val.trim().isEmpty()) {
-                    System.out.println("[INFO] Found payment link (input value): " + val.trim());
-                    return val.trim();
-                }
-            } catch (Exception ignored) {}
-        }
+        // Strategy 1: input element whose value is a rzp/razorpay URL (single wait, combined OR)
+        try {
+            WebElement el = shortWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(
+                "//input[contains(@value,'rzp') or contains(@value,'razorpay') " +
+                "or contains(@value,'payment-link') or (@readonly and contains(@value,'http'))]")));
+            String val = el.getAttribute("value");
+            if (val != null && !val.trim().isEmpty()) {
+                System.out.println("[INFO] Found payment link (input value): " + val.trim());
+                return val.trim();
+            }
+        } catch (Exception ignored) {}
 
         // Strategy 2: anchor tag or text element containing rzp URL
         String[] textXpaths = {
@@ -258,19 +251,19 @@ public class ProcessingFeePage {
 
         // Strategy 3: JS full-page scan of all inputs and anchors
         try {
-            String jsResult = (String) ((JavascriptExecutor) driver).executeScript(
-                "var inputs = document.querySelectorAll('input');" +
-                "for(var i=0;i<inputs.length;i++){" +
-                "  var v=inputs[i].value||'';" +
-                "  if(v.includes('rzp')||v.includes('razorpay')||v.includes('payment-link')){return v;}" +
-                "}" +
-                "var links=document.querySelectorAll('a');" +
-                "for(var j=0;j<links.length;j++){" +
-                "  var h=links[j].href||'';" +
-                "  if(h.includes('rzp')||h.includes('razorpay')){return h;}" +
-                "}" +
-                "return null;"
-            );
+            String jsResult = (String) ((JavascriptExecutor) driver).executeScript("""
+                var inputs = document.querySelectorAll('input');
+                for(var i=0;i<inputs.length;i++){
+                  var v=inputs[i].value||'';
+                  if(v.includes('rzp')||v.includes('razorpay')||v.includes('payment-link')){return v;}
+                }
+                var links=document.querySelectorAll('a');
+                for(var j=0;j<links.length;j++){
+                  var h=links[j].href||'';
+                  if(h.includes('rzp')||h.includes('razorpay')){return h;}
+                }
+                return null;
+                """);
             if (jsResult != null && !jsResult.isEmpty()) {
                 System.out.println("[INFO] Found payment link (JS scan): " + jsResult);
                 return jsResult;
@@ -293,42 +286,70 @@ public class ProcessingFeePage {
         System.out.println("[INFO] Clicking 'Open in new tab' icon for payment link...");
         Set<String> beforeHandles = driver.getWindowHandles();
 
+        // Ancestor traversal works regardless of how many wrapper divs React inserts
+        // between the input and the button — unlike following-sibling which requires direct siblings.
         String[] iconXpaths = {
-            // The last button sibling after the rzp input field
             "(//input[contains(@value,'rzp') or contains(@value,'razorpay')]" +
-            "/following-sibling::button)[last()]",
-            // Span/div wrapping the button next to the input
+            "/ancestor::div[1]//button)[last()]",
             "(//input[contains(@value,'rzp') or contains(@value,'razorpay')]" +
-            "/following-sibling::span//button)[last()]",
-            // Direct anchor tag linking to rzp
-            "//a[contains(@href,'rzp.io') or contains(@href,'razorpay')]",
-            // Aria-label based (generic)
-            "//*[@aria-label='Open link' or @aria-label='Open in new tab' or @title='Open']"
+            "/ancestor::div[2]//button)[last()]",
+            "(//input[contains(@value,'rzp') or contains(@value,'razorpay')]" +
+            "/ancestor::div[3]//button)[last()]",
+            "//*[@aria-label='Open link' or @aria-label='Open in new tab' " +
+            "or @title='Open' or @title='Open link']",
+            "//a[contains(@href,'rzp.io') or contains(@href,'razorpay')]"
         };
 
         for (String xpath : iconXpaths) {
             try {
-                WebElement icon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+                WebElement icon = shortWait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", icon);
-                System.out.println("[INFO] Clicked external link icon.");
-                Thread.sleep(2000);
-                break;
+                Thread.sleep(1500);
+                // Only stop if this click actually opened a new tab — otherwise keep trying
+                Set<String> current = driver.getWindowHandles();
+                if (current.size() > beforeHandles.size()) {
+                    for (String handle : current) {
+                        if (!beforeHandles.contains(handle)) {
+                            driver.switchTo().window(handle);
+                            System.out.println("[INFO] Switched to new tab via: " + xpath);
+                            return true;
+                        }
+                    }
+                }
+                System.out.println("[INFO] Clicked icon but no new tab — trying next xpath...");
             } catch (Exception ignored) {}
         }
 
-        // Check if new tab appeared
-        Set<String> afterHandles = driver.getWindowHandles();
-        if (afterHandles.size() > beforeHandles.size()) {
-            for (String handle : afterHandles) {
-                if (!beforeHandles.contains(handle)) {
-                    driver.switchTo().window(handle);
-                    System.out.println("[INFO] Switched to new tab: " + driver.getCurrentUrl());
-                    return true;
+        // JS fallback: read the rzp link from the input and open it directly —
+        // guarantees a new tab even if no button XPath matched.
+        System.out.println("[INFO] Button click did not open a tab — trying JS window.open fallback...");
+        try {
+            String linkValue = (String) ((JavascriptExecutor) driver).executeScript("""
+                var inputs = document.querySelectorAll('input');
+                for(var i = 0; i < inputs.length; i++){
+                  var v = inputs[i].value || '';
+                  if(v.includes('rzp') || v.includes('razorpay')) return v;
+                }
+                return null;
+                """);
+            if (linkValue != null && !linkValue.isEmpty()) {
+                System.out.println("[INFO] Opening link via JS: " + linkValue);
+                ((JavascriptExecutor) driver).executeScript("window.open(arguments[0], '_blank');", linkValue);
+                Thread.sleep(1500);
+                Set<String> afterHandles = driver.getWindowHandles();
+                for (String handle : afterHandles) {
+                    if (!beforeHandles.contains(handle)) {
+                        driver.switchTo().window(handle);
+                        System.out.println("[INFO] Switched to new tab (JS fallback): " + driver.getCurrentUrl());
+                        return true;
+                    }
                 }
             }
+        } catch (Exception e) {
+            System.out.println("[WARN] JS window.open fallback failed: " + e.getMessage());
         }
 
-        System.out.println("[WARN] No new tab opened by icon click.");
+        System.out.println("[WARN] No new tab opened.");
         return false;
     }
 
@@ -350,17 +371,16 @@ public class ProcessingFeePage {
 
         // Step 1: Go to the LMS Processing Fee tab
         navigateToLmsProcessingFeeTab(applicationId);
-        Thread.sleep(2000);
 
         // Dispatch Processing Fee Link first so the system generates it
         clickDispatchProcessingFeeLink();
-        
+
         System.out.println("[INFO] Waiting for link to be generated...");
-        Thread.sleep(5000); // Give backend time to generate payment link
-        
+        Thread.sleep(3000); // Give backend time to generate payment link
+
         // Refresh page so the new payment record appears in the table
         driver.navigate().refresh();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Step 2: Click the external-link icon to open the payment link in a new tab
         boolean newTabOpened = clickOpenPaymentLinkInNewTab();
@@ -395,7 +415,6 @@ public class ProcessingFeePage {
 
         // Step 3: Complete the Razorpay checkout via Wallet (Mobikwik) in the new tab
         Thread.sleep(2000);
-        String razorpayTabHandle = driver.getWindowHandle();
         switchToRazorpayIframe();
         fillCheckoutAndPayViaWallet();
         driver.switchTo().defaultContent();
@@ -526,21 +545,22 @@ public class ProcessingFeePage {
             Thread.sleep(500);
             // Use JS DOM traversal to click the button CLOSEST to the email field —
             // avoids ambiguity with the Razorpay bottom "Continue" button.
-            Boolean clicked = (Boolean) ((JavascriptExecutor) driver).executeScript(
-                "var el = arguments[0];" +
-                "var parent = el.parentElement;" +
-                "while (parent) {" +
-                "  var buttons = parent.querySelectorAll('button');" +
-                "  for (var i = 0; i < buttons.length; i++) {" +
-                "    var b = buttons[i];" +
-                "    if (b.offsetParent !== null) {" +
-                "      b.click();" +
-                "      return true;" +
-                "    }" +
-                "  }" +
-                "  parent = parent.parentElement;" +
-                "}" +
-                "return false;",
+            Boolean clicked = (Boolean) ((JavascriptExecutor) driver).executeScript("""
+                var el = arguments[0];
+                var parent = el.parentElement;
+                while (parent) {
+                  var buttons = parent.querySelectorAll('button');
+                  for (var i = 0; i < buttons.length; i++) {
+                    var b = buttons[i];
+                    if (b.offsetParent !== null) {
+                      b.click();
+                      return true;
+                    }
+                  }
+                  parent = parent.parentElement;
+                }
+                return false;
+                """,
                 emailEl);
             if (Boolean.TRUE.equals(clicked)) {
                 System.out.println("[INFO] Clicked Continue (nearest button to email input).");
@@ -571,21 +591,22 @@ public class ProcessingFeePage {
             Thread.sleep(500);
             // Use JS DOM traversal from the OTP input to click the nearest visible button —
             // avoids matching the Razorpay checkout's other "Continue" buttons.
-            Boolean otpClicked = (Boolean) ((JavascriptExecutor) driver).executeScript(
-                "var el = arguments[0];" +
-                "var parent = el.parentElement;" +
-                "while (parent) {" +
-                "  var buttons = parent.querySelectorAll('button');" +
-                "  for (var i = 0; i < buttons.length; i++) {" +
-                "    var b = buttons[i];" +
-                "    if (b.offsetParent !== null) {" +
-                "      b.click();" +
-                "      return true;" +
-                "    }" +
-                "  }" +
-                "  parent = parent.parentElement;" +
-                "}" +
-                "return false;",
+            Boolean otpClicked = (Boolean) ((JavascriptExecutor) driver).executeScript("""
+                var el = arguments[0];
+                var parent = el.parentElement;
+                while (parent) {
+                  var buttons = parent.querySelectorAll('button');
+                  for (var i = 0; i < buttons.length; i++) {
+                    var b = buttons[i];
+                    if (b.offsetParent !== null) {
+                      b.click();
+                      return true;
+                    }
+                  }
+                  parent = parent.parentElement;
+                }
+                return false;
+                """,
                 otpEl);
             if (Boolean.TRUE.equals(otpClicked)) {
                 System.out.println("[INFO] Clicked Continue (nearest button to OTP input).");
@@ -607,14 +628,15 @@ public class ProcessingFeePage {
 
     /** Use the React-compatible native value setter to set a field value, then fire input+change. */
     private void jsSetValue(WebElement el, String value) {
-        ((JavascriptExecutor) driver).executeScript(
-            "var el=arguments[0], v=arguments[1];" +
-            "var setter=Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set;" +
-            "setter.call(el,'');" +
-            "el.dispatchEvent(new Event('input',{bubbles:true}));" +
-            "setter.call(el,v);" +
-            "el.dispatchEvent(new Event('input',{bubbles:true}));" +
-            "el.dispatchEvent(new Event('change',{bubbles:true}));",
+        ((JavascriptExecutor) driver).executeScript("""
+            var el=arguments[0], v=arguments[1];
+            var setter=Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set;
+            setter.call(el,'');
+            el.dispatchEvent(new Event('input',{bubbles:true}));
+            setter.call(el,v);
+            el.dispatchEvent(new Event('input',{bubbles:true}));
+            el.dispatchEvent(new Event('change',{bubbles:true}));
+            """,
             el, value);
     }
 
@@ -682,11 +704,11 @@ public class ProcessingFeePage {
         } catch (Exception e) {
             System.out.println("[WARN] Success button not found on simulator. Trying JS fallback...");
             try {
-                ((JavascriptExecutor) driver).executeScript(
-                    "document.querySelectorAll('button, input[type=submit]').forEach(function(b){" +
-                    "  if(b.textContent.toLowerCase().includes('success') || (b.value && b.value.toLowerCase().includes('success')) || b.type === 'submit' || b.className.includes('success')){b.click();}" +
-                    "});"
-                );
+                ((JavascriptExecutor) driver).executeScript("""
+                    document.querySelectorAll('button, input[type=submit]').forEach(function(b){
+                      if(b.textContent.toLowerCase().includes('success') || (b.value && b.value.toLowerCase().includes('success')) || b.type === 'submit' || b.className.includes('success')){b.click();}
+                    });
+                    """);
                 Thread.sleep(3000);
             } catch (Exception ex) {
                 System.out.println("[ERROR] Could not click success on simulator: " + ex.getMessage());
@@ -752,7 +774,7 @@ public class ProcessingFeePage {
      */
     private void fillFieldIfPresent(By locator, String value, String fieldName) {
         try {
-            WebElement field = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            WebElement field = shortWait.until(ExpectedConditions.presenceOfElementLocated(locator));
             field.clear();
             field.sendKeys(value);
             System.out.println("[INFO] Filled " + fieldName + ": " + value);
@@ -780,7 +802,7 @@ public class ProcessingFeePage {
      */
     private void clickIfPresent(By locator, String buttonName) {
         try {
-            WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(locator));
+            WebElement btn = shortWait.until(ExpectedConditions.elementToBeClickable(locator));
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
             System.out.println("[INFO] Clicked: " + buttonName);
         } catch (Exception e) {
