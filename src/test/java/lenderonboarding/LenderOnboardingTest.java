@@ -8,8 +8,8 @@ public class LenderOnboardingTest extends BaseClass {
 
     @Test
     public void testLenderOnboardingFlow() {
-        // Navigate via Dashboard
-        dashboard.selectMenu("Lender Onboarding", "Lender Onboarding");
+        // Navigate directly to the given URL
+        driver.get("https://lms.alfinnext.com/settings/client-onboard?product=VEHICLE_LOAN");
         
         // Initialize the page object after navigation
         LenderOnboardingPage onboardingPage = new LenderOnboardingPage(driver);
@@ -20,11 +20,15 @@ public class LenderOnboardingTest extends BaseClass {
         // -----------------------------------------
         // Step 1: Fill Company Information
         // -----------------------------------------
+        // Client Code must be unique, so generate a fresh one for every run
+        // to avoid "already exists" failures on repeated executions.
+        String uniqueClientCode = "TC-" + System.currentTimeMillis();
+
         onboardingPage.fillCompanyInformation(
                 "Test Company Ltd",
                 "Test Company Private Limited",
                 "TestBrand",
-                "TC-1001");
+                uniqueClientCode);
 
         onboardingPage.fillRegistrationDetails(
                 "01/01/2020",

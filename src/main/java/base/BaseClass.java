@@ -20,20 +20,6 @@ public class BaseClass {
 
     @BeforeSuite(alwaysRun = true)
     public void suiteSetUp() {
-        // Step 1: Windows confirmation prompt BEFORE opening browser
-        int confirm = JOptionPane.showConfirmDialog(null,
-            "Are you sure you want to proceed with the test suite?\n\n" +
-            "The browser will open to lms.alfinnext.com.\n" +
-            "You will need to log in manually before tests begin.\n\n" +
-            "Click YES to proceed, NO to cancel.",
-            "LMS Test Suite - Confirm Start",
-            JOptionPane.YES_NO_OPTION,
-            JOptionPane.QUESTION_MESSAGE);
-
-        if (confirm != JOptionPane.YES_OPTION) {
-            System.out.println("Test suite cancelled by user.");
-            System.exit(0);
-        }
 
         // Step 2: Open browser and navigate to the LMS URL
         WebDriverManager.chromedriver().setup();
@@ -46,16 +32,34 @@ public class BaseClass {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://lms.alfinnext.com/");
 
-        // Step 3: Windows prompt - wait for manual login
-        JOptionPane.showMessageDialog(null,
-            "The browser is now open at lms.alfinnext.com.\n\n" +
-            "Please log in manually in the browser.\n" +
-            "  Username: superadmin\n" +
-            "  Password: Alphaware@2026\n\n" +
-            "Click OK here ONLY after you are successfully logged in.\n" +
-            "Tests will start running immediately after you click OK.",
-            "Manual Login Required",
-            JOptionPane.INFORMATION_MESSAGE);
+        // Step 3: Automated Login
+        try {
+            org.openqa.selenium.support.ui.WebDriverWait wait = new org.openqa.selenium.support.ui.WebDriverWait(driver, Duration.ofSeconds(15));
+
+            // Find and fill username
+            org.openqa.selenium.WebElement usernameField = wait.until(org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.xpath("//input[@type='text' or @name='username' or @name='email']")));
+            usernameField.clear();
+            usernameField.sendKeys("superadmin");
+
+            // Find and fill password
+            org.openqa.selenium.WebElement passwordField = driver.findElement(org.openqa.selenium.By.xpath("//input[@type='password' or @name='password']"));
+            passwordField.clear();
+            passwordField.sendKeys("Alphaware@2026");
+
+            // Click Sign in button
+            org.openqa.selenium.WebElement signInButton = driver.findElement(org.openqa.selenium.By.xpath("//button[contains(., 'Sign in') or @type='submit']"));
+            signInButton.click();
+
+            // Wait for dashboard to load (assuming URL changes from login)
+            wait.until(org.openqa.selenium.support.ui.ExpectedConditions.not(
+                    org.openqa.selenium.support.ui.ExpectedConditions.urlContains("/login")
+            ));
+
+            System.out.println("Automated login successful.");
+        } catch (Exception e) {
+            System.err.println("Automated login failed. Please check locators or network.");
+            e.printStackTrace();
+        }
     }
 
     @BeforeClass(alwaysRun = true)

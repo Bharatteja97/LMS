@@ -42,6 +42,15 @@
         </classes>
     </test>
     
+    <test name="General Tests">
+        <classes>
+            <class name="tests.DashboardTest"/>
+            <class name="tests.FormBuilderTest"/>
+            <class name="tests.LoanSettingsTest"/>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+    
     <listeners>
         <listener class-name="listeners.TestListener" />
     </listeners>
