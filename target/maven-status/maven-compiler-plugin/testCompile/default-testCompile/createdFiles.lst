@@ -5,6 +5,7 @@ tests\SendToUnderwritingTest.class
 tests\KycPageTest.class
 tests\LeadDetailsTest.class
 tests\LoanAgreementTest.class
+listeners\TestReportListener.class
 tests\DealerConfirmationTest.class
 tests\OperationsTest.class
 tests\DealerLetterTest.class

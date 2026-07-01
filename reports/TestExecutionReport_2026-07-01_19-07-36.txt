@@ -1,0 +1,74 @@
+================================================================
+          LOS PRODUCT VEHICLE – TEST EXECUTION REPORT           
+================================================================
+Suite Name   : LOS Test Suite
+Run Date     : 01-Jul-2026 19:07:36
+Duration     : 8 min 32 sec
+----------------------------------------------------------------
+
+  TOTAL TEST SCRIPTS (CLASSES) IN SUITE : 11
+  TOTAL TEST METHODS RUN                : 24
+  PASSED                                : 24
+  FAILED                                : 0
+  SKIPPED                               : 0
+
+================================================================
+  BREAKDOWN BY TEST SCRIPT
+================================================================
+  Test Class                                 PASS   FAIL    SKIP
+  -------------------------------------------------------------
+  CreateLeadTest                                1      0       0
+  LeadDetailsTest                               1      0       0
+  KycPageTest                                   3      0       0
+  SendToUnderwritingTest                        1      0       0
+  UnderWritingTest                             12      0       0
+  ProcessingFeeTest                             1      0       0
+  DealerLetterTest                              1      0       0
+  DealerConfirmationTest                        1      0       0
+  LoanAgreementTest                             1      0       0
+  NachRegistrationTest                          1      0       0
+  DisbursementTest                              1      0       0
+  -------------------------------------------------------------
+  TOTAL                                        24      0       0
+
+================================================================
+  ALL TEST SCRIPTS CONFIGURED IN testng.xml (11 Classes)
+================================================================
+  1.  CreateLeadTest
+  2.  LeadDetailsTest
+  3.  KycPageTest
+  4.  SendToUnderwritingTest
+  5.  UnderWritingTest
+  6.  ProcessingFeeTest
+  7.  DealerLetterTest
+  8.  DealerConfirmationTest
+  9.  LoanAgreementTest
+  10. NachRegistrationTest
+  11. DisbursementTest
+
+================================================================
+  ALL TEST SCRIPT FILES PRESENT IN /tests directory (19 Files)
+================================================================
+   1. CheckEmails.java
+   2. CreateLeadTest.java
+   3. DealerConfirmationTempTest.java
+   4. DealerConfirmationTest.java
+   5. DealerLetterTest.java
+   6. DisbursementTest.java
+   7. KycPageTest.java
+   8. LeadDetailsTest.java
+   9. LoanAgreementTempTest.java
+  10. LoanAgreementTest.java
+  11. LoginTest.java
+  12. NachRegistrationTest.java
+  13. OperationsTest.java
+  14. ProcessingFeeTest.java
+  15. SanctionLetterTest.java
+  16. SendToUnderwritingTest.java
+  17. UnderWritingTest.java
+  18. DealerConfirmationTempTest.java
+  19. ProcessingFeeTest.java
+
+================================================================
+                        END OF REPORT                          
+================================================================

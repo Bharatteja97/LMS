@@ -1,5 +1,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="LOS Test Suite">
+
+    <!-- Automatically generate a test execution report in reports/ folder -->
+    <listeners>
+        <listener class-name="listeners.TestReportListener"/>
+    </listeners>
+
     <test name="Full End-to-End Flow">
         <classes>
             <class name="tests.CreateLeadTest"/>
