@@ -2,272 +2,272 @@
 <testng-results ignored="0" total="24" passed="24" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-30T11:38:03 IST" name="LOS Test Suite" finished-at="2026-06-30T11:46:12 IST" duration-ms="488740">
+  <suite started-at="2026-07-01T12:55:17 IST" name="LOS Test Suite" finished-at="2026-07-01T13:03:22 IST" duration-ms="485278">
     <groups>
     </groups>
-    <test started-at="2026-06-30T11:38:03 IST" name="Full End-to-End Flow" finished-at="2026-06-30T11:46:12 IST" duration-ms="488740">
+    <test started-at="2026-07-01T12:55:17 IST" name="Full End-to-End Flow" finished-at="2026-07-01T13:03:22 IST" duration-ms="485278">
       <class name="tests.ProcessingFeeTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.ProcessingFeeTest@70e8f8e]" started-at="2026-06-30T11:42:47 IST" name="classSetUp" finished-at="2026-06-30T11:42:47 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.ProcessingFeeTest@70e8f8e]" started-at="2026-07-01T12:59:58 IST" name="classSetUp" finished-at="2026-07-01T12:59:58 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.ProcessingFeeTest@70e8f8e]" started-at="2026-06-30T11:42:47 IST" name="methodSetUp" finished-at="2026-06-30T11:42:47 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.ProcessingFeeTest@70e8f8e]" started-at="2026-07-01T12:59:58 IST" name="methodSetUp" finished-at="2026-07-01T12:59:58 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testProcessingFeePayment()[pri:0, instance:tests.ProcessingFeeTest@70e8f8e]" started-at="2026-06-30T11:42:47 IST" name="testProcessingFeePayment" finished-at="2026-06-30T11:44:45 IST" duration-ms="117949" status="PASS">
+        <test-method signature="testProcessingFeePayment()[pri:0, instance:tests.ProcessingFeeTest@70e8f8e]" started-at="2026-07-01T12:59:58 IST" name="testProcessingFeePayment" finished-at="2026-07-01T13:01:58 IST" duration-ms="119963" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testProcessingFeePayment -->
       </class> <!-- tests.ProcessingFeeTest -->
       <class name="tests.LoanAgreementTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.LoanAgreementTest@29626d54]" started-at="2026-06-30T11:45:13 IST" name="classSetUp" finished-at="2026-06-30T11:45:13 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.LoanAgreementTest@29626d54]" started-at="2026-07-01T13:02:26 IST" name="classSetUp" finished-at="2026-07-01T13:02:26 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.LoanAgreementTest@29626d54]" started-at="2026-06-30T11:45:13 IST" name="methodSetUp" finished-at="2026-06-30T11:45:13 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method signature="testDispatchAndSimulateESign()[pri:0, instance:tests.LoanAgreementTest@29626d54]" started-at="2026-06-30T11:45:13 IST" name="testDispatchAndSimulateESign" finished-at="2026-06-30T11:45:39 IST" duration-ms="25434" status="PASS">
+        <test-method signature="testDispatchAndSimulateESign()[pri:0, instance:tests.LoanAgreementTest@29626d54]" started-at="2026-07-01T13:02:26 IST" name="testDispatchAndSimulateESign" finished-at="2026-07-01T13:02:50 IST" duration-ms="24205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDispatchAndSimulateESign -->
-      </class> <!-- tests.LoanAgreementTest -->
-      <class name="tests.KycPageTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.KycPageTest@1622f1b]" started-at="2026-06-30T11:38:50 IST" name="classSetUp" finished-at="2026-06-30T11:38:50 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.KycPageTest@1622f1b]" started-at="2026-06-30T11:38:50 IST" name="methodSetUp" finished-at="2026-06-30T11:38:50 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.LoanAgreementTest@29626d54]" started-at="2026-07-01T13:02:26 IST" name="methodSetUp" finished-at="2026-07-01T13:02:26 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testFetchKycLinkFromEmail()[pri:1, instance:tests.KycPageTest@1622f1b]" started-at="2026-06-30T11:38:50 IST" name="testFetchKycLinkFromEmail" finished-at="2026-06-30T11:39:02 IST" duration-ms="12273" status="PASS">
+      </class> <!-- tests.LoanAgreementTest -->
+      <class name="tests.KycPageTest">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.KycPageTest@1622f1b]" started-at="2026-07-01T12:56:07 IST" name="classSetUp" finished-at="2026-07-01T12:56:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.KycPageTest@1622f1b]" started-at="2026-07-01T12:56:07 IST" name="methodSetUp" finished-at="2026-07-01T12:56:07 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method signature="testFetchKycLinkFromEmail()[pri:1, instance:tests.KycPageTest@1622f1b]" started-at="2026-07-01T12:56:07 IST" name="testFetchKycLinkFromEmail" finished-at="2026-07-01T12:56:18 IST" duration-ms="10743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFetchKycLinkFromEmail -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.KycPageTest@1622f1b]" started-at="2026-06-30T11:39:02 IST" name="methodSetUp" finished-at="2026-06-30T11:39:02 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.KycPageTest@1622f1b]" started-at="2026-07-01T12:56:18 IST" name="methodSetUp" finished-at="2026-07-01T12:56:18 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testKycPageLoadsCorrectly()[pri:2, instance:tests.KycPageTest@1622f1b]" started-at="2026-06-30T11:39:02 IST" name="testKycPageLoadsCorrectly" finished-at="2026-06-30T11:39:03 IST" depends-on-methods="tests.KycPageTest.testFetchKycLinkFromEmail" duration-ms="1309" status="PASS">
+        <test-method signature="testKycPageLoadsCorrectly()[pri:2, instance:tests.KycPageTest@1622f1b]" started-at="2026-07-01T12:56:18 IST" name="testKycPageLoadsCorrectly" finished-at="2026-07-01T12:56:20 IST" depends-on-methods="tests.KycPageTest.testFetchKycLinkFromEmail" duration-ms="1624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testKycPageLoadsCorrectly -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.KycPageTest@1622f1b]" started-at="2026-06-30T11:39:03 IST" name="methodSetUp" finished-at="2026-06-30T11:39:03 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method signature="testFillKycFormAndSubmit()[pri:3, instance:tests.KycPageTest@1622f1b]" started-at="2026-06-30T11:39:03 IST" name="testFillKycFormAndSubmit" finished-at="2026-06-30T11:39:48 IST" depends-on-methods="tests.KycPageTest.testKycPageLoadsCorrectly" duration-ms="44507" status="PASS">
+        <test-method signature="testFillKycFormAndSubmit()[pri:3, instance:tests.KycPageTest@1622f1b]" started-at="2026-07-01T12:56:20 IST" name="testFillKycFormAndSubmit" finished-at="2026-07-01T12:57:05 IST" depends-on-methods="tests.KycPageTest.testKycPageLoadsCorrectly" duration-ms="45334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFillKycFormAndSubmit -->
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.KycPageTest@1622f1b]" started-at="2026-07-01T12:56:20 IST" name="methodSetUp" finished-at="2026-07-01T12:56:20 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
       </class> <!-- tests.KycPageTest -->
       <class name="tests.UnderWritingTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:39:56 IST" name="classSetUp" finished-at="2026-06-30T11:39:56 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:13 IST" name="classSetUp" finished-at="2026-07-01T12:57:13 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method signature="testUnderwritingListPageLoads()[pri:1, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:39:56 IST" name="testUnderwritingListPageLoads" finished-at="2026-06-30T11:40:00 IST" duration-ms="4133" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:13 IST" name="methodSetUp" finished-at="2026-07-01T12:57:13 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method signature="testUnderwritingListPageLoads()[pri:1, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:13 IST" name="testUnderwritingListPageLoads" finished-at="2026-07-01T12:57:16 IST" duration-ms="3648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUnderwritingListPageLoads -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:39:56 IST" name="methodSetUp" finished-at="2026-06-30T11:39:56 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:16 IST" name="methodSetUp" finished-at="2026-07-01T12:57:16 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:00 IST" name="methodSetUp" finished-at="2026-06-30T11:40:00 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method signature="testSearchFunctionality()[pri:2, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:00 IST" name="testSearchFunctionality" finished-at="2026-06-30T11:40:21 IST" depends-on-methods="tests.UnderWritingTest.testUnderwritingListPageLoads" duration-ms="21188" status="PASS">
+        <test-method signature="testSearchFunctionality()[pri:2, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:16 IST" name="testSearchFunctionality" finished-at="2026-07-01T12:57:37 IST" depends-on-methods="tests.UnderWritingTest.testUnderwritingListPageLoads" duration-ms="20821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchFunctionality -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:21 IST" name="methodSetUp" finished-at="2026-06-30T11:40:21 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method signature="testOpenApplicationDetail()[pri:3, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:21 IST" name="testOpenApplicationDetail" finished-at="2026-06-30T11:40:28 IST" depends-on-methods="tests.UnderWritingTest.testSearchFunctionality" duration-ms="7228" status="PASS">
+        <test-method signature="testOpenApplicationDetail()[pri:3, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:37 IST" name="testOpenApplicationDetail" finished-at="2026-07-01T12:57:45 IST" depends-on-methods="tests.UnderWritingTest.testSearchFunctionality" duration-ms="7885" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOpenApplicationDetail -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:28 IST" name="methodSetUp" finished-at="2026-06-30T11:40:28 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:37 IST" name="methodSetUp" finished-at="2026-07-01T12:57:37 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testTabNavigation()[pri:4, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:28 IST" name="testTabNavigation" finished-at="2026-06-30T11:40:43 IST" depends-on-methods="tests.UnderWritingTest.testOpenApplicationDetail" duration-ms="14954" status="PASS">
+        <test-method signature="testTabNavigation()[pri:4, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:45 IST" name="testTabNavigation" finished-at="2026-07-01T12:57:59 IST" depends-on-methods="tests.UnderWritingTest.testOpenApplicationDetail" duration-ms="14053" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTabNavigation -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:43 IST" name="methodSetUp" finished-at="2026-06-30T11:40:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:45 IST" name="methodSetUp" finished-at="2026-07-01T12:57:45 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testUpdateStatusModalOpens()[pri:5, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:43 IST" name="testUpdateStatusModalOpens" finished-at="2026-06-30T11:40:48 IST" depends-on-methods="tests.UnderWritingTest.testTabNavigation" duration-ms="4563" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:59 IST" name="methodSetUp" finished-at="2026-07-01T12:57:59 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method signature="testUpdateStatusModalOpens()[pri:5, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:57:59 IST" name="testUpdateStatusModalOpens" finished-at="2026-07-01T12:58:03 IST" depends-on-methods="tests.UnderWritingTest.testTabNavigation" duration-ms="4004" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateStatusModalOpens -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:48 IST" name="methodSetUp" finished-at="2026-06-30T11:40:48 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:58:03 IST" name="methodSetUp" finished-at="2026-07-01T12:58:03 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testApproveButtonPresent()[pri:6, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:48 IST" name="testApproveButtonPresent" finished-at="2026-06-30T11:40:48 IST" depends-on-methods="tests.UnderWritingTest.testUpdateStatusModalOpens" duration-ms="157" status="PASS">
+        <test-method signature="testApproveButtonPresent()[pri:6, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:58:03 IST" name="testApproveButtonPresent" finished-at="2026-07-01T12:58:03 IST" depends-on-methods="tests.UnderWritingTest.testUpdateStatusModalOpens" duration-ms="64" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApproveButtonPresent -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:48 IST" name="methodSetUp" finished-at="2026-06-30T11:40:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method signature="testDirectNavigationToApplicationDetail()[pri:7, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:48 IST" name="testDirectNavigationToApplicationDetail" finished-at="2026-06-30T11:40:52 IST" duration-ms="3940" status="PASS">
+        <test-method signature="testDirectNavigationToApplicationDetail()[pri:7, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:58:03 IST" name="testDirectNavigationToApplicationDetail" finished-at="2026-07-01T12:58:07 IST" duration-ms="3794" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDirectNavigationToApplicationDetail -->
-        <test-method signature="testDealParametersSetPreferredRepaymentDate()[pri:8, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:52 IST" name="testDealParametersSetPreferredRepaymentDate" finished-at="2026-06-30T11:41:05 IST" depends-on-methods="tests.UnderWritingTest.testDirectNavigationToApplicationDetail" duration-ms="13308" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:58:03 IST" name="methodSetUp" finished-at="2026-07-01T12:58:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:58:07 IST" name="methodSetUp" finished-at="2026-07-01T12:58:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method signature="testDealParametersSetPreferredRepaymentDate()[pri:8, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:58:07 IST" name="testDealParametersSetPreferredRepaymentDate" finished-at="2026-07-01T12:58:20 IST" depends-on-methods="tests.UnderWritingTest.testDirectNavigationToApplicationDetail" duration-ms="12690" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDealParametersSetPreferredRepaymentDate -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:40:52 IST" name="methodSetUp" finished-at="2026-06-30T11:40:52 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:41:05 IST" name="methodSetUp" finished-at="2026-06-30T11:41:05 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method signature="testBankDetailsAddCustomerBank()[pri:9, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:41:05 IST" name="testBankDetailsAddCustomerBank" finished-at="2026-06-30T11:41:50 IST" depends-on-methods="tests.UnderWritingTest.testDealParametersSetPreferredRepaymentDate" duration-ms="44805" status="PASS">
+        <test-method signature="testBankDetailsAddCustomerBank()[pri:9, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:58:20 IST" name="testBankDetailsAddCustomerBank" finished-at="2026-07-01T12:59:03 IST" depends-on-methods="tests.UnderWritingTest.testDealParametersSetPreferredRepaymentDate" duration-ms="43539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBankDetailsAddCustomerBank -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:41:50 IST" name="methodSetUp" finished-at="2026-06-30T11:41:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:58:20 IST" name="methodSetUp" finished-at="2026-07-01T12:58:20 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testClickApproveButton()[pri:10, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:41:50 IST" name="testClickApproveButton" finished-at="2026-06-30T11:42:02 IST" depends-on-methods="tests.UnderWritingTest.testBankDetailsAddCustomerBank" duration-ms="11841" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:59:03 IST" name="methodSetUp" finished-at="2026-07-01T12:59:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method signature="testClickApproveButton()[pri:10, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:59:03 IST" name="testClickApproveButton" finished-at="2026-07-01T12:59:14 IST" depends-on-methods="tests.UnderWritingTest.testBankDetailsAddCustomerBank" duration-ms="11174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickApproveButton -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:42:02 IST" name="methodSetUp" finished-at="2026-06-30T11:42:02 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method signature="testDispatchSanctionMail()[pri:11, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:42:02 IST" name="testDispatchSanctionMail" finished-at="2026-06-30T11:42:26 IST" depends-on-methods="tests.UnderWritingTest.testClickApproveButton" duration-ms="24619" status="PASS">
+        <test-method signature="testDispatchSanctionMail()[pri:11, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:59:14 IST" name="testDispatchSanctionMail" finished-at="2026-07-01T12:59:39 IST" depends-on-methods="tests.UnderWritingTest.testClickApproveButton" duration-ms="24237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDispatchSanctionMail -->
-        <test-method signature="testSubmitSanctionLetter()[pri:12, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:42:26 IST" name="testSubmitSanctionLetter" finished-at="2026-06-30T11:42:47 IST" depends-on-methods="tests.UnderWritingTest.testDispatchSanctionMail" duration-ms="20468" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:59:14 IST" name="methodSetUp" finished-at="2026-07-01T12:59:14 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:59:39 IST" name="methodSetUp" finished-at="2026-07-01T12:59:39 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method signature="testSubmitSanctionLetter()[pri:12, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-07-01T12:59:39 IST" name="testSubmitSanctionLetter" finished-at="2026-07-01T12:59:58 IST" depends-on-methods="tests.UnderWritingTest.testDispatchSanctionMail" duration-ms="19698" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubmitSanctionLetter -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.UnderWritingTest@2e4b8173]" started-at="2026-06-30T11:42:26 IST" name="methodSetUp" finished-at="2026-06-30T11:42:26 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
       </class> <!-- tests.UnderWritingTest -->
       <class name="tests.LeadDetailsTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.LeadDetailsTest@63021689]" started-at="2026-06-30T11:38:43 IST" name="classSetUp" finished-at="2026-06-30T11:38:43 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.LeadDetailsTest@63021689]" started-at="2026-07-01T12:56:00 IST" name="classSetUp" finished-at="2026-07-01T12:56:00 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.LeadDetailsTest@63021689]" started-at="2026-06-30T11:38:43 IST" name="methodSetUp" finished-at="2026-06-30T11:38:43 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method signature="testVerifyLeadDetails()[pri:1, instance:tests.LeadDetailsTest@63021689]" started-at="2026-06-30T11:38:43 IST" name="testVerifyLeadDetails" finished-at="2026-06-30T11:38:50 IST" duration-ms="6724" status="PASS">
+        <test-method signature="testVerifyLeadDetails()[pri:1, instance:tests.LeadDetailsTest@63021689]" started-at="2026-07-01T12:56:00 IST" name="testVerifyLeadDetails" finished-at="2026-07-01T12:56:07 IST" duration-ms="7415" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testVerifyLeadDetails -->
-      </class> <!-- tests.LeadDetailsTest -->
-      <class name="tests.DisbursementTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.DisbursementTest@6e4784bc]" started-at="2026-06-30T11:45:54 IST" name="classSetUp" finished-at="2026-06-30T11:45:54 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.DisbursementTest@6e4784bc]" started-at="2026-06-30T11:45:54 IST" name="methodSetUp" finished-at="2026-06-30T11:45:54 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.LeadDetailsTest@63021689]" started-at="2026-07-01T12:56:00 IST" name="methodSetUp" finished-at="2026-07-01T12:56:00 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testSendToDisbursal()[pri:0, instance:tests.DisbursementTest@6e4784bc]" started-at="2026-06-30T11:45:54 IST" name="testSendToDisbursal" finished-at="2026-06-30T11:46:12 IST" duration-ms="18163" status="PASS">
+      </class> <!-- tests.LeadDetailsTest -->
+      <class name="tests.DisbursementTest">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.DisbursementTest@6e4784bc]" started-at="2026-07-01T13:03:05 IST" name="classSetUp" finished-at="2026-07-01T13:03:05 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testSendToDisbursal()[pri:0, instance:tests.DisbursementTest@6e4784bc]" started-at="2026-07-01T13:03:05 IST" name="testSendToDisbursal" finished-at="2026-07-01T13:03:22 IST" duration-ms="17195" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSendToDisbursal -->
-      </class> <!-- tests.DisbursementTest -->
-      <class name="tests.NachRegistrationTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.NachRegistrationTest@5a63f509]" started-at="2026-06-30T11:45:39 IST" name="classSetUp" finished-at="2026-06-30T11:45:39 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.NachRegistrationTest@5a63f509]" started-at="2026-06-30T11:45:39 IST" name="methodSetUp" finished-at="2026-06-30T11:45:39 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.DisbursementTest@6e4784bc]" started-at="2026-07-01T13:03:05 IST" name="methodSetUp" finished-at="2026-07-01T13:03:05 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testNachRegistration()[pri:0, instance:tests.NachRegistrationTest@5a63f509]" started-at="2026-06-30T11:45:39 IST" name="testNachRegistration" finished-at="2026-06-30T11:45:54 IST" duration-ms="15051" status="PASS">
+      </class> <!-- tests.DisbursementTest -->
+      <class name="tests.NachRegistrationTest">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.NachRegistrationTest@5a63f509]" started-at="2026-07-01T13:02:50 IST" name="classSetUp" finished-at="2026-07-01T13:02:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.NachRegistrationTest@5a63f509]" started-at="2026-07-01T13:02:50 IST" name="methodSetUp" finished-at="2026-07-01T13:02:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method signature="testNachRegistration()[pri:0, instance:tests.NachRegistrationTest@5a63f509]" started-at="2026-07-01T13:02:50 IST" name="testNachRegistration" finished-at="2026-07-01T13:03:05 IST" duration-ms="14779" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNachRegistration -->
       </class> <!-- tests.NachRegistrationTest -->
       <class name="tests.SendToUnderwritingTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.SendToUnderwritingTest@72a7c7e0]" started-at="2026-06-30T11:39:48 IST" name="classSetUp" finished-at="2026-06-30T11:39:48 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.SendToUnderwritingTest@72a7c7e0]" started-at="2026-07-01T12:57:05 IST" name="classSetUp" finished-at="2026-07-01T12:57:05 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.SendToUnderwritingTest@72a7c7e0]" started-at="2026-06-30T11:39:48 IST" name="methodSetUp" finished-at="2026-06-30T11:39:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetUp -->
-        <test-method signature="testSendToUnderwriting()[pri:0, instance:tests.SendToUnderwritingTest@72a7c7e0]" started-at="2026-06-30T11:39:48 IST" name="testSendToUnderwriting" finished-at="2026-06-30T11:39:56 IST" duration-ms="7585" status="PASS">
+        <test-method signature="testSendToUnderwriting()[pri:0, instance:tests.SendToUnderwritingTest@72a7c7e0]" started-at="2026-07-01T12:57:05 IST" name="testSendToUnderwriting" finished-at="2026-07-01T12:57:13 IST" duration-ms="7565" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSendToUnderwriting -->
-      </class> <!-- tests.SendToUnderwritingTest -->
-      <class name="tests.DealerConfirmationTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.DealerConfirmationTest@5bd03f44]" started-at="2026-06-30T11:44:54 IST" name="classSetUp" finished-at="2026-06-30T11:44:54 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.DealerConfirmationTest@5bd03f44]" started-at="2026-06-30T11:44:54 IST" name="methodSetUp" finished-at="2026-06-30T11:44:54 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.SendToUnderwritingTest@72a7c7e0]" started-at="2026-07-01T12:57:05 IST" name="methodSetUp" finished-at="2026-07-01T12:57:05 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testDealerConfirmationFill()[pri:0, instance:tests.DealerConfirmationTest@5bd03f44]" started-at="2026-06-30T11:44:54 IST" name="testDealerConfirmationFill" finished-at="2026-06-30T11:45:13 IST" duration-ms="19447" status="PASS">
+      </class> <!-- tests.SendToUnderwritingTest -->
+      <class name="tests.DealerConfirmationTest">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.DealerConfirmationTest@5bd03f44]" started-at="2026-07-01T13:02:07 IST" name="classSetUp" finished-at="2026-07-01T13:02:07 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.DealerConfirmationTest@5bd03f44]" started-at="2026-07-01T13:02:07 IST" name="methodSetUp" finished-at="2026-07-01T13:02:07 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method signature="testDealerConfirmationFill()[pri:0, instance:tests.DealerConfirmationTest@5bd03f44]" started-at="2026-07-01T13:02:07 IST" name="testDealerConfirmationFill" finished-at="2026-07-01T13:02:26 IST" duration-ms="18136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDealerConfirmationFill -->
       </class> <!-- tests.DealerConfirmationTest -->
       <class name="tests.DealerLetterTest">
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.DealerLetterTest@17046283]" started-at="2026-06-30T11:44:45 IST" name="classSetUp" finished-at="2026-06-30T11:44:45 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.DealerLetterTest@17046283]" started-at="2026-07-01T13:01:58 IST" name="classSetUp" finished-at="2026-07-01T13:01:58 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.DealerLetterTest@17046283]" started-at="2026-06-30T11:44:45 IST" name="methodSetUp" finished-at="2026-06-30T11:44:45 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.DealerLetterTest@17046283]" started-at="2026-07-01T13:01:58 IST" name="methodSetUp" finished-at="2026-07-01T13:01:58 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testDispatchMailToDealer()[pri:0, instance:tests.DealerLetterTest@17046283]" started-at="2026-06-30T11:44:45 IST" name="testDispatchMailToDealer" finished-at="2026-06-30T11:44:54 IST" duration-ms="9099" status="PASS">
+        <test-method signature="testDispatchMailToDealer()[pri:0, instance:tests.DealerLetterTest@17046283]" started-at="2026-07-01T13:01:58 IST" name="testDispatchMailToDealer" finished-at="2026-07-01T13:02:07 IST" duration-ms="9278" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDispatchMailToDealer -->
       </class> <!-- tests.DealerLetterTest -->
       <class name="tests.CreateLeadTest">
-        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-06-30T11:37:30 IST" name="suiteSetUp" finished-at="2026-06-30T11:38:03 IST" duration-ms="33567" status="PASS">
+        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-07-01T12:55:06 IST" name="suiteSetUp" finished-at="2026-07-01T12:55:17 IST" duration-ms="10287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-06-30T11:38:03 IST" name="classSetUp" finished-at="2026-06-30T11:38:03 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-07-01T12:55:17 IST" name="classSetUp" finished-at="2026-07-01T12:55:17 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-06-30T11:38:03 IST" name="methodSetUp" finished-at="2026-06-30T11:38:03 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="methodSetUp()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-07-01T12:55:17 IST" name="methodSetUp" finished-at="2026-07-01T12:55:17 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method signature="testCreateNewLead()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-06-30T11:38:03 IST" name="testCreateNewLead" finished-at="2026-06-30T11:38:43 IST" duration-ms="39745" status="PASS">
+        <test-method signature="testCreateNewLead()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-07-01T12:55:17 IST" name="testCreateNewLead" finished-at="2026-07-01T12:56:00 IST" duration-ms="43124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateNewLead -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-06-30T11:46:12 IST" name="tearDown" finished-at="2026-06-30T11:46:13 IST" duration-ms="923" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CreateLeadTest@61230f6a]" started-at="2026-07-01T13:03:22 IST" name="tearDown" finished-at="2026-07-01T13:03:23 IST" duration-ms="700" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
