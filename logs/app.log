@@ -1,0 +1,1964 @@
+14:35:07.220 [main] INFO  tests.AccountsTest - Starting testAccountsFilters
+14:35:08.492 [main] INFO  tests.AccountsTest - Testing search filter
+14:35:12.829 [main] INFO  tests.AccountsTest - Table row count after search: 10
+14:35:12.835 [main] INFO  tests.AccountsTest - Testing property type filter
+14:35:28.884 [main] ERROR tests.AccountsTest - Exception occurred during filter test: 
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[text()='VEHICLE_LOAN'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.199, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\i-tech\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64666}, goog:processID: 23772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64666/devtoo..., se:cdpVersion: 149.0.7827.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74f5e69995e6f638e2e92266c91ee08f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84) ~[selenium-support-4.10.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230) ~[selenium-support-4.10.0.jar:?]
+	at accounts.AccountsPage.selectPropertyType(AccountsPage.java:47) ~[classes/:?]
+	at tests.AccountsTest.testAccountsFilters(AccountsTest.java:34) [test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) [testng-7.8.0.jar:7.8.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1604) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1114) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.run(TestNG.java:1082) [testng-7.8.0.jar:7.8.0]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155) [surefire-testng-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102) [surefire-testng-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91) [surefire-testng-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137) [surefire-testng-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.5.4.jar:3.5.4]
+16:30:36.527 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+16:30:37.671 [main] INFO  tests.AccountsTest - Total rows loaded: 1
+16:30:38.615 [main] INFO  tests.AccountsTest - Testing search filter by borrower name
+16:30:41.675 [main] INFO  tests.AccountsTest - Rows after searching 'NIDHI': 10
+16:30:42.077 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+16:31:00.606 [main] INFO  tests.AccountsTest - Testing search with no matching results
+16:31:03.714 [main] INFO  tests.AccountsTest - Rows for non-existent search: 10
+16:31:03.795 [main] INFO  tests.AccountsTest - Testing Status filter: Active
+16:31:19.648 [main] INFO  tests.AccountsTest - Testing Status filter: Overdue
+16:31:35.350 [main] INFO  tests.AccountsTest - Testing Status filter: Settled
+16:31:51.157 [main] INFO  tests.AccountsTest - Testing Login date range filter
+16:32:22.145 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+16:32:38.776 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+16:32:39.499 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+16:32:40.208 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+16:32:55.402 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN link
+16:32:56.006 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+16:32:58.703 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+16:32:58.874 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+16:33:01.490 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+16:40:53.314 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+16:40:53.371 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+16:40:54.775 [main] INFO  tests.AccountsTest - Testing search filter by borrower name
+16:40:55.471 [main] INFO  tests.AccountsTest - Rows after searching 'NIDHI': 10
+16:40:56.759 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+16:41:15.534 [main] INFO  tests.AccountsTest - Testing search with no matching results
+16:41:18.065 [main] INFO  tests.AccountsTest - Rows for non-existent search: 10
+16:41:19.617 [main] INFO  tests.AccountsTest - Listing available Status filter options
+16:41:20.231 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+16:41:21.482 [main] INFO  tests.AccountsTest - Testing Status filter: first available option
+16:41:22.137 [main] INFO  tests.AccountsTest - Selecting status: DISBURSED
+16:41:40.997 [main] INFO  tests.AccountsTest - Testing Status filter: second available option
+16:41:41.551 [main] INFO  tests.AccountsTest - Selecting status: PRE_EMI
+22:35:52.281 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+22:35:52.465 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+22:35:54.080 [main] INFO  tests.AccountsTest - Testing search filter by borrower name
+22:35:56.824 [main] INFO  tests.AccountsTest - Rows after searching 'NIDHI': 10
+22:35:59.265 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+22:36:05.378 [main] INFO  tests.AccountsTest - Testing search with no matching results
+22:36:08.990 [main] INFO  tests.AccountsTest - Rows for non-existent search: 10
+22:36:10.990 [main] INFO  tests.AccountsTest - Listing available Status filter options
+22:36:11.679 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+22:36:15.481 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+22:36:18.162 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+22:36:21.060 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+22:36:23.658 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+22:36:28.220 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+22:36:46.789 [main] INFO  tests.AccountsTest - Testing Login date range filter
+22:36:49.749 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+22:36:51.067 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+22:36:55.177 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+22:36:56.627 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+22:36:58.470 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+22:36:58.471 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+22:36:58.471 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+22:36:58.471 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+22:36:58.471 [main] INFO  tests.AccountsTest - Row 4: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+22:36:58.471 [main] INFO  tests.AccountsTest - Row 5: LAN=PERSONAL_000006, Borrower=APEKSHA MISHRA, Status=Insurance Closed
+22:36:58.473 [main] INFO  tests.AccountsTest - Row 6: LAN=PERSONAL_000005, Borrower=GAURAV JAISWAL, Status=Moratorium
+22:36:58.473 [main] INFO  tests.AccountsTest - Row 7: LAN=VEHICLE_000022, Borrower=Sarans Tiwari, Status=Settled
+22:36:58.475 [main] INFO  tests.AccountsTest - Row 8: LAN=VEHICLE_000020, Borrower=NIDHI ANIL SADHWANI, Status=Settled
+22:36:58.475 [main] INFO  tests.AccountsTest - Row 9: LAN=PERSONAL_000004, Borrower=VISHNU MOHANDAS MUPPARATHY, Status=Active
+22:36:59.911 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+22:37:02.293 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+22:37:02.436 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000026
+22:37:03.262 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000026
+22:37:04.810 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+22:37:04.949 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000026
+22:37:06.944 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+22:37:09.306 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+22:37:10.652 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+22:37:13.141 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+22:41:21.800 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+22:41:21.991 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+22:41:24.477 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+22:41:28.425 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+22:41:30.835 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+22:41:37.509 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+22:41:41.231 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+22:41:43.278 [main] INFO  tests.AccountsTest - Listing available Status filter options
+22:41:44.136 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+22:41:50.253 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+22:41:52.807 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+22:41:56.488 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+22:41:58.998 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+22:42:01.944 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+22:42:04.481 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 1
+22:42:21.220 [main] INFO  tests.AccountsTest - Testing Login date range filter
+22:42:24.160 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+22:42:25.741 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+22:42:29.904 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+22:42:31.534 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+22:42:34.749 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+22:42:34.751 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+22:42:34.751 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+22:42:34.751 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+22:42:34.751 [main] INFO  tests.AccountsTest - Row 4: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+22:42:34.751 [main] INFO  tests.AccountsTest - Row 5: LAN=PERSONAL_000006, Borrower=APEKSHA MISHRA, Status=Insurance Closed
+22:42:34.753 [main] INFO  tests.AccountsTest - Row 6: LAN=PERSONAL_000005, Borrower=GAURAV JAISWAL, Status=Moratorium
+22:42:34.753 [main] INFO  tests.AccountsTest - Row 7: LAN=VEHICLE_000022, Borrower=Sarans Tiwari, Status=Settled
+22:42:34.754 [main] INFO  tests.AccountsTest - Row 8: LAN=VEHICLE_000020, Borrower=NIDHI ANIL SADHWANI, Status=Settled
+22:42:34.754 [main] INFO  tests.AccountsTest - Row 9: LAN=PERSONAL_000004, Borrower=VISHNU MOHANDAS MUPPARATHY, Status=Active
+22:42:36.343 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+22:42:39.575 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+22:42:39.820 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000026
+22:42:40.688 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000026
+22:42:42.196 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+22:42:42.336 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000026
+22:42:44.899 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+22:42:47.395 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+22:42:49.016 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+22:42:51.302 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+22:44:47.285 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+22:44:47.413 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+22:44:49.093 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+22:44:52.717 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+22:44:54.738 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+22:45:00.130 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+22:45:04.076 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+22:45:05.728 [main] INFO  tests.AccountsTest - Listing available Status filter options
+22:45:06.682 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+22:45:08.183 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+22:45:10.887 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+22:45:14.777 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+22:45:17.655 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+22:45:20.814 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+22:45:38.521 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 0
+22:45:38.521 [main] INFO  tests.AccountsTest - No SETTLED loans in current test data — filter applied without error
+22:45:43.420 [main] INFO  tests.AccountsTest - Testing Login date range filter
+22:45:46.441 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+22:45:48.050 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+22:45:52.486 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+22:45:54.208 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+22:45:57.734 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+22:45:57.734 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+22:45:57.734 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+22:45:57.734 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+22:45:57.734 [main] INFO  tests.AccountsTest - Row 4: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+22:45:57.738 [main] INFO  tests.AccountsTest - Row 5: LAN=PERSONAL_000006, Borrower=APEKSHA MISHRA, Status=Insurance Closed
+22:45:57.738 [main] INFO  tests.AccountsTest - Row 6: LAN=PERSONAL_000005, Borrower=GAURAV JAISWAL, Status=Moratorium
+22:45:57.738 [main] INFO  tests.AccountsTest - Row 7: LAN=VEHICLE_000022, Borrower=Sarans Tiwari, Status=Settled
+22:45:57.738 [main] INFO  tests.AccountsTest - Row 8: LAN=VEHICLE_000020, Borrower=NIDHI ANIL SADHWANI, Status=Settled
+22:45:57.738 [main] INFO  tests.AccountsTest - Row 9: LAN=PERSONAL_000004, Borrower=VISHNU MOHANDAS MUPPARATHY, Status=Active
+22:45:59.203 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+22:46:02.227 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+22:46:02.373 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000026
+22:46:03.312 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000026
+22:46:04.824 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+22:46:05.199 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000026
+22:46:08.219 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+22:46:10.523 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+22:46:11.919 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+22:46:14.281 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+23:01:52.113 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+23:01:52.234 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+23:01:53.910 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+23:01:57.769 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+23:02:01.094 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+23:02:06.045 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+23:02:09.794 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+23:02:11.434 [main] INFO  tests.AccountsTest - Listing available Status filter options
+23:02:12.304 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+23:02:13.838 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+23:02:16.650 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+23:02:20.321 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+23:02:22.771 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+23:02:25.072 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+23:02:42.624 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 0
+23:02:42.624 [main] INFO  tests.AccountsTest - No SETTLED loans in current test data — filter applied without error
+23:02:43.916 [main] INFO  tests.AccountsTest - Testing Login date range filter
+23:02:46.919 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+23:02:48.072 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+23:02:52.177 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+23:02:53.432 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+23:02:55.271 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+23:02:55.271 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+23:02:55.271 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+23:02:55.271 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+23:02:55.271 [main] INFO  tests.AccountsTest - Row 4: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+23:02:55.275 [main] INFO  tests.AccountsTest - Row 5: LAN=PERSONAL_000006, Borrower=APEKSHA MISHRA, Status=Insurance Closed
+23:02:55.275 [main] INFO  tests.AccountsTest - Row 6: LAN=PERSONAL_000005, Borrower=GAURAV JAISWAL, Status=Moratorium
+23:02:55.275 [main] INFO  tests.AccountsTest - Row 7: LAN=VEHICLE_000022, Borrower=Sarans Tiwari, Status=Settled
+23:02:55.275 [main] INFO  tests.AccountsTest - Row 8: LAN=VEHICLE_000020, Borrower=NIDHI ANIL SADHWANI, Status=Settled
+23:02:55.275 [main] INFO  tests.AccountsTest - Row 9: LAN=PERSONAL_000004, Borrower=VISHNU MOHANDAS MUPPARATHY, Status=Active
+23:02:56.613 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+23:02:58.873 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+23:02:58.960 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000026
+23:02:59.694 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000026
+23:03:01.028 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+23:03:01.155 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000026
+23:03:03.221 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+23:03:05.672 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+23:03:07.060 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+23:03:09.491 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+23:03:11.493 [main] INFO  tests.AccountsDetailsTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/207?product=VEHICLE_LOAN
+23:03:13.760 [main] INFO  tests.AccountsDetailsTest - Verifying detail page loads
+23:03:14.544 [main] INFO  tests.AccountsDetailsTest - Verifying URL contains numeric account ID
+23:03:14.559 [main] INFO  tests.AccountsDetailsTest - Current URL: https://lms.alfinnext.com/lms/accounts/207?product=VEHICLE_LOAN
+23:03:15.798 [main] INFO  tests.AccountsDetailsTest - Verifying borrower name is visible in header
+23:03:15.852 [main] INFO  tests.AccountsDetailsTest - Borrower name: Hiniw BapenHiniw Bapen
+23:03:16.546 [main] INFO  tests.AccountsDetailsTest - Verifying LAN number is shown in header
+23:03:16.754 [main] INFO  tests.AccountsDetailsTest - LAN number: VEHICLE_000026
+23:03:17.375 [main] INFO  tests.AccountsDetailsTest - Verifying full LAN label contains 'LAN:' prefix
+23:03:17.549 [main] INFO  tests.AccountsDetailsTest - Full LAN text: LAN:
+VEHICLE_000026
+23:03:18.267 [main] INFO  tests.AccountsDetailsTest - Verifying status badge is visible
+23:03:49.512 [main] INFO  tests.AccountsDetailsTest - Verifying AN text is visible in header
+23:03:49.658 [main] INFO  tests.AccountsDetailsTest - AN text: LAN:
+VEHICLE_000026
+23:03:50.445 [main] INFO  tests.AccountsDetailsTest - Verifying Product Type is visible in header
+23:03:50.517 [main] INFO  tests.AccountsDetailsTest - Product type: VEHICLE
+23:03:51.250 [main] INFO  tests.AccountsDetailsTest - Verifying Disbursed On date is visible in header
+23:03:51.327 [main] INFO  tests.AccountsDetailsTest - Disbursed on: 27-06-2026
+23:03:52.069 [main] INFO  tests.AccountsDetailsTest - Verifying Loan Amount is displayed in info grid
+23:03:52.171 [main] INFO  tests.AccountsDetailsTest - Loan Amount: ₹70,000
+23:03:53.085 [main] INFO  tests.AccountsDetailsTest - Verifying Outstanding is displayed in info grid
+23:03:53.216 [main] INFO  tests.AccountsDetailsTest - Outstanding: ₹70,000
+23:03:53.916 [main] INFO  tests.AccountsDetailsTest - Verifying Current DPD is displayed in info grid
+23:03:54.031 [main] INFO  tests.AccountsDetailsTest - Current DPD: 0
+23:03:54.791 [main] INFO  tests.AccountsDetailsTest - Verifying Next EMI Due is displayed in info grid
+23:03:54.856 [main] INFO  tests.AccountsDetailsTest - Next EMI Due: 04 Jul 2026
+23:03:55.691 [main] INFO  tests.AccountsDetailsTest - Verifying Current Liability is displayed in info grid
+23:03:55.774 [main] INFO  tests.AccountsDetailsTest - Current Liability: ₹222
+23:03:56.549 [main] INFO  tests.AccountsDetailsTest - Verifying DISBURSED AMOUNT card is shown
+23:04:28.395 [main] INFO  tests.AccountsDetailsTest - Verifying NET OUTSTANDING BALANCE card is shown
+23:04:59.319 [main] INFO  tests.AccountsDetailsTest - Verifying PAID AMOUNT card is shown
+23:05:30.256 [main] INFO  tests.AccountsDetailsTest - Verifying OVERDUE AMOUNT card is shown
+23:06:01.394 [main] INFO  tests.AccountsDetailsTest - Clicking Schedules tab
+23:06:32.614 [main] INFO  tests.AccountsDetailsTest - Clicking Ledger tab
+23:07:04.602 [main] INFO  tests.AccountsDetailsTest - Clicking Transaction tab
+23:07:35.782 [main] INFO  tests.AccountsDetailsTest - Clicking Payment tab
+23:08:06.869 [main] INFO  tests.AccountsDetailsTest - Clicking Nach Presentation tab
+23:08:37.870 [main] INFO  tests.AccountsDetailsTest - Clicking Documents tab
+23:09:08.942 [main] INFO  tests.AccountsDetailsTest - Clicking Tracking History tab
+23:09:40.983 [main] INFO  tests.AccountsDetailsTest - Clicking Charges tab
+23:10:11.921 [main] INFO  tests.AccountsDetailsTest - Clicking Disbursements tab
+23:10:43.038 [main] INFO  tests.AccountsDetailsTest - Clicking Balance Transfer tab
+23:11:14.248 [main] INFO  tests.AccountsDetailsTest - Clicking Insurance Claims tab
+23:11:47.027 [main] INFO  tests.AccountsDetailsTest - Clicking Audit Trail tab
+23:12:18.823 [main] INFO  tests.AccountsDetailsTest - Clicking Schedules then returning to Overview tab
+23:16:34.296 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+23:16:34.502 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+23:16:36.131 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+23:16:39.944 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+23:16:42.067 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+23:16:47.641 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+23:16:51.591 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+23:16:53.098 [main] INFO  tests.AccountsTest - Listing available Status filter options
+23:16:54.223 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+23:16:55.869 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+23:16:58.617 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+23:17:02.097 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+23:17:04.709 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+23:17:06.375 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+23:17:23.920 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 0
+23:17:23.925 [main] INFO  tests.AccountsTest - No SETTLED loans in current test data — filter applied without error
+23:17:25.492 [main] INFO  tests.AccountsTest - Testing Login date range filter
+23:17:28.736 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+23:17:30.412 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+23:17:34.690 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+23:17:36.171 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+23:17:38.688 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+23:17:38.690 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+23:17:38.690 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+23:17:38.690 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+23:17:38.690 [main] INFO  tests.AccountsTest - Row 4: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+23:17:38.690 [main] INFO  tests.AccountsTest - Row 5: LAN=PERSONAL_000006, Borrower=APEKSHA MISHRA, Status=Insurance Closed
+23:17:38.690 [main] INFO  tests.AccountsTest - Row 6: LAN=PERSONAL_000005, Borrower=GAURAV JAISWAL, Status=Moratorium
+23:17:38.690 [main] INFO  tests.AccountsTest - Row 7: LAN=VEHICLE_000022, Borrower=Sarans Tiwari, Status=Settled
+23:17:38.690 [main] INFO  tests.AccountsTest - Row 8: LAN=VEHICLE_000020, Borrower=NIDHI ANIL SADHWANI, Status=Settled
+23:17:38.690 [main] INFO  tests.AccountsTest - Row 9: LAN=PERSONAL_000004, Borrower=VISHNU MOHANDAS MUPPARATHY, Status=Active
+23:17:40.119 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+23:17:43.393 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+23:17:43.515 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000026
+23:17:44.550 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000026
+23:17:46.177 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+23:17:46.354 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000026
+23:17:48.809 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+23:17:51.487 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+23:17:53.064 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+23:17:55.710 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+23:17:59.056 [main] INFO  tests.AccountsDetailsTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/207?product=VEHICLE_LOAN
+23:18:00.225 [main] INFO  tests.AccountsDetailsTest - Verifying detail page loads
+23:18:01.473 [main] INFO  tests.AccountsDetailsTest - Verifying URL contains numeric account ID
+23:18:01.481 [main] INFO  tests.AccountsDetailsTest - Current URL: https://lms.alfinnext.com/lms/accounts/207?product=VEHICLE_LOAN
+23:18:02.293 [main] INFO  tests.AccountsDetailsTest - Verifying borrower name is visible in header
+23:18:02.599 [main] INFO  tests.AccountsDetailsTest - Borrower name: Hiniw BapenHiniw Bapen
+23:18:03.632 [main] INFO  tests.AccountsDetailsTest - Verifying LAN number is shown in header
+23:18:03.856 [main] INFO  tests.AccountsDetailsTest - LAN number: VEHICLE_000026
+23:18:04.882 [main] INFO  tests.AccountsDetailsTest - Verifying full LAN label contains 'LAN:' prefix
+23:18:05.022 [main] INFO  tests.AccountsDetailsTest - Full LAN text: LAN:
+VEHICLE_000026
+23:18:05.979 [main] INFO  tests.AccountsDetailsTest - Verifying status badge is visible
+23:18:06.080 [main] INFO  tests.AccountsDetailsTest - Status badge: Active
+23:18:07.249 [main] INFO  tests.AccountsDetailsTest - Verifying AN text is visible in header
+23:18:07.319 [main] INFO  tests.AccountsDetailsTest - AN text: AN:
+APP82647478
+23:18:11.877 [main] INFO  tests.AccountsDetailsTest - Verifying Product Type is visible in header
+23:18:11.944 [main] INFO  tests.AccountsDetailsTest - Product type: VEHICLE
+23:18:22.541 [main] INFO  tests.AccountsDetailsTest - Verifying Disbursed On date is visible in header
+23:18:22.658 [main] INFO  tests.AccountsDetailsTest - Disbursed on: 27-06-2026
+23:18:28.596 [main] INFO  tests.AccountsDetailsTest - Verifying Loan Amount is displayed in info grid
+23:18:28.728 [main] INFO  tests.AccountsDetailsTest - Loan Amount: ₹70,000
+23:18:36.565 [main] INFO  tests.AccountsDetailsTest - Verifying Outstanding is displayed in info grid
+23:18:36.676 [main] INFO  tests.AccountsDetailsTest - Outstanding: ₹70,000
+23:18:46.994 [main] INFO  tests.AccountsDetailsTest - Verifying Current DPD is displayed in info grid
+23:18:47.075 [main] INFO  tests.AccountsDetailsTest - Current DPD: 0
+23:18:55.174 [main] INFO  tests.AccountsDetailsTest - Verifying Next EMI Due is displayed in info grid
+23:18:55.282 [main] INFO  tests.AccountsDetailsTest - Next EMI Due: 04 Jul 2026
+23:19:01.199 [main] INFO  tests.AccountsDetailsTest - Verifying Current Liability is displayed in info grid
+23:19:01.277 [main] INFO  tests.AccountsDetailsTest - Current Liability: ₹222
+23:19:09.599 [main] INFO  tests.AccountsDetailsTest - Verifying DISBURSED AMOUNT card is shown
+23:19:43.903 [main] INFO  tests.AccountsDetailsTest - Verifying NET OUTSTANDING BALANCE card is shown
+23:20:17.239 [main] INFO  tests.AccountsDetailsTest - Verifying PAID AMOUNT card is shown
+23:21:17.784 [main] INFO  tests.AccountsDetailsTest - Verifying OVERDUE AMOUNT card is shown
+23:22:18.289 [main] INFO  tests.AccountsDetailsTest - ── Tab 1: Overview (already active) ──
+16:39:08.054 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+16:39:08.137 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+16:39:10.337 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+16:39:13.916 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+16:39:15.864 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+16:39:21.520 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+16:39:25.285 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+16:39:26.982 [main] INFO  tests.AccountsTest - Listing available Status filter options
+16:39:27.992 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+16:39:29.558 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+16:39:32.037 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+16:39:35.402 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+16:39:37.902 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+16:39:41.678 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+16:39:59.241 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 0
+16:39:59.241 [main] INFO  tests.AccountsTest - No SETTLED loans in current test data — filter applied without error
+16:40:00.915 [main] INFO  tests.AccountsTest - Testing Login date range filter
+16:40:03.961 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+16:40:05.379 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+16:40:09.457 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+16:40:10.869 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+16:40:13.402 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+16:40:13.402 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+16:40:13.402 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+16:40:13.403 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+16:40:13.403 [main] INFO  tests.AccountsTest - Row 4: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+16:40:13.403 [main] INFO  tests.AccountsTest - Row 5: LAN=PERSONAL_000006, Borrower=APEKSHA MISHRA, Status=Insurance Closed
+16:40:13.403 [main] INFO  tests.AccountsTest - Row 6: LAN=PERSONAL_000005, Borrower=GAURAV JAISWAL, Status=Moratorium
+16:40:13.403 [main] INFO  tests.AccountsTest - Row 7: LAN=VEHICLE_000022, Borrower=Sarans Tiwari, Status=Settled
+16:40:13.404 [main] INFO  tests.AccountsTest - Row 8: LAN=VEHICLE_000020, Borrower=NIDHI ANIL SADHWANI, Status=Settled
+16:40:13.404 [main] INFO  tests.AccountsTest - Row 9: LAN=PERSONAL_000004, Borrower=VISHNU MOHANDAS MUPPARATHY, Status=Active
+16:40:15.028 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+16:40:17.875 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+16:40:17.990 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000026
+16:40:18.821 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000026
+16:40:20.438 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+16:40:20.607 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000026
+16:40:23.173 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+16:40:25.592 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+16:40:27.170 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+16:40:29.617 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+16:40:31.524 [main] INFO  tests.AccountsDetailsTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/207?product=VEHICLE_LOAN
+16:40:32.281 [main] INFO  tests.AccountsDetailsTest - Verifying detail page loads
+16:40:33.108 [main] INFO  tests.AccountsDetailsTest - Verifying URL contains numeric account ID
+16:40:33.116 [main] INFO  tests.AccountsDetailsTest - Current URL: https://lms.alfinnext.com/lms/accounts/207?product=VEHICLE_LOAN
+16:40:33.762 [main] INFO  tests.AccountsDetailsTest - Verifying borrower name is visible in header
+16:40:33.882 [main] INFO  tests.AccountsDetailsTest - Borrower name: Hiniw BapenHiniw Bapen
+16:40:34.565 [main] INFO  tests.AccountsDetailsTest - Verifying LAN number is shown in header
+16:40:34.724 [main] INFO  tests.AccountsDetailsTest - LAN number: VEHICLE_000026
+16:40:35.357 [main] INFO  tests.AccountsDetailsTest - Verifying full LAN label contains 'LAN:' prefix
+16:40:35.486 [main] INFO  tests.AccountsDetailsTest - Full LAN text: LAN:
+VEHICLE_000026
+16:40:36.138 [main] INFO  tests.AccountsDetailsTest - Verifying status badge is visible
+16:40:36.303 [main] INFO  tests.AccountsDetailsTest - Status badge: Active
+16:40:37.528 [main] INFO  tests.AccountsDetailsTest - Verifying AN text is visible in header
+16:40:37.846 [main] INFO  tests.AccountsDetailsTest - AN text: AN:
+APP82647478
+16:40:38.718 [main] INFO  tests.AccountsDetailsTest - Verifying Product Type is visible in header
+16:40:38.888 [main] INFO  tests.AccountsDetailsTest - Product type: VEHICLE
+16:40:39.685 [main] INFO  tests.AccountsDetailsTest - Verifying Disbursed On date is visible in header
+16:40:39.834 [main] INFO  tests.AccountsDetailsTest - Disbursed on: 27-06-2026
+16:40:40.604 [main] INFO  tests.AccountsDetailsTest - Verifying Loan Amount is displayed in info grid
+16:40:40.697 [main] INFO  tests.AccountsDetailsTest - Loan Amount: ₹70,000
+16:40:41.333 [main] INFO  tests.AccountsDetailsTest - Verifying Outstanding is displayed in info grid
+16:40:41.403 [main] INFO  tests.AccountsDetailsTest - Outstanding: ₹70,015.34
+16:40:42.013 [main] INFO  tests.AccountsDetailsTest - Verifying Current DPD is displayed in info grid
+16:40:42.093 [main] INFO  tests.AccountsDetailsTest - Current DPD: 0
+16:40:42.797 [main] INFO  tests.AccountsDetailsTest - Verifying Next EMI Due is displayed in info grid
+16:40:43.078 [main] INFO  tests.AccountsDetailsTest - Next EMI Due: 04 Jul 2026
+16:40:43.761 [main] INFO  tests.AccountsDetailsTest - Verifying Current Liability is displayed in info grid
+16:40:43.839 [main] INFO  tests.AccountsDetailsTest - Current Liability: ₹222
+16:40:44.803 [main] INFO  tests.AccountsDetailsTest - Verifying DISBURSED AMOUNT card is shown
+16:41:15.439 [main] INFO  tests.AccountsDetailsTest - Verifying NET OUTSTANDING BALANCE card is shown
+16:41:46.298 [main] INFO  tests.AccountsDetailsTest - Verifying PAID AMOUNT card is shown
+16:42:17.088 [main] INFO  tests.AccountsDetailsTest - Verifying OVERDUE AMOUNT card is shown
+16:42:47.934 [main] INFO  tests.AccountsDetailsTest - ── Tab 1: Overview (already active) ──
+16:42:49.307 [main] INFO  tests.AccountsDetailsTest - Overview: borrower=Hiniw BapenHiniw Bapen
+16:42:49.307 [main] INFO  tests.AccountsDetailsTest - ── Tab 2: Schedules ──
+16:42:51.016 [main] INFO  tests.AccountsDetailsTest - Schedules: URL=https://lms.alfinnext.com/lms/accounts/207?tab=repayment_schedule&product=VEHICLE_LOAN
+16:42:51.018 [main] INFO  tests.AccountsDetailsTest - ── Tab 3: Ledger ──
+16:42:52.734 [main] INFO  tests.AccountsDetailsTest - Ledger: URL=https://lms.alfinnext.com/lms/accounts/207?tab=ledger&product=VEHICLE_LOAN
+16:42:52.734 [main] INFO  tests.AccountsDetailsTest - ── Tab 4: Transaction ──
+16:42:54.481 [main] INFO  tests.AccountsDetailsTest - Transaction: URL=https://lms.alfinnext.com/lms/accounts/207?tab=transactions&product=VEHICLE_LOAN
+16:42:54.482 [main] INFO  tests.AccountsDetailsTest - ── Tab 5: Payment ──
+16:42:56.244 [main] INFO  tests.AccountsDetailsTest - Payment: URL=https://lms.alfinnext.com/lms/accounts/207?tab=payment&product=VEHICLE_LOAN
+16:42:56.245 [main] INFO  tests.AccountsDetailsTest - ── Tab 6: Nach Presentation ──
+16:42:58.037 [main] INFO  tests.AccountsDetailsTest - Nach Presentation: URL=https://lms.alfinnext.com/lms/accounts/207?tab=nach_presentation&product=VEHICLE_LOAN
+16:42:58.037 [main] INFO  tests.AccountsDetailsTest - ── Tab 7: Documents ──
+16:42:59.763 [main] INFO  tests.AccountsDetailsTest - Documents: URL=https://lms.alfinnext.com/lms/accounts/207?tab=documents&product=VEHICLE_LOAN
+16:42:59.763 [main] INFO  tests.AccountsDetailsTest - ── Tab 8: Tracking History ──
+16:43:01.513 [main] INFO  tests.AccountsDetailsTest - Tracking History: URL=https://lms.alfinnext.com/lms/accounts/207?tab=tracking_history&product=VEHICLE_LOAN
+16:43:01.514 [main] INFO  tests.AccountsDetailsTest - ── Tab 9: Charges ──
+16:43:03.232 [main] INFO  tests.AccountsDetailsTest - Charges: URL=https://lms.alfinnext.com/lms/accounts/207?tab=charges&product=VEHICLE_LOAN
+16:43:03.232 [main] INFO  tests.AccountsDetailsTest - ── Tab 10: Disbursements ──
+16:43:04.938 [main] INFO  tests.AccountsDetailsTest - Disbursements: URL=https://lms.alfinnext.com/lms/accounts/207?tab=disbursements&product=VEHICLE_LOAN
+16:43:04.939 [main] INFO  tests.AccountsDetailsTest - ── Tab 11: Balance Transfer ──
+16:43:06.647 [main] INFO  tests.AccountsDetailsTest - Balance Transfer: URL=https://lms.alfinnext.com/lms/accounts/207?tab=balance_transfer&product=VEHICLE_LOAN
+16:43:06.647 [main] INFO  tests.AccountsDetailsTest - ── Tab 12: Insurance Claims ──
+16:43:08.354 [main] INFO  tests.AccountsDetailsTest - Insurance Claims: URL=https://lms.alfinnext.com/lms/accounts/207?tab=insurance_claims&product=VEHICLE_LOAN
+16:43:08.354 [main] INFO  tests.AccountsDetailsTest - ── Tab 13: Audit Trail ──
+16:43:10.074 [main] INFO  tests.AccountsDetailsTest - Audit Trail: URL=https://lms.alfinnext.com/lms/accounts/207?tab=audit_trail&product=VEHICLE_LOAN
+16:43:10.075 [main] INFO  tests.AccountsDetailsTest - ── Back to Overview ──
+16:43:11.786 [main] INFO  tests.AccountsDetailsTest - Back to Overview: borrower=Hiniw BapenHiniw Bapen
+16:55:42.712 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+16:55:42.897 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+16:55:45.296 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+16:55:49.011 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+16:55:51.126 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+16:55:56.632 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+16:56:00.378 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+16:56:02.156 [main] INFO  tests.AccountsTest - Listing available Status filter options
+16:56:02.910 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+16:56:04.455 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+16:56:07.036 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+16:56:09.733 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+16:56:12.249 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+16:56:15.005 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+16:56:32.836 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 0
+16:56:32.836 [main] INFO  tests.AccountsTest - No SETTLED loans in current test data — filter applied without error
+16:56:34.401 [main] INFO  tests.AccountsTest - Testing Login date range filter
+16:56:37.294 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+16:56:38.707 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+16:56:42.786 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+16:56:44.087 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+16:56:46.484 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+16:56:46.484 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+16:56:46.485 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+16:56:46.485 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+16:56:46.485 [main] INFO  tests.AccountsTest - Row 4: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+16:56:46.485 [main] INFO  tests.AccountsTest - Row 5: LAN=PERSONAL_000006, Borrower=APEKSHA MISHRA, Status=Insurance Closed
+16:56:46.485 [main] INFO  tests.AccountsTest - Row 6: LAN=PERSONAL_000005, Borrower=GAURAV JAISWAL, Status=Moratorium
+16:56:46.485 [main] INFO  tests.AccountsTest - Row 7: LAN=VEHICLE_000022, Borrower=Sarans Tiwari, Status=Settled
+16:56:46.485 [main] INFO  tests.AccountsTest - Row 8: LAN=VEHICLE_000020, Borrower=NIDHI ANIL SADHWANI, Status=Settled
+16:56:46.486 [main] INFO  tests.AccountsTest - Row 9: LAN=PERSONAL_000004, Borrower=VISHNU MOHANDAS MUPPARATHY, Status=Active
+16:56:48.098 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+16:56:52.035 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+16:56:52.129 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000026
+16:56:52.695 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000026
+16:56:54.436 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+16:56:54.609 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000026
+16:56:57.469 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+16:56:59.816 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+16:57:01.277 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+16:57:04.041 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+16:57:06.789 [main] INFO  tests.AccountsDetailsTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/207?product=VEHICLE_LOAN
+16:57:07.874 [main] INFO  tests.AccountsDetailsTest - Verifying detail page loads
+16:57:09.340 [main] INFO  tests.AccountsDetailsTest - Verifying URL contains numeric account ID
+16:57:09.371 [main] INFO  tests.AccountsDetailsTest - Current URL: https://lms.alfinnext.com/lms/accounts/207?product=VEHICLE_LOAN
+16:57:10.765 [main] INFO  tests.AccountsDetailsTest - Verifying borrower name is visible in header
+16:57:10.883 [main] INFO  tests.AccountsDetailsTest - Borrower name: Hiniw BapenHiniw Bapen
+16:57:12.319 [main] INFO  tests.AccountsDetailsTest - Verifying LAN number is shown in header
+16:57:12.436 [main] INFO  tests.AccountsDetailsTest - LAN number: VEHICLE_000026
+16:57:13.797 [main] INFO  tests.AccountsDetailsTest - Verifying full LAN label contains 'LAN:' prefix
+16:57:14.228 [main] INFO  tests.AccountsDetailsTest - Full LAN text: LAN:
+VEHICLE_000026
+16:57:15.727 [main] INFO  tests.AccountsDetailsTest - Verifying status badge is visible
+16:57:15.898 [main] INFO  tests.AccountsDetailsTest - Status badge: Active
+16:57:17.213 [main] INFO  tests.AccountsDetailsTest - Verifying AN text is visible in header
+16:57:17.412 [main] INFO  tests.AccountsDetailsTest - AN text: AN:
+APP82647478
+16:57:18.971 [main] INFO  tests.AccountsDetailsTest - Verifying Product Type is visible in header
+16:57:19.253 [main] INFO  tests.AccountsDetailsTest - Product type: VEHICLE
+16:57:20.821 [main] INFO  tests.AccountsDetailsTest - Verifying Disbursed On date is visible in header
+16:57:21.013 [main] INFO  tests.AccountsDetailsTest - Disbursed on: 27-06-2026
+16:57:22.202 [main] INFO  tests.AccountsDetailsTest - Verifying Loan Amount is displayed in info grid
+16:57:22.334 [main] INFO  tests.AccountsDetailsTest - Loan Amount: ₹70,000
+16:57:23.688 [main] INFO  tests.AccountsDetailsTest - Verifying Outstanding is displayed in info grid
+16:57:23.814 [main] INFO  tests.AccountsDetailsTest - Outstanding: ₹70,015.34
+16:57:25.063 [main] INFO  tests.AccountsDetailsTest - Verifying Current DPD is displayed in info grid
+16:57:25.175 [main] INFO  tests.AccountsDetailsTest - Current DPD: 0
+16:57:26.619 [main] INFO  tests.AccountsDetailsTest - Verifying Next EMI Due is displayed in info grid
+16:57:26.880 [main] INFO  tests.AccountsDetailsTest - Next EMI Due: 04 Jul 2026
+16:57:27.981 [main] INFO  tests.AccountsDetailsTest - Verifying Current Liability is displayed in info grid
+16:57:28.174 [main] INFO  tests.AccountsDetailsTest - Current Liability: ₹222
+16:57:29.701 [main] INFO  tests.AccountsDetailsTest - Verifying DISBURSED AMOUNT card is shown
+16:58:00.915 [main] INFO  tests.AccountsDetailsTest - Verifying NET OUTSTANDING BALANCE card is shown
+16:58:32.045 [main] INFO  tests.AccountsDetailsTest - Verifying PAID AMOUNT card is shown
+16:59:02.906 [main] INFO  tests.AccountsDetailsTest - Verifying OVERDUE AMOUNT card is shown
+16:59:33.664 [main] INFO  tests.AccountsDetailsTest - ── Tab 1: Overview (already active) ──
+16:59:35.044 [main] INFO  tests.AccountsDetailsTest - Overview: borrower=Hiniw BapenHiniw Bapen
+16:59:35.045 [main] INFO  tests.AccountsDetailsTest - ── Tab 2: Schedules ──
+16:59:36.776 [main] INFO  tests.AccountsDetailsTest - Schedules: URL=https://lms.alfinnext.com/lms/accounts/207?tab=repayment_schedule&product=VEHICLE_LOAN
+16:59:36.776 [main] INFO  tests.AccountsDetailsTest - ── Tab 3: Ledger ──
+16:59:38.491 [main] INFO  tests.AccountsDetailsTest - Ledger: URL=https://lms.alfinnext.com/lms/accounts/207?tab=ledger&product=VEHICLE_LOAN
+16:59:38.491 [main] INFO  tests.AccountsDetailsTest - ── Tab 4: Transaction ──
+16:59:40.224 [main] INFO  tests.AccountsDetailsTest - Transaction: URL=https://lms.alfinnext.com/lms/accounts/207?tab=transactions&product=VEHICLE_LOAN
+16:59:40.225 [main] INFO  tests.AccountsDetailsTest - ── Tab 5: Payment ──
+16:59:42.017 [main] INFO  tests.AccountsDetailsTest - Payment: URL=https://lms.alfinnext.com/lms/accounts/207?tab=payment&product=VEHICLE_LOAN
+16:59:42.017 [main] INFO  tests.AccountsDetailsTest - ── Tab 6: Nach Presentation ──
+16:59:43.736 [main] INFO  tests.AccountsDetailsTest - Nach Presentation: URL=https://lms.alfinnext.com/lms/accounts/207?tab=nach_presentation&product=VEHICLE_LOAN
+16:59:43.737 [main] INFO  tests.AccountsDetailsTest - ── Tab 7: Documents ──
+16:59:45.439 [main] INFO  tests.AccountsDetailsTest - Documents: URL=https://lms.alfinnext.com/lms/accounts/207?tab=documents&product=VEHICLE_LOAN
+16:59:45.440 [main] INFO  tests.AccountsDetailsTest - ── Tab 8: Tracking History ──
+16:59:47.154 [main] INFO  tests.AccountsDetailsTest - Tracking History: URL=https://lms.alfinnext.com/lms/accounts/207?tab=tracking_history&product=VEHICLE_LOAN
+16:59:47.155 [main] INFO  tests.AccountsDetailsTest - ── Tab 9: Charges ──
+16:59:48.925 [main] INFO  tests.AccountsDetailsTest - Charges: URL=https://lms.alfinnext.com/lms/accounts/207?tab=charges&product=VEHICLE_LOAN
+16:59:48.926 [main] INFO  tests.AccountsDetailsTest - ── Tab 10: Disbursements ──
+16:59:50.660 [main] INFO  tests.AccountsDetailsTest - Disbursements: URL=https://lms.alfinnext.com/lms/accounts/207?tab=disbursements&product=VEHICLE_LOAN
+16:59:50.660 [main] INFO  tests.AccountsDetailsTest - ── Tab 11: Balance Transfer ──
+16:59:52.407 [main] INFO  tests.AccountsDetailsTest - Balance Transfer: URL=https://lms.alfinnext.com/lms/accounts/207?tab=balance_transfer&product=VEHICLE_LOAN
+16:59:52.407 [main] INFO  tests.AccountsDetailsTest - ── Tab 12: Insurance Claims ──
+16:59:54.154 [main] INFO  tests.AccountsDetailsTest - Insurance Claims: URL=https://lms.alfinnext.com/lms/accounts/207?tab=insurance_claims&product=VEHICLE_LOAN
+16:59:54.154 [main] INFO  tests.AccountsDetailsTest - ── Tab 13: Audit Trail ──
+16:59:55.954 [main] INFO  tests.AccountsDetailsTest - Audit Trail: URL=https://lms.alfinnext.com/lms/accounts/207?tab=audit_trail&product=VEHICLE_LOAN
+16:59:55.955 [main] INFO  tests.AccountsDetailsTest - ── Back to Overview ──
+16:59:57.712 [main] INFO  tests.AccountsDetailsTest - Back to Overview: borrower=Hiniw BapenHiniw Bapen
+17:28:22.917 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+17:28:23.046 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+17:28:25.473 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+17:28:29.441 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+17:28:30.671 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+17:28:35.989 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+17:28:39.497 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+17:28:40.090 [main] INFO  tests.AccountsTest - Listing available Status filter options
+17:28:40.833 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+17:28:41.812 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+17:28:44.555 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+17:28:46.870 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+17:28:49.355 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+17:28:51.581 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+17:28:59.655 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 5
+17:29:01.408 [main] INFO  tests.AccountsTest - Testing Login date range filter
+17:29:04.368 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+17:29:05.494 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+17:29:09.782 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+17:29:10.356 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000028, Borrower=Ribiw Bewaw, Status=Active
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000027, Borrower=Wufes Wavef, Status=Active
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 4: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 5: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 6: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 7: LAN=PERSONAL_000006, Borrower=APEKSHA MISHRA, Status=Insurance Closed
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 8: LAN=PERSONAL_000005, Borrower=GAURAV JAISWAL, Status=Moratorium
+17:29:12.310 [main] INFO  tests.AccountsTest - Row 9: LAN=VEHICLE_000022, Borrower=Sarans Tiwari, Status=Settled
+17:29:13.280 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+17:29:15.630 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+17:29:15.797 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000028
+17:29:16.387 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000028
+17:29:17.480 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+17:29:17.673 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000028
+17:29:19.285 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+17:29:21.524 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+17:29:22.838 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+17:29:25.340 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+17:29:27.104 [main] INFO  tests.AccountsDetailsTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+17:29:27.549 [main] INFO  tests.AccountsDetailsTest - Verifying detail page loads
+17:29:28.090 [main] INFO  tests.AccountsDetailsTest - Verifying URL contains numeric account ID
+17:29:28.102 [main] INFO  tests.AccountsDetailsTest - Current URL: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+17:29:28.762 [main] INFO  tests.AccountsDetailsTest - Verifying borrower name is visible in header
+17:29:28.905 [main] INFO  tests.AccountsDetailsTest - Borrower name: Ribiw Bewaw
+17:29:29.516 [main] INFO  tests.AccountsDetailsTest - Verifying LAN number is shown in header
+17:29:29.624 [main] INFO  tests.AccountsDetailsTest - LAN number: VEHICLE_000028
+17:29:30.146 [main] INFO  tests.AccountsDetailsTest - Verifying full LAN label contains 'LAN:' prefix
+17:29:30.238 [main] INFO  tests.AccountsDetailsTest - Full LAN text: LAN:
+VEHICLE_000028
+17:29:30.833 [main] INFO  tests.AccountsDetailsTest - Verifying status badge is visible
+17:29:31.045 [main] INFO  tests.AccountsDetailsTest - Status badge: Active
+17:29:31.507 [main] INFO  tests.AccountsDetailsTest - Verifying AN text is visible in header
+17:29:31.623 [main] INFO  tests.AccountsDetailsTest - AN text: AN:
+APP04680317
+17:29:32.140 [main] INFO  tests.AccountsDetailsTest - Verifying Product Type is visible in header
+17:29:32.246 [main] INFO  tests.AccountsDetailsTest - Product type: VEHICLE
+17:29:32.745 [main] INFO  tests.AccountsDetailsTest - Verifying Disbursed On date is visible in header
+17:29:32.862 [main] INFO  tests.AccountsDetailsTest - Disbursed on: 29-06-2026
+17:29:33.430 [main] INFO  tests.AccountsDetailsTest - Verifying Loan Amount is displayed in info grid
+17:29:33.562 [main] INFO  tests.AccountsDetailsTest - Loan Amount: ₹70,000
+17:29:34.022 [main] INFO  tests.AccountsDetailsTest - Verifying Outstanding is displayed in info grid
+17:29:34.168 [main] INFO  tests.AccountsDetailsTest - Outstanding: ₹70,000
+17:29:34.759 [main] INFO  tests.AccountsDetailsTest - Verifying Current DPD is displayed in info grid
+17:29:34.905 [main] INFO  tests.AccountsDetailsTest - Current DPD: 0
+17:29:35.492 [main] INFO  tests.AccountsDetailsTest - Verifying Next EMI Due is displayed in info grid
+17:29:35.615 [main] INFO  tests.AccountsDetailsTest - Next EMI Due: 06 Jul 2026
+17:29:36.127 [main] INFO  tests.AccountsDetailsTest - Verifying Current Liability is displayed in info grid
+17:29:36.232 [main] INFO  tests.AccountsDetailsTest - Current Liability: ₹222
+17:29:36.853 [main] INFO  tests.AccountsDetailsTest - Verifying DISBURSED AMOUNT card is shown
+17:30:07.777 [main] INFO  tests.AccountsDetailsTest - Verifying NET OUTSTANDING BALANCE card is shown
+17:30:38.541 [main] INFO  tests.AccountsDetailsTest - Verifying PAID AMOUNT card is shown
+17:31:09.108 [main] INFO  tests.AccountsDetailsTest - Verifying OVERDUE AMOUNT card is shown
+17:31:39.862 [main] INFO  tests.AccountsDetailsTest - ── Tab 1: Overview (already active) ──
+17:31:41.460 [main] INFO  tests.AccountsDetailsTest - Overview: borrower=Ribiw Bewaw
+17:31:41.460 [main] INFO  tests.AccountsDetailsTest - ── Tab 2: Schedules ──
+17:31:43.511 [main] INFO  tests.AccountsDetailsTest - Schedules: URL=https://lms.alfinnext.com/lms/accounts/209?tab=repayment_schedule&product=VEHICLE_LOAN
+17:31:43.511 [main] INFO  tests.AccountsDetailsTest - ── Tab 3: Ledger ──
+17:31:45.509 [main] INFO  tests.AccountsDetailsTest - Ledger: URL=https://lms.alfinnext.com/lms/accounts/209?tab=ledger&product=VEHICLE_LOAN
+17:31:45.509 [main] INFO  tests.AccountsDetailsTest - ── Tab 4: Transaction ──
+17:31:47.451 [main] INFO  tests.AccountsDetailsTest - Transaction: URL=https://lms.alfinnext.com/lms/accounts/209?tab=transactions&product=VEHICLE_LOAN
+17:31:47.451 [main] INFO  tests.AccountsDetailsTest - ── Tab 5: Payment ──
+17:31:49.307 [main] INFO  tests.AccountsDetailsTest - Payment: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:31:49.307 [main] INFO  tests.AccountsDetailsTest - ── Tab 6: Nach Presentation ──
+17:31:51.411 [main] INFO  tests.AccountsDetailsTest - Nach Presentation: URL=https://lms.alfinnext.com/lms/accounts/209?tab=nach_presentation&product=VEHICLE_LOAN
+17:31:51.411 [main] INFO  tests.AccountsDetailsTest - ── Tab 7: Documents ──
+17:31:53.513 [main] INFO  tests.AccountsDetailsTest - Documents: URL=https://lms.alfinnext.com/lms/accounts/209?tab=documents&product=VEHICLE_LOAN
+17:31:53.513 [main] INFO  tests.AccountsDetailsTest - ── Tab 8: Tracking History ──
+17:31:55.611 [main] INFO  tests.AccountsDetailsTest - Tracking History: URL=https://lms.alfinnext.com/lms/accounts/209?tab=tracking_history&product=VEHICLE_LOAN
+17:31:55.611 [main] INFO  tests.AccountsDetailsTest - ── Tab 9: Charges ──
+17:31:57.499 [main] INFO  tests.AccountsDetailsTest - Charges: URL=https://lms.alfinnext.com/lms/accounts/209?tab=charges&product=VEHICLE_LOAN
+17:31:57.499 [main] INFO  tests.AccountsDetailsTest - ── Tab 10: Disbursements ──
+17:31:59.347 [main] INFO  tests.AccountsDetailsTest - Disbursements: URL=https://lms.alfinnext.com/lms/accounts/209?tab=disbursements&product=VEHICLE_LOAN
+17:31:59.347 [main] INFO  tests.AccountsDetailsTest - ── Tab 11: Balance Transfer ──
+17:32:01.374 [main] INFO  tests.AccountsDetailsTest - Balance Transfer: URL=https://lms.alfinnext.com/lms/accounts/209?tab=balance_transfer&product=VEHICLE_LOAN
+17:32:01.374 [main] INFO  tests.AccountsDetailsTest - ── Tab 12: Insurance Claims ──
+17:32:03.414 [main] INFO  tests.AccountsDetailsTest - Insurance Claims: URL=https://lms.alfinnext.com/lms/accounts/209?tab=insurance_claims&product=VEHICLE_LOAN
+17:32:03.414 [main] INFO  tests.AccountsDetailsTest - ── Tab 13: Audit Trail ──
+17:32:05.414 [main] INFO  tests.AccountsDetailsTest - Audit Trail: URL=https://lms.alfinnext.com/lms/accounts/209?tab=audit_trail&product=VEHICLE_LOAN
+17:32:05.414 [main] INFO  tests.AccountsDetailsTest - ── Back to Overview ──
+17:32:07.447 [main] INFO  tests.AccountsDetailsTest - Back to Overview: borrower=Ribiw Bewaw
+17:32:09.164 [main] INFO  tests.PaymentTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+17:32:40.075 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:32:40.077 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+17:33:41.247 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:33:41.252 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+17:34:43.073 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:34:43.074 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+17:34:44.313 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:35:15.572 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:35:15.574 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+17:35:17.291 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+17:35:48.415 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:35:48.415 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+17:36:20.748 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:36:20.748 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+17:37:22.399 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:37:22.400 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+17:37:54.973 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:37:54.974 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+17:37:55.761 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+17:38:27.083 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:38:27.084 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+17:38:27.647 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+17:38:58.922 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:38:58.924 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+17:38:59.690 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+17:39:30.914 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:39:30.917 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+17:39:31.563 [main] INFO  tests.PaymentTest - Max Payment Limit: Cap for this payment cycle
+17:40:02.821 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:40:02.822 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+17:41:05.372 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:41:05.373 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+17:41:46.910 [main] INFO  tests.PaymentTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+17:42:18.935 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:42:18.944 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+17:43:20.493 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:43:20.495 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+17:44:22.167 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:44:22.174 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+17:44:23.637 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:44:54.875 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:44:54.880 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+17:44:56.721 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+17:45:27.900 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:45:27.904 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+17:46:29.332 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:46:29.336 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+17:46:38.146 [main] INFO  tests.PaymentTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+17:47:10.420 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:47:10.427 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+17:47:31.244 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:47:31.248 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+17:47:31.988 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+17:48:03.242 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:48:03.243 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+17:48:04.484 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+17:48:12.729 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:48:12.731 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+17:48:35.898 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:48:35.901 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+17:48:36.315 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+17:49:07.503 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:49:07.504 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+17:49:08.131 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+17:49:14.381 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:49:14.382 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+17:49:15.842 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:49:40.608 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:49:40.611 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+17:49:43.038 [main] INFO  tests.PaymentTest - Max Payment Limit: Cap for this payment cycle
+17:49:47.251 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:49:47.251 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+17:49:49.033 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+17:50:15.766 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:50:15.768 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+17:50:20.896 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:50:20.903 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+17:51:18.875 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:51:18.880 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+17:51:22.492 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:51:22.495 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+17:52:15.555 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:52:21.853 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:52:21.861 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+17:52:22.742 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+17:52:24.028 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+17:52:25.413 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:52:25.415 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+17:52:26.414 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+17:52:46.118 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:52:46.132 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+17:52:58.333 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:52:58.337 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+17:52:59.088 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+17:53:30.735 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:53:30.735 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+17:53:31.464 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+17:53:46.815 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:53:46.818 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+17:54:03.011 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:54:03.018 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+17:54:03.656 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+17:54:35.834 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:54:35.837 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+17:54:36.524 [main] INFO  tests.PaymentTest - Max Payment Limit: Cap for this payment cycle
+17:54:47.927 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:54:47.929 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+17:54:49.459 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:55:08.066 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:55:08.067 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+17:55:20.027 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:55:20.029 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+17:55:22.034 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+17:56:11.185 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:56:11.189 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+17:56:49.563 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:56:51.053 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:56:51.061 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+17:57:13.430 [main] INFO  tests.PaymentTest - Navigated to Payment tab
+17:57:13.430 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+17:57:14.153 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+17:57:15.179 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+17:57:22.416 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:22.422 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+17:57:24.272 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:24.282 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+17:57:25.862 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:27.026 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:27.034 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+17:57:29.061 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+17:57:30.826 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:30.828 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+17:57:32.054 [main] INFO  tests.PaymentTest - Payment History row count: 1
+17:57:34.376 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:34.393 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+17:57:36.841 [main] INFO  tests.PaymentTest - First row cells: [No history found]
+17:57:40.766 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:40.782 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+17:57:43.813 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+17:57:45.911 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:45.924 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+17:57:47.400 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+17:57:48.873 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:48.882 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+17:57:52.007 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+17:57:54.125 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:54.130 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+17:57:55.448 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+17:57:56.685 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:56.686 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+17:57:57.341 [main] INFO  tests.PaymentTest - Max Payment Limit: Cap for this payment cycle
+17:57:58.425 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:57:58.428 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+17:58:00.337 [main] INFO  tests.PaymentTest - Modal cancelled successfully
+17:58:01.515 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:58:01.517 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+17:58:33.331 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+17:58:33.332 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+17:58:34.310 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+17:58:35.443 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+18:07:58.403 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:00.496 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:00.500 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+18:08:02.138 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:02.138 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+18:08:03.739 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:03.743 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+18:08:05.195 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:06.232 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:06.234 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+18:08:07.918 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+18:08:08.937 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:08.939 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+18:08:09.393 [main] INFO  tests.PaymentTest - Payment History row count: 1
+18:08:10.260 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:10.262 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+18:08:10.839 [main] INFO  tests.PaymentTest - First row cells: [No history found]
+18:08:11.669 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:11.672 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+18:08:12.299 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:08:13.138 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:13.144 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+18:08:13.764 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:08:14.435 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:14.439 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+18:08:15.099 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+18:08:15.909 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:15.911 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+18:08:16.444 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+18:08:17.173 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:17.175 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+18:08:17.840 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+18:08:18.682 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:18.682 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+18:08:20.360 [main] INFO  tests.PaymentTest - Modal cancelled successfully
+18:08:21.218 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:21.218 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+18:08:22.275 [main] INFO  tests.PaymentTest - Modal closed successfully via × button
+18:08:23.116 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:08:23.116 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+18:08:23.684 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+18:08:24.703 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+18:12:21.041 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:22.168 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:22.170 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+18:12:23.042 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:23.045 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+18:12:24.294 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:24.295 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+18:12:25.784 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:26.567 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:26.570 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+18:12:28.147 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+18:12:28.897 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:28.900 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+18:12:29.383 [main] INFO  tests.PaymentTest - Payment History row count: 1
+18:12:30.114 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:30.114 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+18:12:30.681 [main] INFO  tests.PaymentTest - First row cells: [No history found]
+18:12:31.425 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:31.425 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+18:12:32.250 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:12:33.034 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:33.036 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+18:12:33.542 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:12:34.313 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:34.313 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+18:12:34.940 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+18:12:35.752 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:35.754 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+18:12:36.340 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+18:12:37.088 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:37.090 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+18:12:37.719 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+18:12:38.524 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:38.527 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+18:12:40.216 [main] INFO  tests.PaymentTest - Modal cancelled successfully
+18:12:41.090 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:41.094 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+18:12:42.112 [main] INFO  tests.PaymentTest - Modal closed successfully via × button
+18:12:43.081 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:12:43.081 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+18:12:43.666 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+18:12:44.745 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+18:12:45.192 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+18:12:45.685 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+18:17:04.182 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:06.211 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:06.218 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+18:17:07.520 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:07.530 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+18:17:08.843 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:08.845 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+18:17:10.334 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:11.133 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:11.140 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+18:17:12.806 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+18:17:13.709 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:13.711 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+18:17:14.317 [main] INFO  tests.PaymentTest - Payment History row count: 1
+18:17:15.089 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:15.093 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+18:17:15.577 [main] INFO  tests.PaymentTest - First row cells: [No history found]
+18:17:16.305 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:16.305 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+18:17:17.181 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:17:17.952 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:17.952 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+18:17:18.579 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:17:19.313 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:19.316 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+18:17:19.895 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+18:17:20.721 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:20.722 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+18:17:21.375 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+18:17:22.128 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:22.128 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+18:17:22.709 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+18:17:23.605 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:23.605 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+18:17:25.165 [main] INFO  tests.PaymentTest - Modal cancelled successfully
+18:17:25.895 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:25.895 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+18:17:27.035 [main] INFO  tests.PaymentTest - Modal closed successfully via × button
+18:17:27.854 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:17:27.854 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+18:17:28.445 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+18:17:29.411 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+18:17:29.871 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+18:17:30.386 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+18:17:31.796 [main] INFO  tests.PaymentTest - Authorized By selected
+18:17:34.477 [main] INFO  tests.PaymentTest - Payment submitted — URL: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:12.801 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:14.225 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:14.234 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+18:24:15.396 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:15.398 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+18:24:16.864 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:16.864 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+18:24:18.329 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:19.597 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:19.598 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+18:24:21.090 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+18:24:22.395 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:22.398 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+18:24:22.730 [main] INFO  tests.PaymentTest - Payment History row count: 1
+18:24:23.934 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:23.937 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+18:24:24.556 [main] INFO  tests.PaymentTest - First row cells: [No history found]
+18:24:25.748 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:25.750 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+18:24:26.442 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:24:27.705 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:27.706 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+18:24:28.270 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:24:29.482 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:29.483 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+18:24:29.978 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+18:24:31.182 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:31.183 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+18:24:31.753 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+18:24:33.198 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:33.203 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+18:24:33.854 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+18:24:35.415 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:35.418 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+18:24:36.925 [main] INFO  tests.PaymentTest - Modal cancelled successfully
+18:24:38.194 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:38.196 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+18:24:39.400 [main] INFO  tests.PaymentTest - Modal closed successfully via × button
+18:24:40.701 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:40.701 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+18:24:41.366 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+18:24:42.199 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+18:24:42.460 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+18:24:42.759 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+18:24:43.716 [main] INFO  tests.PaymentTest - Authorized By selected
+18:24:46.020 [main] INFO  tests.PaymentTest - Payment submitted — URL: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:24:47.459 [main] INFO  tests.PaymentTest - Staged Repayments rows after submission: 2
+18:26:36.053 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:37.261 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:37.267 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+18:26:38.016 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:38.016 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+18:26:38.681 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:38.681 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+18:26:39.890 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:40.480 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:40.481 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+18:26:41.800 [main] INFO  tests.PaymentTest - Staged Repayments row count: 2
+18:26:42.404 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:42.406 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+18:26:42.604 [main] INFO  tests.PaymentTest - Payment History row count: 1
+18:26:43.070 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:43.071 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+18:26:43.306 [main] INFO  tests.PaymentTest - First row cells: [No history found]
+18:26:43.788 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:43.788 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+18:26:44.052 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:26:44.609 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:44.611 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+18:26:44.891 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:26:45.324 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:45.325 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+18:26:45.587 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+18:26:46.133 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:46.133 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+18:26:46.431 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+18:26:46.936 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:46.936 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+18:26:47.231 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+18:26:47.727 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:47.731 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+18:26:48.844 [main] INFO  tests.PaymentTest - Modal cancelled successfully
+18:26:49.360 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:49.360 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+18:26:49.881 [main] INFO  tests.PaymentTest - Modal closed successfully via × button
+18:26:50.411 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:50.411 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+18:26:50.718 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+18:26:51.471 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+18:26:51.647 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+18:26:51.857 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+18:26:52.723 [main] INFO  tests.PaymentTest - Authorized By selected
+18:26:54.961 [main] INFO  tests.PaymentTest - Payment submitted — URL: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:26:56.210 [main] INFO  tests.PaymentTest - Staged Repayments rows after submission: 3
+18:31:45.712 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:47.172 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:47.174 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+18:31:48.278 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:48.278 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+18:31:49.072 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:49.073 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+18:31:50.319 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:50.813 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:50.813 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+18:31:52.113 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+18:31:52.553 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:52.553 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+18:31:52.826 [main] INFO  tests.PaymentTest - Payment History row count: 1
+18:31:53.359 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:53.359 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+18:31:53.688 [main] INFO  tests.PaymentTest - First row cells: [No history found]
+18:31:54.174 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:54.175 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+18:31:54.480 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:31:55.116 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:55.116 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+18:31:55.446 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:31:55.962 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:55.962 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+18:31:56.280 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+18:31:56.814 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:56.816 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+18:31:57.080 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+18:31:57.763 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:57.763 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+18:31:58.129 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+18:31:58.706 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:31:58.708 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+18:31:59.778 [main] INFO  tests.PaymentTest - Modal cancelled successfully
+18:32:00.255 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:32:00.256 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+18:32:00.823 [main] INFO  tests.PaymentTest - Modal closed successfully via × button
+18:32:01.289 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:32:01.291 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+18:32:01.583 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+18:32:02.280 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+18:32:02.479 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+18:32:02.746 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+18:32:03.591 [main] INFO  tests.PaymentTest - Authorized By selected
+18:32:05.818 [main] INFO  tests.PaymentTest - Payment submitted — URL: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:32:07.223 [main] INFO  tests.PaymentTest - Staged Repayments rows after submission: 2
+18:32:15.806 [main] INFO  tests.PaymentTest - Staged repayment approved — URL: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:04.167 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:05.492 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:05.496 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+18:35:06.652 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:06.653 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+18:35:07.737 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:07.737 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+18:35:09.016 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:09.592 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:09.593 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+18:35:10.914 [main] INFO  tests.PaymentTest - Staged Repayments row count: 2
+18:35:11.456 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:11.456 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+18:35:11.654 [main] INFO  tests.PaymentTest - Payment History row count: 1
+18:35:12.133 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:12.133 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+18:35:12.416 [main] INFO  tests.PaymentTest - First row cells: [No history found]
+18:35:13.023 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:13.023 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+18:35:13.388 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:35:13.883 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:13.883 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+18:35:14.169 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:35:14.613 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:14.613 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+18:35:14.893 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+18:35:15.416 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:15.416 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+18:35:15.736 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+18:35:16.274 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:16.274 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+18:35:16.544 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+18:35:17.006 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:17.006 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+18:35:17.999 [main] INFO  tests.PaymentTest - Modal cancelled successfully
+18:35:18.452 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:18.454 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+18:35:18.935 [main] INFO  tests.PaymentTest - Modal closed successfully via × button
+18:35:19.471 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:19.474 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+18:35:19.755 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+18:35:20.504 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+18:35:20.689 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+18:35:20.890 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+18:35:21.700 [main] INFO  tests.PaymentTest - Authorized By selected
+18:35:23.909 [main] INFO  tests.PaymentTest - Payment submitted — URL: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:35:25.152 [main] INFO  tests.PaymentTest - Staged Repayments rows after submission: 3
+18:35:28.540 [main] INFO  tests.PaymentTest - Staged repayment approved — URL: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:07.567 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:08.866 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:08.869 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+18:37:09.861 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:09.861 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+18:37:10.726 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:10.726 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+18:37:12.037 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:12.541 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:12.541 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+18:37:13.886 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+18:37:14.471 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:14.472 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+18:37:14.657 [main] INFO  tests.PaymentTest - Payment History row count: 1
+18:37:15.207 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:15.207 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+18:37:15.566 [main] INFO  tests.PaymentTest - First row cells: [No history found]
+18:37:16.065 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:16.065 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+18:37:16.381 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:37:16.881 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:16.881 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+18:37:17.201 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+18:37:17.686 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:17.686 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+18:37:17.972 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+18:37:18.508 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:18.509 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+18:37:18.831 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+18:37:19.364 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:19.366 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+18:37:19.665 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+18:37:20.237 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:20.240 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+18:37:21.314 [main] INFO  tests.PaymentTest - Modal cancelled successfully
+18:37:21.801 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:21.802 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+18:37:22.261 [main] INFO  tests.PaymentTest - Modal closed successfully via × button
+18:37:22.756 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:22.758 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+18:37:23.032 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+18:37:23.831 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+18:37:24.025 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+18:37:24.231 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+18:37:25.059 [main] INFO  tests.PaymentTest - Authorized By selected
+18:37:27.301 [main] INFO  tests.PaymentTest - Payment submitted — URL: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+18:37:28.651 [main] INFO  tests.PaymentTest - Staged Repayments rows after submission: 1
+18:37:31.919 [main] INFO  tests.PaymentTest - Staged repayment approved — URL: https://lms.alfinnext.com/lms/accounts/209?tab=payment&product=VEHICLE_LOAN
+19:04:07.886 [main] INFO  tests.SettlementTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+19:04:08.876 [main] INFO  tests.SettlementTest - Verifying Settlement modal opens from action menu
+19:04:24.942 [main] INFO  tests.SettlementTest - Verifying complete Settlement flow
+19:06:48.494 [main] INFO  tests.SettlementTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+19:06:49.593 [main] INFO  tests.SettlementTest - Verifying Settlement modal opens from action menu
+19:07:55.495 [main] INFO  tests.SettlementTest - Verifying complete Settlement flow
+19:11:20.818 [main] INFO  tests.SettlementTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+19:11:21.994 [main] INFO  tests.SettlementTest - Verifying Settlement modal opens from action menu
+19:12:27.798 [main] INFO  tests.SettlementTest - Verifying complete Settlement flow
+12:16:18.795 [main] INFO  tests.ForeclosureTest - Navigated to account detail page: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+12:16:20.206 [main] INFO  tests.ForeclosureTest - Verifying Foreclosure modal opens from action menu
+12:16:55.924 [main] INFO  tests.ForeclosureTest - Foreclosure modal title: Loan Foreclosure Payoff
+12:16:56.759 [main] INFO  tests.ForeclosureTest - Verifying Loan Payoff Summary section fields
+12:17:32.052 [main] INFO  tests.ForeclosureTest - Loan Account Number: VEHICLE_000028
+12:17:32.144 [main] INFO  tests.ForeclosureTest - Current Loan Status: ACTIVE
+12:17:32.216 [main] INFO  tests.ForeclosureTest - Outstanding Principal: ₹70,000
+12:17:32.276 [main] INFO  tests.ForeclosureTest - Total Net Dues: ₹75,622.58
+12:17:32.813 [main] INFO  tests.ForeclosureTest - Verifying Generate Quote flow
+12:18:15.622 [main] INFO  tests.ForeclosureTest - Verifying Generate New Quote button after existing quote
+12:19:21.272 [main] INFO  tests.ForeclosureTest - Verifying full Foreclosure flow: generate quote → foreclose
+12:23:12.908 [main] INFO  tests.ForeclosureTest - Navigated to account detail page: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+12:23:14.125 [main] INFO  tests.ForeclosureTest - Verifying Foreclosure modal opens from action menu
+12:23:49.638 [main] INFO  tests.ForeclosureTest - Foreclosure modal title: Loan Foreclosure Payoff
+12:24:36.034 [main] INFO  tests.ForeclosureTest - Verifying Loan Payoff Summary section fields
+12:25:26.222 [main] INFO  tests.ForeclosureTest - Modal opened on history view (existing quote found) — verifying history section
+12:25:57.446 [main] INFO  tests.ForeclosureTest - Verifying Generate Quote flow
+12:26:37.582 [main] INFO  tests.ForeclosureTest - Verifying Generate New Quote when existing quote is present
+12:27:44.063 [main] INFO  tests.ForeclosureTest - Verifying full Foreclosure flow: generate quote → click Foreclose
+12:33:21.759 [main] INFO  tests.ForeclosureTest - Navigated to account detail page: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+12:33:23.168 [main] INFO  tests.ForeclosureTest - Verifying Foreclosure modal opens from action menu
+12:33:58.619 [main] INFO  tests.ForeclosureTest - Foreclosure modal title: Loan Foreclosure Payoff
+12:34:28.809 [main] INFO  tests.ForeclosureTest - Modal opened on: SUMMARY view
+12:34:35.802 [main] INFO  tests.ForeclosureTest - Verifying modal content fields
+12:35:41.004 [main] INFO  tests.ForeclosureTest - History view — verifying first quote in history
+12:35:56.595 [main] INFO  tests.ForeclosureTest - Verifying Generate Quote flow
+12:37:18.168 [main] INFO  tests.ForeclosureTest - Verifying Foreclose button opens payment form
+14:46:11.077 [main] INFO  tests.BalanceTransferTest - Navigated to Balance Transfer tab: https://lms.alfinnext.com/lms/accounts/210?tab=balance_transfer&product=VEHICLE_LOAN
+14:46:12.954 [main] INFO  tests.BalanceTransferTest - Verifying Balance Transfer Settlement section loads
+14:46:13.422 [main] INFO  tests.BalanceTransferTest - Section heading: Balance Transfer Settlement
+14:46:15.590 [main] INFO  tests.BalanceTransferTest - Verifying info notice text
+14:46:15.866 [main] INFO  tests.BalanceTransferTest - Info notice: LMS
+⌘
+K
+PRODUCT VERTICAL
+Vehicle Loan
+PK
+Pigok Kamac
+LAN:
+VEHICLE_000029
+AN:
+APP92656751
+Product Type:
+VEHICLE
+Disbursed On:
+30-06-2026
+Active
+Loan Amount
+₹70,000
+Outstanding
+₹70,000
+Current DPD
+0
+Current Liability
+₹222
+Next EMI Due
+07 Jul 2026
+Lead no
+934
+Contact
+******6849
+PAN
+******993E
+Email
+Bhar******************
+Employment Type
+SALARIED
+Residential Type
+OWNED
+Tenure
+24 Months
+Interest
+8%
+DISBURSED AMOUNT
+₹70,000
+NET OUTSTANDING BALANCE
+₹75,622.58
+PAID AMOUNT
+₹0
+OVERDUE AMOUNT
+₹222
+Overview
+Schedules
+Ledger
+Transaction
+Payment
+Nach Presentation
+Documents
+Tracking History
+Charges
+Disbursements
+Balance Transfer
+Insurance Claims
+Audit Trail
+Balance Transfer Settlement
+Transfer outstanding liability to a new lender
+The full outstanding liability of ₹70,000.00 will be settled by the new lender. Once processed, this loan account will be marked as BALANCE_TRANSFERRED and closed.
+New Lender Name
+NOC Reference (Optional)
+Reason for Transfer
+Reset
+Confirm Transfer
+14:46:17.079 [main] INFO  tests.BalanceTransferTest - Verifying form fields accept input
+14:46:17.542 [main] INFO  tests.BalanceTransferTest - Entered New Lender Name: HDFC Bank
+14:46:17.922 [main] INFO  tests.BalanceTransferTest - Entered NOC Reference: NOC-2026-001
+14:46:18.307 [main] INFO  tests.BalanceTransferTest - Entered Reason for Transfer
+14:46:18.983 [main] INFO  tests.BalanceTransferTest - Verifying Reset button clears the form
+14:46:19.759 [main] INFO  tests.BalanceTransferTest - Clicked Reset
+14:46:20.868 [main] INFO  tests.BalanceTransferTest - New Lender Name after reset: ''
+14:46:21.360 [main] INFO  tests.BalanceTransferTest - Verifying full Balance Transfer flow: fill form → Confirm Transfer
+14:46:21.583 [main] INFO  tests.BalanceTransferTest - New Lender Name: HDFC Bank
+14:46:21.875 [main] INFO  tests.BalanceTransferTest - NOC Reference: NOC-20260630-001
+14:46:22.291 [main] INFO  tests.BalanceTransferTest - Reason for Transfer entered
+14:46:22.513 [main] INFO  tests.BalanceTransferTest - Clicked Confirm Transfer
+14:46:25.553 [main] INFO  tests.BalanceTransferTest - Post-transfer URL: https://lms.alfinnext.com/lms/accounts/210?tab=balance_transfer&product=VEHICLE_LOAN
+15:00:45.010 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/208?product=VEHICLE_LOAN
+15:01:15.257 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?product=VEHICLE_LOAN
+15:01:15.268 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+15:01:45.516 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?product=VEHICLE_LOAN
+15:01:45.518 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+15:02:44.088 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?product=VEHICLE_LOAN
+15:02:44.090 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+15:02:45.342 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:03:15.512 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?product=VEHICLE_LOAN
+15:03:15.514 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+15:04:15.770 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?product=VEHICLE_LOAN
+15:04:15.773 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+15:04:16.081 [main] INFO  tests.PaymentTest - Payment History row count: 1
+15:10:50.912 [main] INFO  tests.PaymentTest - Payment tab URL captured: https://lms.alfinnext.com/lms/accounts/208?product=VEHICLE_LOAN
+15:11:21.260 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?product=VEHICLE_LOAN
+15:11:21.264 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+15:14:31.390 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:14:31.403 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+15:15:01.819 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:15:01.821 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+15:16:02.418 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:16:02.420 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+15:16:03.980 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:16:34.405 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:16:34.407 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+15:16:35.728 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+15:17:06.019 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:17:06.021 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+15:17:36.357 [main] INFO  tests.PaymentTest - Payment History row count: 0
+15:18:06.585 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:18:06.587 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+15:18:36.986 [main] INFO  tests.PaymentTest - No payment history rows — skipping row-data assertion
+15:19:07.310 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:19:07.313 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+15:19:38.799 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:19:38.800 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+15:19:39.150 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+15:20:09.356 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:20:09.358 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+15:20:09.693 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+15:20:39.940 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:20:39.941 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+15:20:40.559 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+15:21:10.829 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:21:10.830 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+15:21:11.328 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+15:21:41.600 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:21:41.605 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+15:22:43.324 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:22:43.330 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+15:23:44.414 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+15:23:44.415 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+15:23:44.862 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+15:23:45.643 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+15:23:45.864 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+15:23:46.141 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+15:23:47.058 [main] INFO  tests.PaymentTest - Authorized By selected
+15:23:49.272 [main] INFO  tests.PaymentTest - Payment submitted — URL: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:15:06.612 [main] INFO  tests.ScheduleTest - Navigated to Schedule tab: https://lms.alfinnext.com/lms/accounts/208?tab=repayment_schedule&product=VEHICLE_LOAN
+17:15:06.653 [main] INFO  tests.ScheduleTest - Verifying Present EMI flow from Schedules tab
+17:22:55.517 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+17:22:55.589 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+17:22:57.414 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+17:23:01.140 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+17:23:02.820 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+17:23:08.433 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+17:23:12.146 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+17:23:13.975 [main] INFO  tests.AccountsTest - Listing available Status filter options
+17:23:14.842 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+17:23:16.642 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+17:23:19.298 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+17:23:21.971 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+17:23:24.688 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+17:23:27.494 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+17:23:45.249 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 0
+17:23:45.249 [main] INFO  tests.AccountsTest - No SETTLED loans in current test data — filter applied without error
+17:23:46.867 [main] INFO  tests.AccountsTest - Testing Login date range filter
+17:23:50.121 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+17:23:51.492 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+17:23:55.726 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+17:23:57.420 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+17:24:01.016 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000029, Borrower=Pigok Kamac, Status=Balance Transferred
+17:24:01.016 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000028, Borrower=Ribiw Bewaw, Status=Active
+17:24:01.017 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000027, Borrower=Wufes Wavef, Status=Active
+17:24:01.017 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+17:24:01.017 [main] INFO  tests.AccountsTest - Row 4: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+17:24:01.018 [main] INFO  tests.AccountsTest - Row 5: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+17:24:01.018 [main] INFO  tests.AccountsTest - Row 6: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+17:24:01.019 [main] INFO  tests.AccountsTest - Row 7: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+17:24:01.019 [main] INFO  tests.AccountsTest - Row 8: LAN=PERSONAL_000006, Borrower=APEKSHA MISHRA, Status=Insurance Closed
+17:24:01.019 [main] INFO  tests.AccountsTest - Row 9: LAN=PERSONAL_000005, Borrower=GAURAV JAISWAL, Status=Moratorium
+17:24:02.719 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+17:24:05.662 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+17:24:05.807 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000029
+17:24:06.289 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000029
+17:24:07.776 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+17:24:07.887 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000029
+17:24:09.889 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+17:24:12.309 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+17:24:13.382 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+17:24:16.038 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+17:24:17.107 [main] INFO  tests.AccountsDetailsTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/210?product=VEHICLE_LOAN
+17:24:17.753 [main] INFO  tests.AccountsDetailsTest - Verifying detail page loads
+17:24:18.302 [main] INFO  tests.AccountsDetailsTest - Verifying URL contains numeric account ID
+17:24:18.312 [main] INFO  tests.AccountsDetailsTest - Current URL: https://lms.alfinnext.com/lms/accounts/210?product=VEHICLE_LOAN
+17:24:18.951 [main] INFO  tests.AccountsDetailsTest - Verifying borrower name is visible in header
+17:24:19.017 [main] INFO  tests.AccountsDetailsTest - Borrower name: Pigok Kamac
+17:24:19.534 [main] INFO  tests.AccountsDetailsTest - Verifying LAN number is shown in header
+17:24:19.724 [main] INFO  tests.AccountsDetailsTest - LAN number: VEHICLE_000029
+17:24:20.117 [main] INFO  tests.AccountsDetailsTest - Verifying full LAN label contains 'LAN:' prefix
+17:24:20.198 [main] INFO  tests.AccountsDetailsTest - Full LAN text: LAN:
+VEHICLE_000029
+17:24:20.653 [main] INFO  tests.AccountsDetailsTest - Verifying status badge is visible
+17:24:20.786 [main] INFO  tests.AccountsDetailsTest - Status badge: Balance Transferred
+17:24:21.280 [main] INFO  tests.AccountsDetailsTest - Verifying AN text is visible in header
+17:24:21.375 [main] INFO  tests.AccountsDetailsTest - AN text: AN:
+APP92656751
+17:24:22.006 [main] INFO  tests.AccountsDetailsTest - Verifying Product Type is visible in header
+17:24:22.115 [main] INFO  tests.AccountsDetailsTest - Product type: VEHICLE
+17:24:22.513 [main] INFO  tests.AccountsDetailsTest - Verifying Disbursed On date is visible in header
+17:24:22.650 [main] INFO  tests.AccountsDetailsTest - Disbursed on: 30-06-2026
+17:24:23.156 [main] INFO  tests.AccountsDetailsTest - Verifying Loan Amount is displayed in info grid
+17:24:23.411 [main] INFO  tests.AccountsDetailsTest - Loan Amount: ₹70,000
+17:24:24.134 [main] INFO  tests.AccountsDetailsTest - Verifying Outstanding is displayed in info grid
+17:24:24.221 [main] INFO  tests.AccountsDetailsTest - Outstanding: ₹0
+17:24:24.753 [main] INFO  tests.AccountsDetailsTest - Verifying Current DPD is displayed in info grid
+17:24:25.064 [main] INFO  tests.AccountsDetailsTest - Current DPD: 0
+17:24:25.612 [main] INFO  tests.AccountsDetailsTest - Verifying Next EMI Due is displayed in info grid
+17:24:25.724 [main] INFO  tests.AccountsDetailsTest - Next EMI Due: 07 Jul 2026
+17:24:26.412 [main] INFO  tests.AccountsDetailsTest - Verifying Current Liability is displayed in info grid
+17:24:26.502 [main] INFO  tests.AccountsDetailsTest - Current Liability: ₹0
+17:24:27.043 [main] INFO  tests.AccountsDetailsTest - Verifying DISBURSED AMOUNT card is shown
+17:24:57.744 [main] INFO  tests.AccountsDetailsTest - Verifying NET OUTSTANDING BALANCE card is shown
+17:25:28.363 [main] INFO  tests.AccountsDetailsTest - Verifying PAID AMOUNT card is shown
+17:25:59.131 [main] INFO  tests.AccountsDetailsTest - Verifying OVERDUE AMOUNT card is shown
+17:26:29.944 [main] INFO  tests.AccountsDetailsTest - ── Tab 1: Overview (already active) ──
+17:26:31.388 [main] INFO  tests.AccountsDetailsTest - Overview: borrower=Pigok Kamac
+17:26:31.389 [main] INFO  tests.AccountsDetailsTest - ── Tab 2: Schedules ──
+17:26:33.323 [main] INFO  tests.AccountsDetailsTest - Schedules: URL=https://lms.alfinnext.com/lms/accounts/210?tab=repayment_schedule&product=VEHICLE_LOAN
+17:26:33.324 [main] INFO  tests.AccountsDetailsTest - ── Tab 3: Ledger ──
+17:26:35.432 [main] INFO  tests.AccountsDetailsTest - Ledger: URL=https://lms.alfinnext.com/lms/accounts/210?tab=ledger&product=VEHICLE_LOAN
+17:26:35.432 [main] INFO  tests.AccountsDetailsTest - ── Tab 4: Transaction ──
+17:26:37.257 [main] INFO  tests.AccountsDetailsTest - Transaction: URL=https://lms.alfinnext.com/lms/accounts/210?tab=transactions&product=VEHICLE_LOAN
+17:26:37.258 [main] INFO  tests.AccountsDetailsTest - ── Tab 5: Payment ──
+17:26:39.182 [main] INFO  tests.AccountsDetailsTest - Payment: URL=https://lms.alfinnext.com/lms/accounts/210?tab=payment&product=VEHICLE_LOAN
+17:26:39.182 [main] INFO  tests.AccountsDetailsTest - ── Tab 6: Nach Presentation ──
+17:26:41.007 [main] INFO  tests.AccountsDetailsTest - Nach Presentation: URL=https://lms.alfinnext.com/lms/accounts/210?tab=nach_presentation&product=VEHICLE_LOAN
+17:26:41.008 [main] INFO  tests.AccountsDetailsTest - ── Tab 7: Documents ──
+17:26:42.773 [main] INFO  tests.AccountsDetailsTest - Documents: URL=https://lms.alfinnext.com/lms/accounts/210?tab=documents&product=VEHICLE_LOAN
+17:26:42.774 [main] INFO  tests.AccountsDetailsTest - ── Tab 8: Tracking History ──
+17:26:44.793 [main] INFO  tests.AccountsDetailsTest - Tracking History: URL=https://lms.alfinnext.com/lms/accounts/210?tab=tracking_history&product=VEHICLE_LOAN
+17:26:44.793 [main] INFO  tests.AccountsDetailsTest - ── Tab 9: Charges ──
+17:26:46.805 [main] INFO  tests.AccountsDetailsTest - Charges: URL=https://lms.alfinnext.com/lms/accounts/210?tab=charges&product=VEHICLE_LOAN
+17:26:46.805 [main] INFO  tests.AccountsDetailsTest - ── Tab 10: Disbursements ──
+17:26:48.558 [main] INFO  tests.AccountsDetailsTest - Disbursements: URL=https://lms.alfinnext.com/lms/accounts/210?tab=disbursements&product=VEHICLE_LOAN
+17:26:48.559 [main] INFO  tests.AccountsDetailsTest - ── Tab 11: Balance Transfer ──
+17:26:50.386 [main] INFO  tests.AccountsDetailsTest - Balance Transfer: URL=https://lms.alfinnext.com/lms/accounts/210?tab=balance_transfer&product=VEHICLE_LOAN
+17:26:50.387 [main] INFO  tests.AccountsDetailsTest - ── Tab 12: Insurance Claims ──
+17:26:52.401 [main] INFO  tests.AccountsDetailsTest - Insurance Claims: URL=https://lms.alfinnext.com/lms/accounts/210?tab=insurance_claims&product=VEHICLE_LOAN
+17:26:52.402 [main] INFO  tests.AccountsDetailsTest - ── Tab 13: Audit Trail ──
+17:26:54.399 [main] INFO  tests.AccountsDetailsTest - Audit Trail: URL=https://lms.alfinnext.com/lms/accounts/210?tab=audit_trail&product=VEHICLE_LOAN
+17:26:54.400 [main] INFO  tests.AccountsDetailsTest - ── Back to Overview ──
+17:26:56.580 [main] INFO  tests.AccountsDetailsTest - Back to Overview: borrower=Pigok Kamac
+17:27:26.948 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:27:26.950 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+17:27:57.300 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:27:57.301 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+17:28:57.990 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:28:57.992 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+17:28:59.627 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:29:29.921 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:29:29.922 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+17:29:31.665 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+17:30:01.860 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:30:01.864 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+17:30:32.311 [main] INFO  tests.PaymentTest - Payment History row count: 0
+17:31:02.718 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:31:02.720 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+17:31:33.251 [main] INFO  tests.PaymentTest - No payment history rows — skipping row-data assertion
+17:32:03.506 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:32:03.508 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+17:32:04.120 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+17:32:34.333 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:32:34.335 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+17:32:34.938 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+17:33:05.205 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:33:05.207 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+17:33:05.854 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+17:33:36.134 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:33:36.139 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+17:33:36.667 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+17:34:06.928 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:34:06.929 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+17:34:07.407 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+17:34:37.683 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:34:37.685 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+17:35:39.620 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:35:39.622 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+17:36:40.843 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:36:40.845 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+17:36:41.644 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+17:36:42.589 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+17:36:43.156 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+17:36:43.790 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+17:36:44.948 [main] INFO  tests.PaymentTest - Authorized By selected
+17:36:47.451 [main] INFO  tests.PaymentTest - Payment submitted — URL: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+17:36:50.463 [main] INFO  tests.SettlementTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/210?product=VEHICLE_LOAN
+17:36:50.965 [main] INFO  tests.SettlementTest - Verifying Settlement modal opens from action menu
+17:37:14.642 [main] WARN  tests.ForeclosureTest - Browser session lost — skipping reset, test will likely be skipped
+17:37:14.646 [main] WARN  tests.ForeclosureTest - Browser session lost — skipping reset, test will likely be skipped
+17:37:14.649 [main] WARN  tests.ForeclosureTest - Browser session lost — skipping reset, test will likely be skipped
+17:37:14.653 [main] WARN  tests.ForeclosureTest - Browser session lost — skipping reset, test will likely be skipped
+17:37:14.658 [main] WARN  tests.ForeclosureTest - Browser session lost — skipping reset, test will likely be skipped
+17:37:14.677 [main] WARN  tests.BalanceTransferTest - Browser session lost before test — skipping
+17:37:14.680 [main] WARN  tests.BalanceTransferTest - Browser session lost before test — skipping
+17:37:14.683 [main] WARN  tests.BalanceTransferTest - Browser session lost before test — skipping
+17:37:14.688 [main] WARN  tests.BalanceTransferTest - Browser session lost before test — skipping
+17:37:14.692 [main] WARN  tests.BalanceTransferTest - Browser session lost before test — skipping
+11:12:39.670 [main] INFO  tests.ScheduleTest - Navigated to Schedule tab: https://lms.alfinnext.com/lms/accounts/208?tab=repayment_schedule&product=VEHICLE_LOAN
+11:12:39.682 [main] INFO  tests.ScheduleTest - Verifying Present EMI flow from Schedules tab
+11:12:41.251 [main] INFO  tests.ScheduleTest - Present EMI flow completed successfully
+11:15:55.531 [main] INFO  tests.ScheduleTest - Navigated to Schedule tab: https://lms.alfinnext.com/lms/accounts/208?tab=repayment_schedule&product=VEHICLE_LOAN
+11:15:55.540 [main] INFO  tests.ScheduleTest - Verifying Present EMI flow from Schedules tab
+11:15:57.081 [main] INFO  tests.ScheduleTest - Present EMI flow completed successfully
+11:17:24.772 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+11:17:24.808 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+11:17:55.550 [main] INFO  tests.ScheduleTest - Navigated to Schedule tab: https://lms.alfinnext.com/lms/accounts/208?tab=repayment_schedule&product=VEHICLE_LOAN
+11:17:55.553 [main] INFO  tests.ScheduleTest - Verifying Present EMI flow from Schedules tab
+11:17:57.285 [main] INFO  tests.ScheduleTest - Present EMI flow completed successfully
+11:31:02.679 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+11:31:02.707 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+11:31:42.444 [main] INFO  tests.ChargesTest - Navigated to Charges tab: https://lms.alfinnext.com/lms/accounts/209?tab=charges&product=VEHICLE_LOAN
+11:31:42.456 [main] INFO  tests.ChargesTest - Verifying Waive Charge flow from Charges tab
+11:31:44.618 [main] INFO  tests.ChargesTest - Waive Charge flow completed successfully
+12:45:25.111 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:45:25.149 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:46:40.695 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:46:40.735 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:46:53.922 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+12:46:54.111 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+12:46:55.551 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+12:46:59.353 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+12:47:00.112 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+12:47:05.305 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+12:47:09.417 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+12:47:10.395 [main] INFO  tests.AccountsTest - Listing available Status filter options
+12:47:11.431 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+12:47:12.963 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+12:47:15.828 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+12:47:18.824 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+12:47:21.566 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+12:47:25.121 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+12:47:42.704 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 0
+12:47:42.706 [main] INFO  tests.AccountsTest - No SETTLED loans in current test data — filter applied without error
+12:47:43.788 [main] INFO  tests.AccountsTest - Testing Login date range filter
+12:47:47.027 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+12:47:47.871 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+11:43:25.655 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+11:43:25.752 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+11:43:35.987 [main] INFO  tests.DocumentsTest - Navigating to Documents tab: https://lms.alfinnext.com/lms/accounts/212?tab=documents&product=VEHICLE_LOAN
+11:43:58.358 [main] INFO  tests.DocumentsTest - Documents tab loaded successfully
+11:43:58.358 [main] INFO  tests.DocumentsTest - TC-01: Verifying Documents tab page load
+11:43:58.410 [main] INFO  tests.DocumentsTest - Page loaded: true
+11:43:58.427 [main] INFO  tests.DocumentsTest - Navigating to Documents tab: https://lms.alfinnext.com/lms/accounts/212?tab=documents&product=VEHICLE_LOAN
+11:44:08.258 [main] INFO  tests.DocumentsTest - Documents tab loaded successfully
+11:44:08.262 [main] INFO  tests.DocumentsTest - TC-02: Scroll to bottom and verify Vehicle Document section appears
+11:44:54.882 [main] INFO  tests.DocumentsTest - Vehicle Document section visible after scroll: false
+11:44:54.951 [main] INFO  tests.DocumentsTest - Navigating to Documents tab: https://lms.alfinnext.com/lms/accounts/212?tab=documents&product=VEHICLE_LOAN
+11:45:40.896 [main] INFO  tests.DocumentsTest - Navigating to Documents tab: https://lms.alfinnext.com/lms/accounts/212?tab=documents&product=VEHICLE_LOAN
+11:46:26.965 [main] INFO  tests.DocumentsTest - Navigating to Documents tab: https://lms.alfinnext.com/lms/accounts/212?tab=documents&product=VEHICLE_LOAN
+11:52:01.347 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+11:52:01.395 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+11:52:14.671 [main] INFO  tests.DashboardTest - Navigating to Dashboard: https://lms.alfinnext.com/lms/dashboard?product=VEHICLE_LOAN
+11:52:16.697 [main] INFO  tests.DashboardTest - Dashboard loaded successfully
+11:52:16.765 [main] INFO  tests.DashboardTest - Verifying KPI cards visibility and values
+11:52:18.469 [main] INFO  tests.DashboardTest - Total Portfolio: ₹2.36 Cr
+11:52:18.471 [main] INFO  tests.DashboardTest - NPA Accounts: 19
+11:52:18.474 [main] INFO  tests.DashboardTest - Active Loans: 118
+11:52:18.475 [main] INFO  tests.DashboardTest - Collection Efficiency: 16.1%
+11:52:18.556 [main] INFO  tests.DashboardTest - Navigating to Dashboard: https://lms.alfinnext.com/lms/dashboard?product=VEHICLE_LOAN
+11:52:20.068 [main] INFO  tests.DashboardTest - Dashboard loaded successfully
+11:52:20.071 [main] INFO  tests.DashboardTest - Verifying DPD Bucket and Live Alerts visibility (Top of page)
+11:53:58.809 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+11:53:58.877 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+11:54:11.152 [main] INFO  tests.DashboardTest - Navigating to Dashboard: https://lms.alfinnext.com/lms/dashboard?product=VEHICLE_LOAN
+11:54:13.353 [main] INFO  tests.DashboardTest - Dashboard loaded successfully
+11:54:13.366 [main] INFO  tests.DashboardTest - Verifying KPI cards visibility and values
+11:54:16.102 [main] INFO  tests.DashboardTest - Total Portfolio: ₹2.36 Cr
+11:54:16.103 [main] INFO  tests.DashboardTest - NPA Accounts: 19
+11:54:16.111 [main] INFO  tests.DashboardTest - Active Loans: 118
+11:54:16.113 [main] INFO  tests.DashboardTest - Collection Efficiency: 16.1%
+11:54:16.168 [main] INFO  tests.DashboardTest - Navigating to Dashboard: https://lms.alfinnext.com/lms/dashboard?product=VEHICLE_LOAN
+11:54:17.696 [main] INFO  tests.DashboardTest - Dashboard loaded successfully
+11:54:17.698 [main] INFO  tests.DashboardTest - Verifying DPD Bucket and Live Alerts visibility (Top of page)
+11:54:18.988 [main] INFO  tests.DashboardTest - Scrolling to bottom to check Recent Loan Activities
+11:54:21.400 [main] INFO  tests.DashboardTest - Recent Activities table row count: 10
+11:54:21.402 [main] INFO  tests.DashboardTest - Scrolling back to top
+11:54:35.092 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+11:54:35.184 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+11:54:47.230 [main] INFO  tests.DashboardTest - Navigating to Dashboard: https://lms.alfinnext.com/lms/dashboard?product=VEHICLE_LOAN
+11:54:49.425 [main] INFO  tests.DashboardTest - Dashboard loaded successfully
+11:54:49.490 [main] INFO  tests.DashboardTest - Verifying KPI cards visibility and values
+11:54:51.737 [main] INFO  tests.DashboardTest - Total Portfolio: ₹2.36 Cr
+11:54:51.738 [main] INFO  tests.DashboardTest - NPA Accounts: 19
+11:54:51.738 [main] INFO  tests.DashboardTest - Active Loans: 118
+11:54:51.755 [main] INFO  tests.DashboardTest - Collection Efficiency: 16.1%
+11:54:51.901 [main] INFO  tests.DashboardTest - Navigating to Dashboard: https://lms.alfinnext.com/lms/dashboard?product=VEHICLE_LOAN
+11:54:53.419 [main] INFO  tests.DashboardTest - Dashboard loaded successfully
+11:54:53.419 [main] INFO  tests.DashboardTest - Verifying DPD Bucket and Live Alerts visibility (Top of page)
+11:54:54.392 [main] INFO  tests.DashboardTest - Scrolling to bottom to check Recent Loan Activities
+11:54:56.113 [main] INFO  tests.DashboardTest - Recent Activities table row count: 10
+11:54:56.115 [main] INFO  tests.DashboardTest - Scrolling back to top
+12:02:28.503 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:02:28.590 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:02:40.521 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:02:42.254 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:02:42.273 [main] INFO  tests.ReportTest - Verifying Stat cards visibility and values
+12:03:12.506 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:03:13.253 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:03:13.256 [main] INFO  tests.ReportTest - Verifying Download buttons are present for Report cards
+12:03:13.358 [main] INFO  tests.ReportTest - Found 3 Download buttons
+12:03:13.371 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:03:14.214 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:03:14.219 [main] INFO  tests.ReportTest - Scrolling to bottom to check Report Generation Guidelines
+12:03:53.274 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:03:53.384 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:04:06.253 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:04:07.608 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:04:07.626 [main] INFO  tests.ReportTest - Verifying Stat cards visibility and values
+12:04:09.028 [main] INFO  tests.ReportTest - TOTAL REPORTS: 3
+12:04:09.029 [main] INFO  tests.ReportTest - FILTERED: 3
+12:04:09.029 [main] INFO  tests.ReportTest - EST. TIME: ~10s
+12:04:09.030 [main] INFO  tests.ReportTest - FORMAT: XLSX
+12:04:09.040 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:04:09.682 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:04:09.686 [main] INFO  tests.ReportTest - Verifying Download buttons are present for Report cards
+12:04:09.987 [main] INFO  tests.ReportTest - Found 3 Download buttons
+12:04:10.000 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:04:10.762 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:04:10.766 [main] INFO  tests.ReportTest - Scrolling to bottom to check Report Generation Guidelines
+12:05:00.082 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:05:00.130 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:05:10.662 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:05:12.181 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:05:12.189 [main] INFO  tests.ReportTest - Verifying Stat cards visibility and values
+12:05:13.238 [main] INFO  tests.ReportTest - TOTAL REPORTS: 3
+12:05:13.238 [main] INFO  tests.ReportTest - FILTERED: 3
+12:05:13.248 [main] INFO  tests.ReportTest - EST. TIME: ~10s
+12:05:13.249 [main] INFO  tests.ReportTest - FORMAT: XLSX
+12:05:13.272 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:05:14.165 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:05:14.169 [main] INFO  tests.ReportTest - Verifying Download buttons are present for Report cards
+12:05:14.335 [main] INFO  tests.ReportTest - Found 3 Download buttons
+12:05:14.350 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:05:15.252 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:05:15.264 [main] INFO  tests.ReportTest - Scrolling to bottom to check Report Generation Guidelines
+12:06:49.393 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:06:49.506 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:07:00.959 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:07:02.522 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:07:02.528 [main] INFO  tests.ReportTest - Verifying Stat cards visibility and values
+12:07:03.827 [main] INFO  tests.ReportTest - TOTAL REPORTS: 3
+12:07:03.836 [main] INFO  tests.ReportTest - FILTERED: 3
+12:07:03.837 [main] INFO  tests.ReportTest - EST. TIME: ~10s
+12:07:03.838 [main] INFO  tests.ReportTest - FORMAT: XLSX
+12:07:03.858 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:07:04.941 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:07:04.951 [main] INFO  tests.ReportTest - Verifying Download buttons are present for Report cards
+12:07:05.101 [main] INFO  tests.ReportTest - Found 3 Download buttons
+12:07:05.108 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:07:06.154 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:07:06.157 [main] INFO  tests.ReportTest - Scrolling to bottom to check Report Generation Guidelines
+12:07:07.686 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:07:09.093 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:07:09.096 [main] INFO  tests.ReportTest - Clicking Download button for 'DPD Graph Report'
+12:07:10.322 [main] INFO  tests.ReportTest - Download button clicked successfully
+12:07:20.101 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:07:20.155 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:07:32.520 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:07:33.874 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:07:33.886 [main] INFO  tests.ReportTest - Verifying Stat cards visibility and values
+12:07:34.941 [main] INFO  tests.ReportTest - TOTAL REPORTS: 3
+12:07:34.943 [main] INFO  tests.ReportTest - FILTERED: 3
+12:07:34.946 [main] INFO  tests.ReportTest - EST. TIME: ~10s
+12:07:34.947 [main] INFO  tests.ReportTest - FORMAT: XLSX
+12:07:34.965 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:07:35.962 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:07:35.962 [main] INFO  tests.ReportTest - Verifying Download buttons are present for Report cards
+12:07:36.066 [main] INFO  tests.ReportTest - Found 3 Download buttons
+12:07:36.098 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:07:37.256 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:07:37.259 [main] INFO  tests.ReportTest - Scrolling to bottom to check Report Generation Guidelines
+12:07:38.682 [main] INFO  tests.ReportTest - Navigating to Reports Dashboard: https://lms.alfinnext.com/lms/reports?product=VEHICLE_LOAN
+12:07:40.191 [main] INFO  tests.ReportTest - Reports Dashboard loaded successfully
+12:07:40.196 [main] INFO  tests.ReportTest - Clicking Download button for 'DPD Graph Report'
+12:07:41.181 [main] INFO  tests.ReportTest - Download button clicked successfully
+12:23:37.217 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:23:37.266 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:23:49.877 [main] INFO  tests.TransactionTest - Navigating to Transaction tab: https://lms.alfinnext.com/lms/accounts/212?tab=transactions&product=VEHICLE_LOAN
+12:23:51.701 [main] INFO  tests.TransactionTest - Transaction tab loaded successfully
+12:23:51.716 [main] INFO  tests.TransactionTest - Verifying Transaction table and pagination
+12:23:53.396 [main] INFO  tests.TransactionTest - Transaction rows found: 5
+12:23:54.276 [main] INFO  tests.TransactionTest - Pagination text: LMS
+⌘
+K
+PRODUCT VERTICAL
+Vehicle Loan
+MK
+Miraf Kasum
+LAN:
+VEHICLE_000031
+AN:
+APP60282932
+Product Type:
+VEHICLE
+Disbursed On:
+01-07-2026
+Active
+Loan Amount
+₹70,000
+Outstanding
+₹70,015.34
+Current DPD
+0
+Current Liability
+₹222
+Next EMI Due
+08 Jul 2026
+Lead no
+938
+Contact
+******6849
+PAN
+******642E
+Email
+Bhar******************
+Employment Type
+SALARIED
+Residential Type
+OWNED
+Tenure
+24 Months
+Interest
+8%
+DISBURSED AMOUNT
+₹70,000
+NET OUTSTANDING BALANCE
+₹75,622.58
+PAID AMOUNT
+₹0
+OVERDUE AMOUNT
+₹222
+Overview
+Schedules
+Ledger
+Transaction
+Payment
+Nach Presentation
+Documents
+Tracking History
+Charges
+Disbursements
+Balance Transfer
+Insurance Claims
+Audit Trail
+TRANSACTION HISTORY
+FULL ACCOUNT TRANSACTION RECORDS
+Export Excel
+FROM DATE
+TO DATE
+Serial Transaction Date Value Date Reference # Type Mode Amount Status Remarks
+1 01 Jul 2026 01 Jul 2026 TXN-20260702-1F350DDD
+Interest Accrual
+--
+₹15.34
+ACTIVE
+Daily accrual: 2026-07-01
+2 01 Jul 2026 01 Jul 2026 TXN-20260701-7A0C0569
+Charge Levy
+--
+₹222
+ACTIVE
+--
+3 01 Jul 2026 01 Jul 2026 TXN-20260701-1D55E765
+Charge Levy
+--
+₹1,180
+ACTIVE
+--
+4 01 Jul 2026 01 Jul 2026 TXN-20260701-BA8473ED
+Charge Levy
+--
+₹236
+ACTIVE
+This is processing fee charge
+5 01 Jul 2026 01 Jul 2026 TXN-20260701-E6A3A9A3
+Disbursement
+--
+₹70,000
+ACTIVE
+Full disbursement at activation
+Showing 1 to 5 of 5 results
+Items per page:
+5
+10
+20
+50
+100
+Previous
+1
+Next
+12:23:54.324 [main] INFO  tests.TransactionTest - Navigating to Transaction tab: https://lms.alfinnext.com/lms/accounts/212?tab=transactions&product=VEHICLE_LOAN
+12:23:55.779 [main] INFO  tests.TransactionTest - Transaction tab loaded successfully
+12:23:55.791 [main] INFO  tests.TransactionTest - Clicking on Export Excel button
+12:23:58.723 [main] INFO  tests.TransactionTest - Successfully clicked Export Excel button
+12:24:46.729 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:24:46.787 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:24:57.978 [main] INFO  tests.TransactionTest - Navigating to Transaction tab: https://lms.alfinnext.com/lms/accounts/212?tab=transactions&product=VEHICLE_LOAN
+12:25:02.187 [main] INFO  tests.TransactionTest - Transaction tab loaded successfully
+12:25:02.220 [main] INFO  tests.TransactionTest - Verifying Transaction table and pagination
+12:25:03.156 [main] INFO  tests.TransactionTest - Transaction rows found: 5
+12:25:03.883 [main] INFO  tests.TransactionTest - Pagination text: LMS
+⌘
+K
+PRODUCT VERTICAL
+Vehicle Loan
+MK
+Miraf Kasum
+LAN:
+VEHICLE_000031
+AN:
+APP60282932
+Product Type:
+VEHICLE
+Disbursed On:
+01-07-2026
+Active
+Loan Amount
+₹70,000
+Outstanding
+₹70,015.34
+Current DPD
+0
+Current Liability
+₹222
+Next EMI Due
+08 Jul 2026
+Lead no
+938
+Contact
+******6849
+PAN
+******642E
+Email
+Bhar******************
+Employment Type
+SALARIED
+Residential Type
+OWNED
+Tenure
+24 Months
+Interest
+8%
+DISBURSED AMOUNT
+₹70,000
+NET OUTSTANDING BALANCE
+₹75,622.58
+PAID AMOUNT
+₹0
+OVERDUE AMOUNT
+₹222
+Overview
+Schedules
+Ledger
+Transaction
+Payment
+Nach Presentation
+Documents
+Tracking History
+Charges
+Disbursements
+Balance Transfer
+Insurance Claims
+Audit Trail
+TRANSACTION HISTORY
+FULL ACCOUNT TRANSACTION RECORDS
+Export Excel
+FROM DATE
+TO DATE
+Serial Transaction Date Value Date Reference # Type Mode Amount Status Remarks
+1 01 Jul 2026 01 Jul 2026 TXN-20260702-1F350DDD
+Interest Accrual
+--
+₹15.34
+ACTIVE
+Daily accrual: 2026-07-01
+2 01 Jul 2026 01 Jul 2026 TXN-20260701-7A0C0569
+Charge Levy
+--
+₹222
+ACTIVE
+--
+3 01 Jul 2026 01 Jul 2026 TXN-20260701-1D55E765
+Charge Levy
+--
+₹1,180
+ACTIVE
+--
+4 01 Jul 2026 01 Jul 2026 TXN-20260701-BA8473ED
+Charge Levy
+--
+₹236
+ACTIVE
+This is processing fee charge
+5 01 Jul 2026 01 Jul 2026 TXN-20260701-E6A3A9A3
+Disbursement
+--
+₹70,000
+ACTIVE
+Full disbursement at activation
+Showing 1 to 5 of 5 results
+Items per page:
+5
+10
+20
+50
+100
+Previous
+1
+Next
+12:25:03.940 [main] INFO  tests.TransactionTest - Navigating to Transaction tab: https://lms.alfinnext.com/lms/accounts/212?tab=transactions&product=VEHICLE_LOAN
+12:25:05.287 [main] INFO  tests.TransactionTest - Transaction tab loaded successfully
+12:25:05.296 [main] INFO  tests.TransactionTest - Clicking on Export Excel button
+12:25:06.229 [main] INFO  tests.TransactionTest - Successfully clicked Export Excel button
+12:26:56.526 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:26:56.572 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:27:17.323 [main] INFO  tests.TransactionTest - Navigating to Transaction tab: https://lms.alfinnext.com/lms/accounts/212?tab=transactions&product=VEHICLE_LOAN
+12:27:19.986 [main] INFO  tests.TransactionTest - Transaction tab loaded successfully
+12:27:20.022 [main] INFO  tests.TransactionTest - Verifying Transaction table and pagination

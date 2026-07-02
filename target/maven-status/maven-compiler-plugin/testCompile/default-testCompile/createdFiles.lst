@@ -1,0 +1,7 @@
+tests\ScheduleTest.class
+tests\DashboardTest.class
+tests\ReportTest.class
+tests\LedgerTest.class
+listeners\TestReportListener.class
+tests\DocumentsTest.class
+tests\ChargesTest.class

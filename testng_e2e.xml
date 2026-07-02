@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ProductAccounts E2E Suite" verbose="1" parallel="none">
+
+    <!-- Auto-generates a test report in reports/ folder after every run -->
+    <listeners>
+        <listener class-name="listeners.TestReportListener"/>
+    </listeners>
+
+    <test name="Accounts List Tests">
+        <classes>
+            <class name="tests.AccountsTest"/>
+        </classes>
+    </test>
+
+    <test name="Account Details Tests">
+        <classes>
+            <class name="tests.AccountsDetailsTest"/>
+        </classes>
+    </test>
+
+    <test name="Payment Tests">
+        <classes>
+            <class name="tests.PaymentTest"/>
+        </classes>
+    </test>
+
+    <test name="Settlement Tests">
+        <classes>
+            <class name="tests.SettlementTest"/>
+        </classes>
+    </test>
+
+    <test name="Foreclosure Tests">
+        <classes>
+            <class name="tests.ForeclosureTest"/>
+        </classes>
+    </test>
+
+    <test name="Balance Transfer Tests">
+        <classes>
+            <class name="tests.BalanceTransferTest"/>
+        </classes>
+    </test>
+
+    <test name="Ledger Tests">
+        <classes>
+            <class name="tests.LedgerTest"/>
+        </classes>
+    </test>
+
+    <test name="Schedule Tests">
+        <classes>
+            <class name="tests.ScheduleTest"/>
+        </classes>
+    </test>
+
+</suite>
