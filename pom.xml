@@ -9,6 +9,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <suiteXmlFile>testng_e2e.xml</suiteXmlFile>
   </properties>
   
   <build>
@@ -19,7 +20,7 @@
         <version>3.5.4</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testng_e2e.xml</suiteXmlFile>
+            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>

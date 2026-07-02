@@ -1,7 +1,15 @@
 tests\ScheduleTest.class
+tests\DomDumper.class
 tests\DashboardTest.class
+tests\AccountsTest.class
+tests\AccountsDetailsTest.class
 tests\ReportTest.class
 tests\LedgerTest.class
+tests\SettlementTest.class
 listeners\TestReportListener.class
 tests\DocumentsTest.class
+tests\ForeclosureTest.class
+tests\BalanceTransferTest.class
+tests\TransactionTest.class
+tests\PaymentTest.class
 tests\ChargesTest.class

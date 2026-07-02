@@ -1962,3 +1962,534 @@ Next
 12:27:17.323 [main] INFO  tests.TransactionTest - Navigating to Transaction tab: https://lms.alfinnext.com/lms/accounts/212?tab=transactions&product=VEHICLE_LOAN
 12:27:19.986 [main] INFO  tests.TransactionTest - Transaction tab loaded successfully
 12:27:20.022 [main] INFO  tests.TransactionTest - Verifying Transaction table and pagination
+12:54:13.108 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:54:13.151 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:54:26.293 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+12:54:26.373 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+12:54:27.283 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+12:54:31.279 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+12:54:32.585 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+12:54:37.916 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+12:54:41.431 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+12:54:42.747 [main] INFO  tests.AccountsTest - Listing available Status filter options
+12:54:43.329 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+12:54:44.869 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+12:54:47.439 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+12:54:49.969 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+12:54:52.562 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+12:54:54.806 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+12:58:38.545 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+12:58:38.591 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+12:58:49.730 [main] INFO  tests.TransactionTest - Navigating to Transaction tab: https://lms.alfinnext.com/lms/accounts/212?tab=transactions&product=VEHICLE_LOAN
+12:58:51.027 [main] INFO  tests.TransactionTest - Transaction tab loaded successfully
+12:58:51.095 [main] INFO  tests.TransactionTest - Verifying Transaction table and pagination
+12:58:51.904 [main] INFO  tests.TransactionTest - Transaction rows found: 5
+12:58:52.124 [main] INFO  tests.TransactionTest - Pagination text: Showing 1 to 5 of 5 results
+12:58:52.141 [main] INFO  tests.TransactionTest - Navigating to Transaction tab: https://lms.alfinnext.com/lms/accounts/212?tab=transactions&product=VEHICLE_LOAN
+12:58:53.316 [main] INFO  tests.TransactionTest - Transaction tab loaded successfully
+12:58:53.322 [main] INFO  tests.TransactionTest - Clicking on Export Excel button
+12:58:54.472 [main] INFO  tests.TransactionTest - Successfully clicked Export Excel button
+13:01:19.315 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:01:19.447 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:01:34.109 [main] INFO  tests.AccountsTest - Verifying accounts table loads with data
+13:01:35.108 [main] INFO  tests.AccountsTest - Total rows loaded: 10
+13:01:37.121 [main] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+13:01:43.100 [main] INFO  tests.AccountsTest - Rows visible after search input: 10
+13:01:44.473 [main] INFO  tests.AccountsTest - Testing search filter by LAN number
+13:01:51.317 [main] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+13:01:55.555 [main] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+13:01:56.651 [main] INFO  tests.AccountsTest - Listing available Status filter options
+13:01:58.214 [main] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+13:01:59.275 [main] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+13:02:02.510 [main] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+13:02:05.351 [TestNG-tests-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:02:05.587 [TestNG-tests-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:02:07.158 [TestNG-tests-3] WARN  io.github.bonigarcia.wdm.versions.VersionDetector - Exception reading https://msedgedriver.azureedge.net/LATEST_RELEASE_149_WINDOWS to get latest version of msedgedriver (No such host is known (msedgedriver.azureedge.net))
+13:02:07.167 [TestNG-tests-3] WARN  io.github.bonigarcia.wdm.versions.VersionDetector - Exception reading https://msedgedriver.azureedge.net/LATEST_STABLE to get latest version of msedgedriver (msedgedriver.azureedge.net)
+13:02:07.173 [TestNG-tests-3] INFO  io.github.bonigarcia.wdm.WebDriverManager - Reading https://msedgedriver.azureedge.net/?restype=container&comp=list to seek msedgedriver
+13:02:07.198 [TestNG-tests-3] WARN  io.github.bonigarcia.wdm.WebDriverManager - There was an error managing msedgedriver (latest version) (java.net.UnknownHostException: msedgedriver.azureedge.net) ... trying again using latest driver stored in cache
+13:02:07.213 [TestNG-tests-3] WARN  io.github.bonigarcia.wdm.versions.VersionDetector - Exception reading https://msedgedriver.azureedge.net/LATEST_STABLE to get latest version of msedgedriver (msedgedriver.azureedge.net)
+13:02:07.218 [TestNG-tests-3] INFO  io.github.bonigarcia.wdm.WebDriverManager - Reading https://msedgedriver.azureedge.net/?restype=container&comp=list to seek msedgedriver
+13:02:07.245 [TestNG-tests-3] ERROR io.github.bonigarcia.wdm.WebDriverManager - There was an error managing msedgedriver (latest version) (java.net.UnknownHostException: msedgedriver.azureedge.net)
+io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
+	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1588) ~[webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:115) ~[webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1442) ~[webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1268) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1437) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1415) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1190) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427) [webdrivermanager-5.8.0.jar:?]
+	at base.BaseClass.setupBrowser(BaseClass.java:34) [classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58) [testng-7.8.0.jar:7.8.0]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+Caused by: java.net.UnknownHostException: msedgedriver.azureedge.net
+	at java.net.InetAddress$CachedLookup.get(InetAddress.java:909) ~[?:?]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1702) ~[?:?]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1582) ~[?:?]
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183) ~[httpclient5-5.2.1.jar:5.2.1]
+	at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:157) ~[webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1573) ~[webdrivermanager-5.8.0.jar:?]
+	... 25 more
+13:02:14.362 [TestNG-tests-2] INFO  io.github.bonigarcia.wdm.WebDriverManager - Reading https://raw.githubusercontent.com/bonigarcia/webdrivermanager/master/docs/mirror/geckodriver to seek geckodriver
+13:02:15.592 [TestNG-tests-2] INFO  io.github.bonigarcia.wdm.online.Downloader - Downloading https://github.com/mozilla/geckodriver/releases/download/v0.37.0/geckodriver-v0.37.0-win64.zip
+13:02:16.554 [main] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+13:02:16.807 [TestNG-tests-2] INFO  io.github.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file geckodriver-v0.37.0-win64.zip
+13:02:17.120 [TestNG-tests-2] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\i-tech\.cache\selenium\geckodriver\win64\0.37.0\geckodriver.exe
+13:02:22.895 [main] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+13:02:36.496 [main] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+13:02:45.770 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Navigated to Balance Transfer tab: https://lms.alfinnext.com/lms/accounts/210?tab=balance_transfer&product=VEHICLE_LOAN
+13:02:47.164 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying Balance Transfer Settlement section loads
+13:02:47.775 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Section heading: Balance Transfer Settlement
+13:02:56.203 [main] INFO  tests.AccountsTest - Rows with SETTLED status: 0
+13:02:56.203 [main] INFO  tests.AccountsTest - No SETTLED loans in current test data — filter applied without error
+13:02:57.900 [main] INFO  tests.AccountsTest - Testing Login date range filter
+13:03:03.098 [main] INFO  tests.AccountsTest - Rows in date range 2024: 10
+13:03:04.943 [main] INFO  tests.AccountsTest - Testing combined Status + Search filter
+13:03:14.516 [main] INFO  tests.AccountsTest - Rows after combined filter: 10
+13:03:16.362 [main] INFO  tests.AccountsTest - Verifying table data integrity for all rows
+13:03:18.438 [TestNG-tests-1] INFO  tests.LedgerTest - Navigated to Ledger tab: https://lms.alfinnext.com/lms/accounts/208?tab=ledger&product=VEHICLE_LOAN
+13:03:18.440 [TestNG-tests-1] INFO  tests.LedgerTest - Verifying Export button click on Ledger tab
+13:03:22.254 [TestNG-tests-1] INFO  tests.LedgerTest - Export button clicked successfully
+13:03:24.886 [TestNG-tests-1] INFO  tests.ForeclosureTest - Navigated to account detail page: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+13:03:26.966 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying Foreclosure modal opens from action menu
+13:03:30.777 [main] INFO  tests.AccountsTest - Row 0: LAN=VEHICLE_000031, Borrower=Miraf Kasum, Status=Active
+13:03:30.777 [main] INFO  tests.AccountsTest - Row 1: LAN=VEHICLE_000030, Borrower=Vilef Dokis, Status=Active
+13:03:30.779 [main] INFO  tests.AccountsTest - Row 2: LAN=VEHICLE_000029, Borrower=Pigok Kamac, Status=Balance Transferred
+13:03:30.779 [main] INFO  tests.AccountsTest - Row 3: LAN=VEHICLE_000028, Borrower=Ribiw Bewaw, Status=Active
+13:03:30.780 [main] INFO  tests.AccountsTest - Row 4: LAN=VEHICLE_000027, Borrower=Wufes Wavef, Status=Active
+13:03:30.780 [main] INFO  tests.AccountsTest - Row 5: LAN=VEHICLE_000026, Borrower=Hiniw BapenHiniw Bapen, Status=Active
+13:03:30.787 [main] INFO  tests.AccountsTest - Row 6: LAN=VEHICLE_000025, Borrower=Jabit CebogJabit Cebog, Status=Active
+13:03:30.788 [main] INFO  tests.AccountsTest - Row 7: LAN=VEHICLE_000024, Borrower=Test User Test User, Status=Active
+13:03:30.789 [main] INFO  tests.AccountsTest - Row 8: LAN=VEHICLE_000023, Borrower=NIDHI ANIL SADHWANI, Status=Overdue
+13:03:30.789 [main] INFO  tests.AccountsTest - Row 9: LAN=PERSONAL_000007, Borrower=APEKSHA MISHRA, Status=Balance Transferred
+13:03:32.806 [main] INFO  tests.AccountsTest - Verifying serial numbers are sequential starting from 1
+13:03:37.436 [main] INFO  tests.AccountsTest - Testing navigation to account detail page by clicking LAN
+13:03:37.851 [main] INFO  tests.AccountsTest - First LAN in table: VEHICLE_000031
+13:03:40.167 [main] INFO  tests.AccountsTest - Successfully navigated to account detail page for VEHICLE_000031
+13:03:41.924 [main] INFO  tests.AccountsTest - Testing navigation by clicking first row LAN cell
+13:03:42.329 [main] INFO  tests.AccountsTest - Clicking LAN: VEHICLE_000031
+13:03:45.509 [TestNG-tests-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:03:45.900 [TestNG-tests-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:03:47.154 [TestNG-tests-3] WARN  io.github.bonigarcia.wdm.versions.VersionDetector - Exception reading https://msedgedriver.azureedge.net/LATEST_RELEASE_149_WINDOWS to get latest version of msedgedriver (No such host is known (msedgedriver.azureedge.net))
+13:03:47.168 [TestNG-tests-3] WARN  io.github.bonigarcia.wdm.versions.VersionDetector - Exception reading https://msedgedriver.azureedge.net/LATEST_STABLE to get latest version of msedgedriver (msedgedriver.azureedge.net)
+13:03:47.173 [TestNG-tests-3] INFO  io.github.bonigarcia.wdm.WebDriverManager - Reading https://msedgedriver.azureedge.net/?restype=container&comp=list to seek msedgedriver
+13:03:47.237 [TestNG-tests-3] WARN  io.github.bonigarcia.wdm.WebDriverManager - There was an error managing msedgedriver (latest version) (java.net.UnknownHostException: msedgedriver.azureedge.net) ... trying again using latest driver stored in cache
+13:03:47.267 [TestNG-tests-3] WARN  io.github.bonigarcia.wdm.versions.VersionDetector - Exception reading https://msedgedriver.azureedge.net/LATEST_STABLE to get latest version of msedgedriver (msedgedriver.azureedge.net)
+13:03:47.289 [TestNG-tests-3] INFO  io.github.bonigarcia.wdm.WebDriverManager - Reading https://msedgedriver.azureedge.net/?restype=container&comp=list to seek msedgedriver
+13:03:47.389 [TestNG-tests-3] ERROR io.github.bonigarcia.wdm.WebDriverManager - There was an error managing msedgedriver (latest version) (java.net.UnknownHostException: msedgedriver.azureedge.net)
+io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
+	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1588) ~[webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:115) ~[webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1442) ~[webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1268) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1437) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1415) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1190) [webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427) [webdrivermanager-5.8.0.jar:?]
+	at base.BaseClass.setupBrowser(BaseClass.java:34) [classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58) [testng-7.8.0.jar:7.8.0]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) [?:?]
+	at java.lang.Thread.run(Thread.java:1474) [?:?]
+Caused by: java.net.UnknownHostException: msedgedriver.azureedge.net
+	at java.net.InetAddress$CachedLookup.get(InetAddress.java:909) ~[?:?]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1702) ~[?:?]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1582) ~[?:?]
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient5-5.2.1.jar:5.2.1]
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183) ~[httpclient5-5.2.1.jar:5.2.1]
+	at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:157) ~[webdrivermanager-5.8.0.jar:?]
+	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1573) ~[webdrivermanager-5.8.0.jar:?]
+	... 25 more
+13:03:47.503 [main] INFO  tests.AccountsTest - Testing 'Present Upcoming EMIs' button click
+13:03:51.165 [main] INFO  tests.AccountsTest - URL after clicking Present Upcoming EMIs: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+13:03:53.657 [main] INFO  tests.AccountsTest - Testing 'View Active Presentations' button click
+13:03:54.447 [TestNG-tests-2] INFO  io.github.bonigarcia.wdm.WebDriverManager - Reading https://raw.githubusercontent.com/bonigarcia/webdrivermanager/master/docs/mirror/geckodriver to seek geckodriver
+13:03:56.843 [TestNG-tests-2] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\i-tech\.cache\selenium\geckodriver\win64\0.37.0\geckodriver.exe
+13:03:58.209 [main] INFO  tests.AccountsTest - URL after clicking View Active Presentations: https://lms.alfinnext.com/lms/accounts?product=VEHICLE_LOAN
+13:04:06.043 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:04:06.129 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:04:12.272 [TestNG-tests-1] INFO  tests.ForeclosureTest - Foreclosure modal title: Loan Foreclosure Payoff
+13:04:20.851 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Navigated to Balance Transfer tab: https://lms.alfinnext.com/lms/accounts/210?tab=balance_transfer&product=VEHICLE_LOAN
+13:04:25.782 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying Balance Transfer Settlement section loads
+13:04:31.745 [TestNG-tests-1] INFO  tests.ForeclosureTest - Modal opened on: HISTORY view
+13:04:32.748 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Section heading: Balance Transfer Settlement
+13:04:55.483 [TestNG-tests-1] INFO  tests.SettlementTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/212?product=VEHICLE_LOAN
+13:04:57.730 [TestNG-tests-1] INFO  tests.SettlementTest - Verifying Settlement modal opens from action menu
+13:05:05.241 [TestNG-tests-1] INFO  tests.LedgerTest - Navigated to Ledger tab: https://lms.alfinnext.com/lms/accounts/208?tab=ledger&product=VEHICLE_LOAN
+13:05:05.248 [TestNG-tests-1] INFO  tests.LedgerTest - Verifying Export button click on Ledger tab
+13:05:10.977 [TestNG-tests-1] INFO  tests.LedgerTest - Export button clicked successfully
+13:05:14.231 [TestNG-tests-1] INFO  tests.ForeclosureTest - Navigated to account detail page: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+13:05:16.539 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying Foreclosure modal opens from action menu
+13:05:18.186 [main] INFO  tests.AccountsDetailsTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/212?product=VEHICLE_LOAN
+13:05:20.412 [main] INFO  tests.AccountsDetailsTest - Verifying detail page loads
+13:05:22.897 [main] INFO  tests.AccountsDetailsTest - Verifying URL contains numeric account ID
+13:05:22.949 [main] INFO  tests.AccountsDetailsTest - Current URL: https://lms.alfinnext.com/lms/accounts/212?product=VEHICLE_LOAN
+13:05:25.275 [main] INFO  tests.AccountsDetailsTest - Verifying borrower name is visible in header
+13:05:25.754 [main] INFO  tests.AccountsDetailsTest - Borrower name: Miraf Kasum
+13:05:27.955 [main] INFO  tests.AccountsDetailsTest - Verifying LAN number is shown in header
+13:05:28.250 [main] INFO  tests.AccountsDetailsTest - LAN number: VEHICLE_000031
+13:05:30.420 [main] INFO  tests.AccountsDetailsTest - Verifying full LAN label contains 'LAN:' prefix
+13:05:31.050 [main] INFO  tests.AccountsDetailsTest - Full LAN text: LAN:
+VEHICLE_000031
+13:05:32.816 [main] INFO  tests.AccountsDetailsTest - Verifying status badge is visible
+13:05:33.216 [main] INFO  tests.AccountsDetailsTest - Status badge: Active
+13:05:35.354 [main] INFO  tests.AccountsDetailsTest - Verifying AN text is visible in header
+13:05:35.780 [main] INFO  tests.AccountsDetailsTest - AN text: AN:
+APP60282932
+13:05:37.328 [main] INFO  tests.AccountsDetailsTest - Verifying Product Type is visible in header
+13:05:37.595 [main] INFO  tests.AccountsDetailsTest - Product type: VEHICLE
+13:05:39.209 [main] INFO  tests.AccountsDetailsTest - Verifying Disbursed On date is visible in header
+13:05:39.575 [main] INFO  tests.AccountsDetailsTest - Disbursed on: 01-07-2026
+13:05:41.590 [main] INFO  tests.AccountsDetailsTest - Verifying Loan Amount is displayed in info grid
+13:05:41.870 [main] INFO  tests.AccountsDetailsTest - Loan Amount: ₹70,000
+13:05:43.835 [main] INFO  tests.AccountsDetailsTest - Verifying Outstanding is displayed in info grid
+13:05:44.269 [main] INFO  tests.AccountsDetailsTest - Outstanding: ₹70,015.34
+13:05:46.313 [main] INFO  tests.AccountsDetailsTest - Verifying Current DPD is displayed in info grid
+13:05:46.584 [main] INFO  tests.AccountsDetailsTest - Current DPD: 0
+13:05:48.440 [main] INFO  tests.AccountsDetailsTest - Verifying Next EMI Due is displayed in info grid
+13:05:49.130 [main] INFO  tests.AccountsDetailsTest - Next EMI Due: 08 Jul 2026
+13:05:51.248 [main] INFO  tests.AccountsDetailsTest - Verifying Current Liability is displayed in info grid
+13:05:51.487 [main] INFO  tests.AccountsDetailsTest - Current Liability: ₹222
+13:05:53.154 [main] INFO  tests.AccountsDetailsTest - Verifying DISBURSED AMOUNT card is shown
+13:05:56.520 [TestNG-tests-1] INFO  tests.ForeclosureTest - Foreclosure modal title: Loan Foreclosure Payoff
+13:06:11.761 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/212?product=VEHICLE_LOAN
+13:06:11.781 [TestNG-tests-1] INFO  tests.ForeclosureTest - Modal opened on: HISTORY view
+13:06:13.381 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying detail page loads
+13:06:21.103 [TestNG-tests-1] INFO  tests.SettlementTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/212?product=VEHICLE_LOAN
+13:06:22.530 [TestNG-tests-1] INFO  tests.SettlementTest - Verifying Settlement modal opens from action menu
+13:06:26.111 [main] INFO  tests.AccountsDetailsTest - Verifying NET OUTSTANDING BALANCE card is shown
+13:06:44.289 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:06:44.289 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+13:06:46.648 [TestNG-tests-1] INFO  tests.ScheduleTest - Navigated to Schedule tab: https://lms.alfinnext.com/lms/accounts/208?tab=repayment_schedule&product=VEHICLE_LOAN
+13:06:46.650 [TestNG-tests-1] INFO  tests.ScheduleTest - Verifying Present EMI flow from Schedules tab
+13:06:49.065 [TestNG-tests-1] INFO  tests.ScheduleTest - Present EMI flow completed successfully
+13:06:51.883 [TestNG-tests-1] INFO  tests.AccountsTest - Verifying accounts table loads with data
+13:06:52.047 [TestNG-tests-1] INFO  tests.AccountsTest - Total rows loaded: 10
+13:06:54.668 [TestNG-tests-1] INFO  tests.SettlementTest - Verifying complete Settlement flow
+13:06:58.967 [main] INFO  tests.AccountsDetailsTest - Verifying PAID AMOUNT card is shown
+13:07:31.143 [main] INFO  tests.AccountsDetailsTest - Verifying OVERDUE AMOUNT card is shown
+13:07:35.722 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/212?product=VEHICLE_LOAN
+13:07:37.471 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying detail page loads
+13:08:03.030 [main] INFO  tests.AccountsDetailsTest - ── Tab 1: Overview (already active) ──
+13:08:05.300 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying info notice text
+13:08:05.466 [main] INFO  tests.AccountsDetailsTest - Overview: borrower=Miraf Kasum
+13:08:05.466 [main] INFO  tests.AccountsDetailsTest - ── Tab 2: Schedules ──
+13:08:05.965 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Info notice: LMS
+⌘
+K
+PRODUCT VERTICAL
+Vehicle Loan
+PK
+Pigok Kamac
+LAN:
+VEHICLE_000029
+AN:
+APP92656751
+Product Type:
+VEHICLE
+Disbursed On:
+30-06-2026
+Balance Transferred
+Loan Amount
+₹70,000
+Outstanding
+₹0
+Current DPD
+0
+Current Liability
+₹0
+Next EMI Due
+07 Jul 2026
+Lead no
+934
+Contact
+******6849
+PAN
+******993E
+Email
+Bhar******************
+Employment Type
+SALARIED
+Residential Type
+OWNED
+Tenure
+24 Months
+Interest
+8%
+DISBURSED AMOUNT
+₹70,000
+NET OUTSTANDING BALANCE
+₹0
+PAID AMOUNT
+₹70,222
+OVERDUE AMOUNT
+₹0
+Overview
+Schedules
+Ledger
+Transaction
+Payment
+Nach Presentation
+Documents
+Tracking History
+Charges
+Disbursements
+Balance Transfer
+Insurance Claims
+Audit Trail
+Balance Transfer Settlement
+Transfer outstanding liability to a new lender
+The full outstanding liability of ₹0.00 will be settled by the new lender. Once processed, this loan account will be marked as BALANCE_TRANSFERRED and closed.
+New Lender Name
+NOC Reference (Optional)
+Reason for Transfer
+Reset
+Confirm Transfer
+13:08:07.598 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying modal content fields
+13:08:07.809 [main] INFO  tests.AccountsDetailsTest - Schedules: URL=https://lms.alfinnext.com/lms/accounts/212?tab=repayment_schedule&product=VEHICLE_LOAN
+13:08:07.809 [main] INFO  tests.AccountsDetailsTest - ── Tab 3: Ledger ──
+13:08:08.245 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:08:08.261 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+13:08:10.360 [main] INFO  tests.AccountsDetailsTest - Ledger: URL=https://lms.alfinnext.com/lms/accounts/212?tab=ledger&product=VEHICLE_LOAN
+13:08:10.360 [main] INFO  tests.AccountsDetailsTest - ── Tab 4: Transaction ──
+13:08:11.173 [TestNG-tests-1] INFO  tests.ScheduleTest - Navigated to Schedule tab: https://lms.alfinnext.com/lms/accounts/208?tab=repayment_schedule&product=VEHICLE_LOAN
+13:08:11.175 [TestNG-tests-1] INFO  tests.ScheduleTest - Verifying Present EMI flow from Schedules tab
+13:08:13.318 [main] INFO  tests.AccountsDetailsTest - Transaction: URL=https://lms.alfinnext.com/lms/accounts/212?tab=transactions&product=VEHICLE_LOAN
+13:08:13.318 [main] INFO  tests.AccountsDetailsTest - ── Tab 5: Payment ──
+13:08:15.288 [TestNG-tests-1] INFO  tests.ScheduleTest - Present EMI flow completed successfully
+13:08:16.365 [main] INFO  tests.AccountsDetailsTest - Payment: URL=https://lms.alfinnext.com/lms/accounts/212?tab=payment&product=VEHICLE_LOAN
+13:08:16.365 [main] INFO  tests.AccountsDetailsTest - ── Tab 6: Nach Presentation ──
+13:08:17.563 [TestNG-tests-1] INFO  tests.AccountsTest - Verifying accounts table loads with data
+13:08:17.967 [TestNG-tests-1] INFO  tests.AccountsTest - Total rows loaded: 10
+13:08:19.628 [main] INFO  tests.AccountsDetailsTest - Nach Presentation: URL=https://lms.alfinnext.com/lms/accounts/212?tab=nach_presentation&product=VEHICLE_LOAN
+13:08:19.665 [main] INFO  tests.AccountsDetailsTest - ── Tab 7: Documents ──
+13:08:20.030 [TestNG-tests-1] INFO  tests.SettlementTest - Verifying complete Settlement flow
+13:08:22.859 [main] INFO  tests.AccountsDetailsTest - Documents: URL=https://lms.alfinnext.com/lms/accounts/212?tab=documents&product=VEHICLE_LOAN
+13:08:22.859 [main] INFO  tests.AccountsDetailsTest - ── Tab 8: Tracking History ──
+13:08:25.621 [main] INFO  tests.AccountsDetailsTest - Tracking History: URL=https://lms.alfinnext.com/lms/accounts/212?tab=tracking_history&product=VEHICLE_LOAN
+13:08:25.621 [main] INFO  tests.AccountsDetailsTest - ── Tab 9: Charges ──
+13:08:28.403 [main] INFO  tests.AccountsDetailsTest - Charges: URL=https://lms.alfinnext.com/lms/accounts/212?tab=charges&product=VEHICLE_LOAN
+13:08:28.403 [main] INFO  tests.AccountsDetailsTest - ── Tab 10: Disbursements ──
+13:08:30.929 [main] INFO  tests.AccountsDetailsTest - Disbursements: URL=https://lms.alfinnext.com/lms/accounts/212?tab=disbursements&product=VEHICLE_LOAN
+13:08:30.929 [main] INFO  tests.AccountsDetailsTest - ── Tab 11: Balance Transfer ──
+13:08:33.228 [main] INFO  tests.AccountsDetailsTest - Balance Transfer: URL=https://lms.alfinnext.com/lms/accounts/212?tab=balance_transfer&product=VEHICLE_LOAN
+13:08:33.228 [main] INFO  tests.AccountsDetailsTest - ── Tab 12: Insurance Claims ──
+13:08:35.560 [main] INFO  tests.AccountsDetailsTest - Insurance Claims: URL=https://lms.alfinnext.com/lms/accounts/212?tab=insurance_claims&product=VEHICLE_LOAN
+13:08:35.560 [main] INFO  tests.AccountsDetailsTest - ── Tab 13: Audit Trail ──
+13:08:37.906 [main] INFO  tests.AccountsDetailsTest - Audit Trail: URL=https://lms.alfinnext.com/lms/accounts/212?tab=audit_trail&product=VEHICLE_LOAN
+13:08:37.906 [main] INFO  tests.AccountsDetailsTest - ── Back to Overview ──
+13:08:40.205 [main] INFO  tests.AccountsDetailsTest - Back to Overview: borrower=Miraf Kasum
+13:08:41.202 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:08:41.263 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:09:19.406 [TestNG-tests-1] INFO  tests.ForeclosureTest - History view — verifying first quote ID is present
+13:09:19.871 [TestNG-tests-1] INFO  tests.ForeclosureTest - First quote ID: FCL-20260630-E5AF9B
+13:09:32.518 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying info notice text
+13:09:32.527 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:09:32.531 [main] INFO  tests.PaymentTest - Verifying Payment tab loads with PAYMENT HISTORY heading
+13:09:33.291 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Info notice: LMS
+⌘
+K
+PRODUCT VERTICAL
+Vehicle Loan
+PK
+Pigok Kamac
+LAN:
+VEHICLE_000029
+AN:
+APP92656751
+Product Type:
+VEHICLE
+Disbursed On:
+30-06-2026
+Balance Transferred
+Loan Amount
+₹70,000
+Outstanding
+₹0
+Current DPD
+0
+Current Liability
+₹0
+Next EMI Due
+07 Jul 2026
+Lead no
+934
+Contact
+******6849
+PAN
+******993E
+Email
+Bhar******************
+Employment Type
+SALARIED
+Residential Type
+OWNED
+Tenure
+24 Months
+Interest
+8%
+DISBURSED AMOUNT
+₹70,000
+NET OUTSTANDING BALANCE
+₹0
+PAID AMOUNT
+₹70,222
+OVERDUE AMOUNT
+₹0
+Overview
+Schedules
+Ledger
+Transaction
+Payment
+Nach Presentation
+Documents
+Tracking History
+Charges
+Disbursements
+Balance Transfer
+Insurance Claims
+Audit Trail
+Balance Transfer Settlement
+Transfer outstanding liability to a new lender
+The full outstanding liability of ₹0.00 will be settled by the new lender. Once processed, this loan account will be marked as BALANCE_TRANSFERRED and closed.
+New Lender Name
+NOC Reference (Optional)
+Reason for Transfer
+Reset
+Confirm Transfer
+13:09:35.036 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying modal content fields
+13:09:56.255 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:09:56.266 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+13:10:03.310 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:10:03.322 [main] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+13:10:28.710 [TestNG-tests-1] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+13:10:33.030 [TestNG-tests-1] INFO  tests.AccountsTest - Rows visible after search input: 10
+13:10:34.683 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying URL contains numeric account ID
+13:10:34.747 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Current URL: https://lms.alfinnext.com/lms/accounts/212?product=VEHICLE_LOAN
+13:10:36.915 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying borrower name is visible in header
+13:10:37.148 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Borrower name: Miraf Kasum
+13:10:38.747 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying form fields accept input
+13:10:39.657 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Entered New Lender Name: HDFC Bank
+13:10:41.295 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Entered NOC Reference: NOC-2026-001
+13:10:42.443 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Entered Reason for Transfer
+13:10:42.657 [TestNG-tests-1] INFO  tests.ForeclosureTest - History view — verifying first quote ID is present
+13:10:43.009 [TestNG-tests-1] INFO  tests.ForeclosureTest - First quote ID: FCL-20260630-E5AF9B
+13:10:44.523 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying Generate Quote flow
+13:11:04.960 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:11:04.965 [main] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+13:11:06.820 [main] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:11:19.956 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:11:19.958 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Payment History sub-tab is visible
+13:11:37.518 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:11:37.520 [main] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+13:11:40.116 [main] INFO  tests.PaymentTest - Staged Repayments row count: 1
+13:11:55.115 [TestNG-tests-1] INFO  tests.AccountsTest - Testing search input accepts borrower-name text without error
+13:12:00.657 [TestNG-tests-1] INFO  tests.AccountsTest - Rows visible after search input: 10
+13:12:03.688 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying URL contains numeric account ID
+13:12:03.738 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Current URL: https://lms.alfinnext.com/lms/accounts/212?product=VEHICLE_LOAN
+13:12:06.001 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying borrower name is visible in header
+13:12:07.083 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Borrower name: Miraf Kasum
+13:12:09.312 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying form fields accept input
+13:12:10.862 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:12:10.876 [main] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+13:12:12.473 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Entered New Lender Name: HDFC Bank
+13:12:15.051 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Entered NOC Reference: NOC-2026-001
+13:12:18.303 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Entered Reason for Transfer
+13:12:22.091 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying Generate Quote flow
+13:12:27.737 [TestNG-tests-1] INFO  tests.AccountsTest - Testing search filter by LAN number
+13:12:43.401 [main] INFO  tests.PaymentTest - Payment History row count: 0
+13:13:05.972 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:13:05.974 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+13:13:07.650 [TestNG-tests-1] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:13:08.849 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying Foreclose button opens payment form
+13:13:13.681 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:13:13.690 [main] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+13:13:44.637 [main] INFO  tests.PaymentTest - No payment history rows — skipping row-data assertion
+13:14:03.545 [TestNG-tests-1] INFO  tests.ForeclosureTest - Clicked Foreclose → on first active quote
+13:14:08.676 [TestNG-tests-1] INFO  tests.AccountsTest - Testing search filter by LAN number
+13:14:15.679 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:14:15.680 [main] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+13:14:19.024 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+13:14:37.363 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying LAN number is shown in header
+13:14:37.785 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - LAN number: VEHICLE_000031
+13:14:40.431 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying Reset button clears the form
+13:14:47.059 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:14:47.065 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Staged Repayments sub-tab is clickable
+13:14:49.798 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Clicked Reset
+13:14:49.983 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:14:49.986 [main] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+13:14:51.582 [TestNG-tests-1] INFO  tests.BalanceTransferTest - New Lender Name after reset: ''
+13:14:53.937 [TestNG-tests-1] INFO  tests.PaymentTest - Staged Repayments sub-tab clicked: URL=https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:14:54.576 [TestNG-tests-1] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+13:14:55.175 [main] INFO  tests.PaymentTest - Modal title: Make Payment
+13:14:57.762 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying Foreclose button opens payment form
+13:15:05.314 [TestNG-tests-1] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+13:15:27.329 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:15:27.332 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Scheduled EMI value
+13:15:28.483 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
+13:15:35.840 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:15:35.842 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative

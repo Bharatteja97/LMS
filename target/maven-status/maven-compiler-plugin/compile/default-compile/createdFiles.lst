@@ -5,6 +5,7 @@ accounts\ForeclosurePage.class
 accounts\SettlementPage.class
 pages\LoginPage.class
 pages\DashboardPage.class
+accounts\AccountsPage.class
 accounts\PaymentPage.class
 utils\ConfigReader.class
 utils\WaitUtils.class
@@ -13,5 +14,7 @@ accounts\DocumentsPage.class
 accounts\BalanceTransferPage.class
 pages\ReportPage.class
 accounts\SchedulePage.class
+accounts\AccountDetailsPage.class
+accounts\TransactionPage.class
 utils\ScreenshotUtils.class
 utils\WebDriverUtils.class

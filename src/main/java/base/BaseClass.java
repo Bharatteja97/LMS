@@ -14,24 +14,42 @@ import java.time.Duration;
 
 public class BaseClass {
 
-    protected static WebDriver driver;
+    protected static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
+    protected WebDriver driver;
     protected DashboardPage dashboard;
 
-    @BeforeSuite(alwaysRun = true)
-    public void suiteSetUp() {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        // Add CI compatibility
-        if (System.getenv("CI") != null) {
-            options.addArguments("--headless=new");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--window-size=1920,1080");
+    @org.testng.annotations.Parameters("browser")
+    @org.testng.annotations.BeforeTest(alwaysRun = true)
+    public void setupBrowser(@org.testng.annotations.Optional("chrome") String browser) {
+        WebDriver webDriver;
+        
+        switch (browser.toLowerCase()) {
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                org.openqa.selenium.firefox.FirefoxOptions firefoxOptions = new org.openqa.selenium.firefox.FirefoxOptions();
+                if (System.getenv("CI") != null) firefoxOptions.addArguments("--headless");
+                webDriver = new org.openqa.selenium.firefox.FirefoxDriver(firefoxOptions);
+                break;
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                org.openqa.selenium.edge.EdgeOptions edgeOptions = new org.openqa.selenium.edge.EdgeOptions();
+                if (System.getenv("CI") != null) edgeOptions.addArguments("--headless");
+                webDriver = new org.openqa.selenium.edge.EdgeDriver(edgeOptions);
+                break;
+            case "chrome":
+            default:
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--remote-allow-origins=*");
+                if (System.getenv("CI") != null) {
+                    chromeOptions.addArguments("--headless=new", "--disable-gpu", "--no-sandbox", "--disable-dev-shm-usage", "--window-size=1920,1080");
+                }
+                webDriver = new ChromeDriver(chromeOptions);
+                break;
         }
 
-        driver = new ChromeDriver(options);
+        threadLocalDriver.set(webDriver);
+        driver = webDriver;
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(15));
         
@@ -76,6 +94,7 @@ public class BaseClass {
 
     @BeforeClass(alwaysRun = true)
     public void classSetUp() {
+        this.driver = threadLocalDriver.get();
         // Initialize dashboard for EACH test class instance using the shared static driver
         dashboard = new DashboardPage(driver);
     }
@@ -88,10 +107,12 @@ public class BaseClass {
         }
     }
 
-    @AfterSuite(alwaysRun = true)
+    @org.testng.annotations.AfterTest(alwaysRun = true)
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
+        WebDriver currentDriver = threadLocalDriver.get();
+        if (currentDriver != null) {
+            currentDriver.quit();
+            threadLocalDriver.remove();
         }
     }
 
