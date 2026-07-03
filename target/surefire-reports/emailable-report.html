@@ -8,20 +8,69 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">39,619</td><td></td><td></td></tr>
+<tr><th colspan="8">LOS Test Suite</th></tr>
+<tr><td><a href="#t0">Full End-to-End Flow</a></td><td class="num">24</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">536,867</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.DashboardTest</td><td><a href="#m0">testDashboardStatsAndSearch</a></td><td rowspan="1">1782998019172</td><td rowspan="1">39147</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">LOS Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Full End-to-End Flow &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.DashboardTest</td><td><a href="#m0">testDashboardStatsAndSearch</a></td><td rowspan="1">1783065379230</td><td rowspan="1">45611</td></tr><tr><th colspan="4">Full End-to-End Flow &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.CreateLeadTest</td><td><a href="#m1">testCreateNewLead</a></td><td rowspan="1">1783064888214</td><td rowspan="1">48971</td></tr><tr class="passedodd"><td rowspan="1">tests.DealerConfirmationTest</td><td><a href="#m2">testDealerConfirmationFill</a></td><td rowspan="1">1783065303251</td><td rowspan="1">18986</td></tr><tr class="passedeven"><td rowspan="1">tests.DealerLetterTest</td><td><a href="#m3">testDispatchMailToDealer</a></td><td rowspan="1">1783065293161</td><td rowspan="1">10081</td></tr><tr class="passedodd"><td rowspan="1">tests.DisbursementTest</td><td><a href="#m4">testSendToDisbursal</a></td><td rowspan="1">1783065361193</td><td rowspan="1">18032</td></tr><tr class="passedeven"><td rowspan="3">tests.KycPageTest</td><td><a href="#m5">testFetchKycLinkFromEmail</a></td><td rowspan="1">1783064944968</td><td rowspan="1">10960</td></tr><tr class="passedeven"><td><a href="#m6">testFillKycFormAndSubmit</a></td><td rowspan="1">1783064957374</td><td rowspan="1">46046</td></tr><tr class="passedeven"><td><a href="#m7">testKycPageLoadsCorrectly</a></td><td rowspan="1">1783064955948</td><td rowspan="1">1418</td></tr><tr class="passedodd"><td rowspan="1">tests.LeadDetailsTest</td><td><a href="#m8">testVerifyLeadDetails</a></td><td rowspan="1">1783064937221</td><td rowspan="1">7719</td></tr><tr class="passedeven"><td rowspan="1">tests.LoanAgreementTest</td><td><a href="#m9">testDispatchAndSimulateESign</a></td><td rowspan="1">1783065322237</td><td rowspan="1">24435</td></tr><tr class="passedodd"><td rowspan="1">tests.NachRegistrationTest</td><td><a href="#m10">testNachRegistration</a></td><td rowspan="1">1783065346676</td><td rowspan="1">14507</td></tr><tr class="passedeven"><td rowspan="1">tests.ProcessingFeeTest</td><td><a href="#m11">testProcessingFeePayment</a></td><td rowspan="1">1783065183469</td><td rowspan="1">109684</td></tr><tr class="passedodd"><td rowspan="1">tests.SendToUnderwritingTest</td><td><a href="#m12">testSendToUnderwriting</a></td><td rowspan="1">1783065003446</td><td rowspan="1">7770</td></tr><tr class="passedeven"><td rowspan="12">tests.UnderWritingTest</td><td><a href="#m13">testApproveButtonPresent</a></td><td rowspan="1">1783065063396</td><td rowspan="1">103</td></tr><tr class="passedeven"><td><a href="#m14">testBankDetailsAddCustomerBank</a></td><td rowspan="1">1783065081081</td><td rowspan="1">45714</td></tr><tr class="passedeven"><td><a href="#m15">testClickApproveButton</a></td><td rowspan="1">1783065126809</td><td rowspan="1">11395</td></tr><tr class="passedeven"><td><a href="#m16">testDealParametersSetPreferredRepaymentDate</a></td><td rowspan="1">1783065067912</td><td rowspan="1">13168</td></tr><tr class="passedeven"><td><a href="#m17">testDirectNavigationToApplicationDetail</a></td><td rowspan="1">1783065063505</td><td rowspan="1">4390</td></tr><tr class="passedeven"><td><a href="#m18">testDispatchSanctionMail</a></td><td rowspan="1">1783065138217</td><td rowspan="1">24783</td></tr><tr class="passedeven"><td><a href="#m19">testOpenApplicationDetail</a></td><td rowspan="1">1783065036448</td><td rowspan="1">6913</td></tr><tr class="passedeven"><td><a href="#m20">testSearchFunctionality</a></td><td rowspan="1">1783065015416</td><td rowspan="1">21024</td></tr><tr class="passedeven"><td><a href="#m21">testSubmitSanctionLetter</a></td><td rowspan="1">1783065163006</td><td rowspan="1">20463</td></tr><tr class="passedeven"><td><a href="#m22">testTabNavigation</a></td><td rowspan="1">1783065043364</td><td rowspan="1">14797</td></tr><tr class="passedeven"><td><a href="#m23">testUnderwritingListPageLoads</a></td><td rowspan="1">1783065011223</td><td rowspan="1">4184</td></tr><tr class="passedeven"><td><a href="#m24">testUpdateStatusModalOpens</a></td><td rowspan="1">1783065058164</td><td rowspan="1">5225</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">tests.DashboardTest#testDashboardStatsAndSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate option with text: USED CAR LOAN
+<h2>Full End-to-End Flow</h2><h3 id="m0">tests.DashboardTest#testDashboardStatsAndSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[normalize-space(text())=&apos;Total Applications&apos; or contains(text(), &apos;Total Applications&apos;)]/following-sibling::*[1] | //div[div[contains(text(), &apos;Total Applications&apos;)]]/div[2]&apos; (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.DashboardPage.getTotalApplicationsCount(DashboardPage.java:78)
+	at tests.DashboardTest.testDashboardStatsAndSearch(DashboardTest.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[normalize-space(text())=&apos;Total Applications&apos; or contains(text(), &apos;Total Applications&apos;)]/following-sibling::*[1] | //div[div[contains(text(), &apos;Total Applications&apos;)]]/div[2]&quot;}
+  (Session info: chrome=149.0.7827.199)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:153)
-	at pages.DashboardPage.selectFilterScheme(DashboardPage.java:156)
-	at tests.DashboardTest.testDashboardStatsAndSearch(DashboardTest.java:47)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6795a6c8aa65e0dbb0773c333c9c1fbc, findElement {value=//*[normalize-space(text())=&apos;Total Applications&apos; or contains(text(), &apos;Total Applications&apos;)]/following-sibling::*[1] | //div[div[contains(text(), &apos;Total Applications&apos;)]]/div[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.199, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\i-tech\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51069}, goog:processID: 7232, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51069/devtoo..., se:cdpVersion: 149.0.7827.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6795a6c8aa65e0dbb0773c333c9c1fbc
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 32 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.CreateLeadTest#testCreateNewLead</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.DealerConfirmationTest#testDealerConfirmationFill</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.DealerLetterTest#testDispatchMailToDealer</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.DisbursementTest#testSendToDisbursal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.KycPageTest#testFetchKycLinkFromEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.KycPageTest#testFillKycFormAndSubmit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.KycPageTest#testKycPageLoadsCorrectly</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.LeadDetailsTest#testVerifyLeadDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.LoanAgreementTest#testDispatchAndSimulateESign</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.NachRegistrationTest#testNachRegistration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.ProcessingFeeTest#testProcessingFeePayment</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.SendToUnderwritingTest#testSendToUnderwriting</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">tests.UnderWritingTest#testApproveButtonPresent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">tests.UnderWritingTest#testBankDetailsAddCustomerBank</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">tests.UnderWritingTest#testClickApproveButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">tests.UnderWritingTest#testDealParametersSetPreferredRepaymentDate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">tests.UnderWritingTest#testDirectNavigationToApplicationDetail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">tests.UnderWritingTest#testDispatchSanctionMail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">tests.UnderWritingTest#testOpenApplicationDetail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">tests.UnderWritingTest#testSearchFunctionality</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">tests.UnderWritingTest#testSubmitSanctionLetter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">tests.UnderWritingTest#testTabNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">tests.UnderWritingTest#testUnderwritingListPageLoads</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">tests.UnderWritingTest#testUpdateStatusModalOpens</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

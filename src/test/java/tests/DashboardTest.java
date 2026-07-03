@@ -13,6 +13,10 @@ public class DashboardTest extends BaseClass {
         System.out.println("[TEST] Navigating to Dashboard and checking elements...");
         System.out.println("-----------------------------------------------------------");
 
+        // Navigate back to the dashboard from wherever the previous test left off
+        driver.get("https://lms.alfinnext.com/");
+        Thread.sleep(3000);
+
         DashboardPage dashboardPage = new DashboardPage(driver);
         
         System.out.println("[INFO] Getting Total Applications...");

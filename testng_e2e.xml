@@ -14,7 +14,7 @@
             <class name="tests.LoanAgreementTest"/>
             <class name="tests.NachRegistrationTest"/>
             <class name="tests.DisbursementTest"/>
-            <class name="DashboardTest"/>
+            <class name="tests.DashboardTest"/>
         </classes>
     </test>
 </suite>
