@@ -46,16 +46,16 @@ public class DashboardPage {
     private WebElement statusDropdown;
 
     // --- Filter Dashboard Sidebar ---
-    @FindBy(xpath = "//*[contains(text(), 'Start Date')]/ancestor::div[1]/following-sibling::*//input | //*[contains(text(), 'Start Date')]/parent::*/parent::*//input | //input[ancestor::div[*[contains(text(), 'Start Date')]]]")
+    @FindBy(xpath = "//*[normalize-space(text())='Start Date']/following::input[@type='date'][1]")
     private WebElement filterStartDate;
 
-    @FindBy(xpath = "//*[contains(text(), 'End Date')]/ancestor::div[1]/following-sibling::*//input | //*[contains(text(), 'End Date')]/parent::*/parent::*//input | //input[ancestor::div[*[contains(text(), 'End Date')]]]")
+    @FindBy(xpath = "//*[normalize-space(text())='End Date']/following::input[@type='date'][1]")
     private WebElement filterEndDate;
 
-    @FindBy(xpath = "//*[contains(text(), 'Branch')]/ancestor::div[1]/following-sibling::*//select | //*[contains(text(), 'Branch')]/parent::*/parent::*//select | //select[ancestor::div[*[contains(text(), 'Branch')]]]")
+    @FindBy(xpath = "//*[normalize-space(text())='Branch']/following::select[1]")
     private WebElement filterBranchDropdown;
 
-    @FindBy(xpath = "//*[contains(text(), 'Scheme')]/ancestor::div[1]/following-sibling::*//select | //*[contains(text(), 'Scheme')]/parent::*/parent::*//select | //select[ancestor::div[*[contains(text(), 'Scheme')]]]")
+    @FindBy(xpath = "//*[normalize-space(text())='Scheme']/following::select[1]")
     private WebElement filterSchemeDropdown;
 
     @FindBy(xpath = "//button[contains(., 'Reset')]")
@@ -134,26 +134,42 @@ public class DashboardPage {
 
     public void selectFilterBranch(String branchText) {
         wait.until(ExpectedConditions.visibilityOf(filterBranchDropdown));
-        org.openqa.selenium.support.ui.Select branchSelect = new org.openqa.selenium.support.ui.Select(filterBranchDropdown);
-        for (WebElement option : branchSelect.getOptions()) {
-            if (option.getText().trim().equalsIgnoreCase(branchText.trim())) {
-                branchSelect.selectByVisibleText(option.getText());
-                return;
-            }
-        }
-        branchSelect.selectByVisibleText(branchText); // Fallback
+        selectDropdownOption(filterBranchDropdown, branchText);
     }
 
     public void selectFilterScheme(String schemeText) {
         wait.until(ExpectedConditions.visibilityOf(filterSchemeDropdown));
-        org.openqa.selenium.support.ui.Select schemeSelect = new org.openqa.selenium.support.ui.Select(filterSchemeDropdown);
-        for (WebElement option : schemeSelect.getOptions()) {
-            if (option.getText().trim().equalsIgnoreCase(schemeText.trim())) {
-                schemeSelect.selectByVisibleText(option.getText());
-                return;
+        selectDropdownOption(filterSchemeDropdown, schemeText);
+    }
+
+    // React-controlled <select> elements ignore a plain WebDriver click/JS value
+    // assignment in some environments (the visible label doesn't update even though
+    // an option gets highlighted). Select via the native value setter + dispatched
+    // 'change' event so React's onChange fires, then verify it actually stuck.
+    private void selectDropdownOption(WebElement selectElement, String visibleText) {
+        org.openqa.selenium.support.ui.Select select = new org.openqa.selenium.support.ui.Select(selectElement);
+        WebElement matchedOption = null;
+        for (WebElement option : select.getOptions()) {
+            if (option.getText().trim().equalsIgnoreCase(visibleText.trim())) {
+                matchedOption = option;
+                break;
             }
         }
-        schemeSelect.selectByVisibleText(schemeText); // Fallback
+
+        select.selectByVisibleText(matchedOption != null ? matchedOption.getText() : visibleText);
+
+        boolean applied = select.getFirstSelectedOption().getText().trim().equalsIgnoreCase(visibleText.trim());
+        if (!applied) {
+            String optionValue = matchedOption != null ? matchedOption.getAttribute("value") : visibleText;
+            js.executeScript(
+                "var el = arguments[0];" +
+                "var value = arguments[1];" +
+                "var setter = Object.getOwnPropertyDescriptor(window.HTMLSelectElement.prototype, 'value').set;" +
+                "setter.call(el, value);" +
+                "el.dispatchEvent(new Event('input', { bubbles: true }));" +
+                "el.dispatchEvent(new Event('change', { bubbles: true }));",
+                selectElement, optionValue);
+        }
     }
 
     public void clickApplyFilters() {
