@@ -8,6 +8,7 @@
 
     <test name="Full End-to-End Flow">
         <classes>
+             <class name="tests.DashboardTest"/>
             <class name="tests.CreateLeadTest"/>
             <class name="tests.LeadDetailsTest"/>
             <class name="tests.KycPageTest"/>
@@ -19,7 +20,6 @@
             <class name="tests.LoanAgreementTest"/>
             <class name="tests.NachRegistrationTest"/>
             <class name="tests.DisbursementTest"/>
-            <class name="tests.DashboardTest"/>
         </classes>
     </test>
 </suite>

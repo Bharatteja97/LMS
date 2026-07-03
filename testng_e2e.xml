@@ -2,6 +2,7 @@
 <suite name="LOS E2E Full Pipeline Test Suite" preserve-order="true">
     <test name="End-To-End Automation">
         <classes>
+            <class name="tests.DashboardTest"/>
             <class name="tests.CreateLeadTest"/>
             <class name="tests.LeadDetailsTest"/>
             <class name="tests.KycPageTest"/>
@@ -14,7 +15,6 @@
             <class name="tests.LoanAgreementTest"/>
             <class name="tests.NachRegistrationTest"/>
             <class name="tests.DisbursementTest"/>
-            <class name="tests.DashboardTest"/>
         </classes>
     </test>
 </suite>

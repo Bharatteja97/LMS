@@ -13,12 +13,28 @@ public class DashboardTest extends BaseClass {
         System.out.println("[TEST] Navigating to Dashboard and checking elements...");
         System.out.println("-----------------------------------------------------------");
 
-        // Navigate back to the dashboard from wherever the previous test left off
-        driver.get("https://lms.alfinnext.com/");
-        Thread.sleep(3000);
+        // Click the Home/Dashboard icon in the sidebar to ensure we are on the dashboard
+        try {
+            org.openqa.selenium.WebElement homeIcon = new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(10))
+                .until(org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable(
+                    org.openqa.selenium.By.xpath("//*[contains(@class, 'lucide-house')]/ancestor::li")));
+            homeIcon.click(); // Standard click, not JS executor
+            Thread.sleep(4000);
+            
+            System.out.println("URL after clicking Home: " + driver.getCurrentUrl());
+            // Dump source again just in case
+            java.nio.file.Files.write(java.nio.file.Paths.get("page_source.html"), driver.getPageSource().getBytes());
+        } catch(Exception e) {
+            System.out.println("Failed to click home icon: " + e.getMessage());
+        }
 
         DashboardPage dashboardPage = new DashboardPage(driver);
         
+        try {
+            java.nio.file.Files.write(java.nio.file.Paths.get("page_source.html"), driver.getPageSource().getBytes());
+            System.out.println("Page source dumped to page_source.html");
+        } catch(Exception e) {}
+
         System.out.println("[INFO] Getting Total Applications...");
         String totalApps = dashboardPage.getTotalApplicationsCount();
         System.out.println("[RESULT] Total Applications: " + totalApps);
