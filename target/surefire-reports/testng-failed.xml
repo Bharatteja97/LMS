@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ProductAccounts E2E Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="listeners.TestReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Account Details Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.AccountsDetailsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testPaidAmountCardIsDisplayed"/>
+          <include name="testDisbursedAmountCardIsDisplayed"/>
+          <include name="navigateToDetailPage"/>
+          <include name="captureDetailPageUrl"/>
+          <include name="setupBrowser"/>
+          <include name="testNetOutstandingBalanceCardIsDisplayed"/>
+          <include name="classSetUp"/>
+          <include name="testOverdueAmountCardIsDisplayed"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.AccountsDetailsTest -->
+    </classes>
+  </test> <!-- Account Details Tests(failed) -->
+  <test thread-count="5" name="Payment Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.PaymentTest">
+        <methods>
+          <include name="setupPaymentTab"/>
+          <include name="tearDown"/>
+          <include name="testPaymentHistorySubTabVisible"/>
+          <include name="setupBrowser"/>
+          <include name="testMakePaymentWithScheduledEMIAmount"/>
+          <include name="testModalCloseButtonDismissesModal"/>
+          <include name="classSetUp"/>
+          <include name="navigateToPaymentTab"/>
+          <include name="testModalCancelClosesModal"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.PaymentTest -->
+    </classes>
+  </test> <!-- Payment Tests(failed) -->
+  <test thread-count="5" name="Settlement Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.SettlementTest">
+        <methods>
+          <include name="captureDetailPageUrl"/>
+          <include name="tearDown"/>
+          <include name="testOpenSettlementModal"/>
+          <include name="testCompleteSettlementFlow"/>
+          <include name="setupBrowser"/>
+          <include name="navigateToDetailPage"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.SettlementTest -->
+    </classes>
+  </test> <!-- Settlement Tests(failed) -->
+  <test thread-count="5" name="Foreclosure Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.ForeclosureTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testForeclosureFullFlow"/>
+          <include name="testForecloseButtonOpensPaymentForm"/>
+          <include name="testGenerateForeclosureQuote"/>
+          <include name="navigateToAccount"/>
+          <include name="setupBrowser"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+          <include name="resetToDetailPage"/>
+        </methods>
+      </class> <!-- tests.ForeclosureTest -->
+    </classes>
+  </test> <!-- Foreclosure Tests(failed) -->
+</suite> <!-- Failed suite [ProductAccounts E2E Suite] -->

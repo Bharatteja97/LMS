@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Cross Browser E2E Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="listeners.TestReportListener"/>
+  </listeners>
+  <test thread-count="3" parallel="tests" name="Edge Tests(failed)" verbose="0">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="tests.ScheduleTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setupBrowser"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+          <include name="navigateToScheduleTab"/>
+          <include name="testPresentEMI"/>
+        </methods>
+      </class> <!-- tests.ScheduleTest -->
+      <class name="tests.PaymentTest">
+        <methods>
+          <include name="testModalShowsScheduledEMI"/>
+          <include name="tearDown"/>
+          <include name="testPaymentHistoryRowCount"/>
+          <include name="testPayButtonOpensModal"/>
+          <include name="testModalShowsRemainingDue"/>
+          <include name="testPaymentHistorySubTabVisible"/>
+          <include name="testMakePaymentWithScheduledEMIAmount"/>
+          <include name="testModalCloseButtonDismissesModal"/>
+          <include name="classSetUp"/>
+          <include name="testModalCancelClosesModal"/>
+          <include name="navigateToPaymentTab"/>
+          <include name="testPaymentTabLoads"/>
+          <include name="testModalTitleIsCorrect"/>
+          <include name="setupPaymentTab"/>
+          <include name="testModalShowsMaxPaymentLimit"/>
+          <include name="setupBrowser"/>
+          <include name="testStagedRepaymentsSubTabVisible"/>
+          <include name="testStagedRepaymentRowCount"/>
+          <include name="methodSetUp"/>
+          <include name="testPaymentHistoryFirstRowData"/>
+        </methods>
+      </class> <!-- tests.PaymentTest -->
+      <class name="tests.BalanceTransferTest">
+        <methods>
+          <include name="resetTab"/>
+          <include name="testResetClearsForm"/>
+          <include name="tearDown"/>
+          <include name="testFormFieldsAcceptInput"/>
+          <include name="testInfoNoticeText"/>
+          <include name="testConfirmTransferFullFlow"/>
+          <include name="setupBrowser"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+          <include name="testBalanceTransferTabLoads"/>
+          <include name="openBalanceTransferTab"/>
+        </methods>
+      </class> <!-- tests.BalanceTransferTest -->
+      <class name="tests.SettlementTest">
+        <methods>
+          <include name="captureDetailPageUrl"/>
+          <include name="testOpenSettlementModal"/>
+          <include name="tearDown"/>
+          <include name="testCompleteSettlementFlow"/>
+          <include name="setupBrowser"/>
+          <include name="navigateToDetailPage"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.SettlementTest -->
+      <class name="tests.LedgerTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setupBrowser"/>
+          <include name="navigateToLedgerTab"/>
+          <include name="testExportLedger"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.LedgerTest -->
+      <class name="tests.AccountsDetailsTest">
+        <methods>
+          <include name="testOutstandingIsDisplayed"/>
+          <include name="testNextEMIDueIsDisplayed"/>
+          <include name="tearDown"/>
+          <include name="testCurrentLiabilityIsDisplayed"/>
+          <include name="testCurrentDPDIsDisplayed"/>
+          <include name="testDisbursedAmountCardIsDisplayed"/>
+          <include name="navigateToDetailPage"/>
+          <include name="captureDetailPageUrl"/>
+          <include name="testDisbursedOnDateIsVisible"/>
+          <include name="testPageLoadsSuccessfully"/>
+          <include name="testNetOutstandingBalanceCardIsDisplayed"/>
+          <include name="testANTextIsVisible"/>
+          <include name="classSetUp"/>
+          <include name="testOverdueAmountCardIsDisplayed"/>
+          <include name="testBorrowerNameIsVisible"/>
+          <include name="testProductTypeIsVisible"/>
+          <include name="testStatusBadgeIsVisible"/>
+          <include name="testLoanAmountIsDisplayed"/>
+          <include name="testPaidAmountCardIsDisplayed"/>
+          <include name="testLANNumberIsVisible"/>
+          <include name="setupBrowser"/>
+          <include name="testLANTextContainsPrefix"/>
+          <include name="testAllTabsOneByOne"/>
+          <include name="testUrlContainsAccountId"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.AccountsDetailsTest -->
+      <class name="tests.ForeclosureTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testForeclosureFullFlow"/>
+          <include name="testLoanPayoffSummaryOrHistoryFields"/>
+          <include name="testGenerateForeclosureQuote"/>
+          <include name="testForecloseButtonOpensPaymentForm"/>
+          <include name="navigateToAccount"/>
+          <include name="setupBrowser"/>
+          <include name="testOpenForeclosureModal"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+          <include name="resetToDetailPage"/>
+        </methods>
+      </class> <!-- tests.ForeclosureTest -->
+      <class name="tests.AccountsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testSerialNumberSequence"/>
+          <include name="testTableDataIntegrity"/>
+          <include name="testSearchByBorrowerName"/>
+          <include name="testSearchInputNonExistentText"/>
+          <include name="testAvailableStatusOptions"/>
+          <include name="classSetUp"/>
+          <include name="testFilterByOverdueStatus"/>
+          <include name="testFilterBySettledStatus"/>
+          <include name="testViewActivePresentationsButton"/>
+          <include name="testClickFirstRowLAN"/>
+          <include name="testCombinedStatusAndSearchFilter"/>
+          <include name="testClickLANNavigatesToDetailPage"/>
+          <include name="setupBrowser"/>
+          <include name="navigateToAccountsPage"/>
+          <include name="testLoginDateFilter"/>
+          <include name="testSearchByLAN"/>
+          <include name="testPresentUpcomingEMIsButton"/>
+          <include name="testFilterByActiveStatus"/>
+          <include name="methodSetUp"/>
+          <include name="testTableLoadsWithData"/>
+        </methods>
+      </class> <!-- tests.AccountsTest -->
+    </classes>
+  </test> <!-- Edge Tests(failed) -->
+  <test thread-count="3" parallel="tests" name="Firefox Tests(failed)" verbose="0">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="tests.ScheduleTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setupBrowser"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+          <include name="navigateToScheduleTab"/>
+          <include name="testPresentEMI"/>
+        </methods>
+      </class> <!-- tests.ScheduleTest -->
+      <class name="tests.PaymentTest">
+        <methods>
+          <include name="testModalShowsScheduledEMI"/>
+          <include name="tearDown"/>
+          <include name="testPaymentHistoryRowCount"/>
+          <include name="testModalShowsRemainingDue"/>
+          <include name="testPayButtonOpensModal"/>
+          <include name="testPaymentHistorySubTabVisible"/>
+          <include name="testModalCloseButtonDismissesModal"/>
+          <include name="testMakePaymentWithScheduledEMIAmount"/>
+          <include name="navigateToPaymentTab"/>
+          <include name="classSetUp"/>
+          <include name="testModalCancelClosesModal"/>
+          <include name="testPaymentTabLoads"/>
+          <include name="testModalTitleIsCorrect"/>
+          <include name="setupPaymentTab"/>
+          <include name="testModalShowsMaxPaymentLimit"/>
+          <include name="setupBrowser"/>
+          <include name="testStagedRepaymentsSubTabVisible"/>
+          <include name="testStagedRepaymentRowCount"/>
+          <include name="methodSetUp"/>
+          <include name="testPaymentHistoryFirstRowData"/>
+        </methods>
+      </class> <!-- tests.PaymentTest -->
+      <class name="tests.BalanceTransferTest">
+        <methods>
+          <include name="testResetClearsForm"/>
+          <include name="resetTab"/>
+          <include name="tearDown"/>
+          <include name="testFormFieldsAcceptInput"/>
+          <include name="testInfoNoticeText"/>
+          <include name="testConfirmTransferFullFlow"/>
+          <include name="setupBrowser"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+          <include name="testBalanceTransferTabLoads"/>
+          <include name="openBalanceTransferTab"/>
+        </methods>
+      </class> <!-- tests.BalanceTransferTest -->
+      <class name="tests.SettlementTest">
+        <methods>
+          <include name="captureDetailPageUrl"/>
+          <include name="tearDown"/>
+          <include name="testOpenSettlementModal"/>
+          <include name="testCompleteSettlementFlow"/>
+          <include name="setupBrowser"/>
+          <include name="navigateToDetailPage"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.SettlementTest -->
+      <class name="tests.LedgerTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setupBrowser"/>
+          <include name="navigateToLedgerTab"/>
+          <include name="testExportLedger"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.LedgerTest -->
+      <class name="tests.AccountsDetailsTest">
+        <methods>
+          <include name="testNextEMIDueIsDisplayed"/>
+          <include name="testOutstandingIsDisplayed"/>
+          <include name="tearDown"/>
+          <include name="testCurrentLiabilityIsDisplayed"/>
+          <include name="testCurrentDPDIsDisplayed"/>
+          <include name="testDisbursedAmountCardIsDisplayed"/>
+          <include name="navigateToDetailPage"/>
+          <include name="testPageLoadsSuccessfully"/>
+          <include name="testDisbursedOnDateIsVisible"/>
+          <include name="captureDetailPageUrl"/>
+          <include name="testNetOutstandingBalanceCardIsDisplayed"/>
+          <include name="testANTextIsVisible"/>
+          <include name="classSetUp"/>
+          <include name="testOverdueAmountCardIsDisplayed"/>
+          <include name="testBorrowerNameIsVisible"/>
+          <include name="testProductTypeIsVisible"/>
+          <include name="testStatusBadgeIsVisible"/>
+          <include name="testLoanAmountIsDisplayed"/>
+          <include name="testPaidAmountCardIsDisplayed"/>
+          <include name="testLANNumberIsVisible"/>
+          <include name="setupBrowser"/>
+          <include name="testLANTextContainsPrefix"/>
+          <include name="testAllTabsOneByOne"/>
+          <include name="testUrlContainsAccountId"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.AccountsDetailsTest -->
+      <class name="tests.ForeclosureTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testForeclosureFullFlow"/>
+          <include name="testLoanPayoffSummaryOrHistoryFields"/>
+          <include name="navigateToAccount"/>
+          <include name="testForecloseButtonOpensPaymentForm"/>
+          <include name="testGenerateForeclosureQuote"/>
+          <include name="testOpenForeclosureModal"/>
+          <include name="setupBrowser"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+          <include name="resetToDetailPage"/>
+        </methods>
+      </class> <!-- tests.ForeclosureTest -->
+      <class name="tests.AccountsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testSerialNumberSequence"/>
+          <include name="testTableDataIntegrity"/>
+          <include name="testSearchByBorrowerName"/>
+          <include name="testSearchInputNonExistentText"/>
+          <include name="testAvailableStatusOptions"/>
+          <include name="classSetUp"/>
+          <include name="testFilterByOverdueStatus"/>
+          <include name="testFilterBySettledStatus"/>
+          <include name="testViewActivePresentationsButton"/>
+          <include name="testClickFirstRowLAN"/>
+          <include name="testClickLANNavigatesToDetailPage"/>
+          <include name="testCombinedStatusAndSearchFilter"/>
+          <include name="navigateToAccountsPage"/>
+          <include name="setupBrowser"/>
+          <include name="testLoginDateFilter"/>
+          <include name="testPresentUpcomingEMIsButton"/>
+          <include name="testSearchByLAN"/>
+          <include name="methodSetUp"/>
+          <include name="testFilterByActiveStatus"/>
+          <include name="testTableLoadsWithData"/>
+        </methods>
+      </class> <!-- tests.AccountsTest -->
+    </classes>
+  </test> <!-- Firefox Tests(failed) -->
+  <test thread-count="3" parallel="tests" name="Chrome Tests(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.PaymentTest">
+        <methods>
+          <include name="testModalShowsScheduledEMI"/>
+          <include name="tearDown"/>
+          <include name="testModalShowsRemainingDue"/>
+          <include name="testPaymentHistorySubTabVisible"/>
+          <include name="testMakePaymentWithScheduledEMIAmount"/>
+          <include name="testModalCloseButtonDismissesModal"/>
+          <include name="testModalCancelClosesModal"/>
+          <include name="classSetUp"/>
+          <include name="navigateToPaymentTab"/>
+          <include name="setupPaymentTab"/>
+          <include name="testModalTitleIsCorrect"/>
+          <include name="testModalShowsMaxPaymentLimit"/>
+          <include name="setupBrowser"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.PaymentTest -->
+      <class name="tests.SettlementTest">
+        <methods>
+          <include name="testOpenSettlementModal"/>
+          <include name="tearDown"/>
+          <include name="captureDetailPageUrl"/>
+          <include name="testCompleteSettlementFlow"/>
+          <include name="setupBrowser"/>
+          <include name="navigateToDetailPage"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.SettlementTest -->
+      <class name="tests.AccountsDetailsTest">
+        <methods>
+          <include name="testNextEMIDueIsDisplayed"/>
+          <include name="testOutstandingIsDisplayed"/>
+          <include name="tearDown"/>
+          <include name="testCurrentDPDIsDisplayed"/>
+          <include name="testCurrentLiabilityIsDisplayed"/>
+          <include name="testDisbursedAmountCardIsDisplayed"/>
+          <include name="navigateToDetailPage"/>
+          <include name="testDisbursedOnDateIsVisible"/>
+          <include name="captureDetailPageUrl"/>
+          <include name="testNetOutstandingBalanceCardIsDisplayed"/>
+          <include name="classSetUp"/>
+          <include name="testOverdueAmountCardIsDisplayed"/>
+          <include name="testProductTypeIsVisible"/>
+          <include name="testLoanAmountIsDisplayed"/>
+          <include name="testPaidAmountCardIsDisplayed"/>
+          <include name="setupBrowser"/>
+          <include name="testAllTabsOneByOne"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.AccountsDetailsTest -->
+      <class name="tests.ForeclosureTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testForeclosureFullFlow"/>
+          <include name="navigateToAccount"/>
+          <include name="testGenerateForeclosureQuote"/>
+          <include name="testForecloseButtonOpensPaymentForm"/>
+          <include name="setupBrowser"/>
+          <include name="classSetUp"/>
+          <include name="methodSetUp"/>
+          <include name="resetToDetailPage"/>
+        </methods>
+      </class> <!-- tests.ForeclosureTest -->
+      <class name="tests.AccountsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testSerialNumberSequence"/>
+          <include name="testTableDataIntegrity"/>
+          <include name="classSetUp"/>
+          <include name="testFilterByOverdueStatus"/>
+          <include name="testFilterBySettledStatus"/>
+          <include name="testViewActivePresentationsButton"/>
+          <include name="testClickFirstRowLAN"/>
+          <include name="testCombinedStatusAndSearchFilter"/>
+          <include name="testClickLANNavigatesToDetailPage"/>
+          <include name="setupBrowser"/>
+          <include name="navigateToAccountsPage"/>
+          <include name="testLoginDateFilter"/>
+          <include name="testPresentUpcomingEMIsButton"/>
+          <include name="testFilterByActiveStatus"/>
+          <include name="methodSetUp"/>
+        </methods>
+      </class> <!-- tests.AccountsTest -->
+    </classes>
+  </test> <!-- Chrome Tests(failed) -->
+</suite> <!-- Failed suite [Cross Browser E2E Suite] -->

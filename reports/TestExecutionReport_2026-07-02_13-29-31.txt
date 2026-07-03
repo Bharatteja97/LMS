@@ -1,0 +1,110 @@
+=================================================================
+          PRODUCT ACCOUNTS – TEST EXECUTION REPORT              
+=================================================================
+  Suite Name  : ProductAccounts E2E Suite
+  Run Date    : 02-Jul-2026 13:29:31
+  Duration    : 28 min 13 sec
+-----------------------------------------------------------------
+
+  SUMMARY
+  -------
+  Total Test Scripts (Classes) Run  : 8
+  Total Test Methods Run            : 63
+  ✅ PASSED                         : 50
+  ❌ FAILED                         : 13
+  ⏭ SKIPPED                        : 0
+
+=================================================================
+  BREAKDOWN BY TEST SCRIPT
+=================================================================
+
+  [1] AccountsTest  →  ✅ ALL PASSED
+       Methods: 16 total | 16 passed | 0 failed | 0 skipped
+       ✅ Passed  : testTableLoadsWithData, testSearchByBorrowerName, testSearchByLAN, testSearchInputNonExistentText, testAvailableStatusOptions, testFilterByActiveStatus, testFilterByOverdueStatus, testFilterBySettledStatus, testLoginDateFilter, testCombinedStatusAndSearchFilter, testTableDataIntegrity, testSerialNumberSequence, testClickLANNavigatesToDetailPage, testClickFirstRowLAN, testPresentUpcomingEMIsButton, testViewActivePresentationsButton
+
+  [2] AccountsDetailsTest  →  ❌ HAS FAILURES
+       Methods: 19 total | 15 passed | 4 failed | 0 skipped
+       ✅ Passed  : testPageLoadsSuccessfully, testUrlContainsAccountId, testBorrowerNameIsVisible, testLANNumberIsVisible, testLANTextContainsPrefix, testStatusBadgeIsVisible, testANTextIsVisible, testProductTypeIsVisible, testDisbursedOnDateIsVisible, testLoanAmountIsDisplayed, testOutstandingIsDisplayed, testCurrentDPDIsDisplayed, testNextEMIDueIsDisplayed, testCurrentLiabilityIsDisplayed, testAllTabsOneByOne
+       ❌ Failed  :
+           - testDisbursedAmountCardIsDisplayed
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (//*[contains(n…
+           - testNetOutstandingBalanceCardIsDisplayed
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (//*[contains(n…
+           - testPaidAmountCardIsDisplayed
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (//*[contains(n…
+           - testOverdueAmountCardIsDisplayed
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (//*[contains(n…
+
+  [3] PaymentTest  →  ❌ HAS FAILURES
+       Methods: 14 total | 10 passed | 4 failed | 0 skipped
+       ✅ Passed  : testPaymentTabLoads, testStagedRepaymentsSubTabVisible, testStagedRepaymentRowCount, testPaymentHistoryRowCount, testPaymentHistoryFirstRowData, testPayButtonOpensModal, testModalTitleIsCorrect, testModalShowsScheduledEMI, testModalShowsRemainingDue, testModalShowsMaxPaymentLimit
+       ❌ Failed  :
+           - testPaymentHistorySubTabVisible
+             ↳ AssertionError: Payment History sub-tab should keep the PAYMENT HISTORY section visible expected [true] but found [false]
+           - testModalCancelClosesModal
+             ↳ AssertionError: Payment tab should still be loaded after cancelling the modal expected [true] but found [false]
+           - testModalCloseButtonDismissesModal
+             ↳ AssertionError: Payment tab should still be loaded after closing the modal via × button expected [true] but found [false]
+           - testMakePaymentWithScheduledEMIAmount
+             ↳ ElementClickInterceptedException: element click intercepted: Element <div data-selected="notactive" class="relative inline-flex items-center justify-cente…
+
+  [4] SettlementTest  →  ❌ HAS FAILURES
+       Methods: 2 total | 0 passed | 2 failed | 0 skipped
+       ❌ Failed  :
+           - testOpenSettlementModal
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@role='di…
+           - testCompleteSettlementFlow
+             ↳ RuntimeException: Could not find or open the Action Menu with Settlement option.
+
+  [5] ForeclosureTest  →  ❌ HAS FAILURES
+       Methods: 5 total | 2 passed | 3 failed | 0 skipped
+       ✅ Passed  : testOpenForeclosureModal, testLoanPayoffSummaryOrHistoryFields
+       ❌ Failed  :
+           - testGenerateForeclosureQuote
+             ↳ TimeoutException: Expected condition failed: waiting for accounts.ForeclosurePage$$Lambda/0x0000000035366578@e2ee348 (tried for 45 second(…
+           - testForecloseButtonOpensPaymentForm
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//*[normalize-space(text())='QUOTE RE…
+           - testForeclosureFullFlow
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//*[normalize-space(text())='QUOTE RE…
+
+  [6] BalanceTransferTest  →  ✅ ALL PASSED
+       Methods: 5 total | 5 passed | 0 failed | 0 skipped
+       ✅ Passed  : testBalanceTransferTabLoads, testInfoNoticeText, testFormFieldsAcceptInput, testResetClearsForm, testConfirmTransferFullFlow
+
+  [7] LedgerTest  →  ✅ ALL PASSED
+       Methods: 1 total | 1 passed | 0 failed | 0 skipped
+       ✅ Passed  : testExportLedger
+
+  [8] ScheduleTest  →  ✅ ALL PASSED
+       Methods: 1 total | 1 passed | 0 failed | 0 skipped
+       ✅ Passed  : testPresentEMI
+
+=================================================================
+  TEST SCRIPTS CONFIGURED IN testng_e2e.xml (8 Classes)
+=================================================================
+  1. AccountsTest
+  2. AccountsDetailsTest
+  3. PaymentTest
+  4. SettlementTest
+  5. ForeclosureTest
+  6. BalanceTransferTest
+  7. LedgerTest
+  8. ScheduleTest
+
+=================================================================
+  ALL TEST SCRIPT FILES IN /tests DIRECTORY (10 Files)
+=================================================================
+   1. AccountsTest.java
+   2. AccountsDetailsTest.java
+   3. PaymentTest.java
+   4. SettlementTest.java
+   5. ForeclosureTest.java
+   6. BalanceTransferTest.java
+   7. LedgerTest.java
+   8. ScheduleTest.java
+   9. ChargesTest.java
+  10. DomDumper.java
+
+=================================================================
+                       END OF REPORT                            
+=================================================================

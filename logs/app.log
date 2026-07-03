@@ -2493,3 +2493,206 @@ Confirm Transfer
 13:15:28.483 [main] INFO  tests.PaymentTest - Scheduled EMI: ₹2,806.64
 13:15:35.840 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
 13:15:35.842 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+13:15:39.463 [TestNG-tests-1] INFO  tests.PaymentTest - Staged Repayments row count: 1
+13:15:41.472 [TestNG-tests-1] INFO  tests.AccountsTest - Listing available Status filter options
+13:15:45.742 [TestNG-tests-1] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+13:15:47.354 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying full Balance Transfer flow: fill form → Confirm Transfer
+13:15:48.058 [TestNG-tests-1] INFO  tests.BalanceTransferTest - New Lender Name: HDFC Bank
+13:15:50.052 [TestNG-tests-1] INFO  tests.BalanceTransferTest - NOC Reference: NOC-20260630-001
+13:15:56.209 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Reason for Transfer entered
+13:15:59.195 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:15:59.205 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Remaining Due value
+13:15:59.677 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Clicked Confirm Transfer
+13:15:59.899 [TestNG-tests-1] INFO  tests.ForeclosureTest - Clicked Foreclose → on first active quote
+13:16:01.892 [main] INFO  tests.PaymentTest - Remaining Due: ₹2,806.64
+13:16:02.920 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Post-transfer URL: https://lms.alfinnext.com/lms/accounts/210?tab=balance_transfer&product=VEHICLE_LOAN
+13:16:06.353 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying full Foreclosure flow: generate quote → foreclose → fill form → confirm
+13:16:32.532 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:16:32.533 [main] INFO  tests.PaymentTest - Verifying Make Payment modal shows Max Payment Limit value
+13:16:32.627 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying LAN number is shown in header
+13:16:33.132 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - LAN number: VEHICLE_000031
+13:16:34.197 [main] INFO  tests.PaymentTest - Max Payment Limit: ₹75,844.58
+13:16:35.069 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying Reset button clears the form
+13:16:37.095 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Clicked Reset
+13:16:38.274 [TestNG-tests-1] INFO  tests.BalanceTransferTest - New Lender Name after reset: ''
+13:16:40.388 [TestNG-tests-1] INFO  tests.AccountsTest - Testing search input with non-existent text does not crash page
+13:16:44.312 [TestNG-tests-1] INFO  tests.AccountsTest - Rows visible after non-existent search: 10
+13:17:00.142 [TestNG-tests-1] INFO  tests.ForeclosureTest - Proceeding to foreclose quote: FCL-20260630-E5AF9B
+13:17:04.508 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:17:04.509 [main] INFO  tests.PaymentTest - Verifying Cancel button closes the Make Payment modal
+13:17:14.525 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:17:14.526 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Staged Repayments table row count is non-negative
+13:17:16.236 [TestNG-tests-1] INFO  tests.PaymentTest - Staged Repayments row count: 1
+13:17:18.184 [TestNG-tests-1] INFO  tests.AccountsTest - Listing available Status filter options
+13:17:18.961 [TestNG-tests-1] INFO  tests.AccountsTest - Available status options: [DISBURSED, PRE_EMI, ACTIVE, MORATORIUM, OVERDUE, NPA, SETTLED, FORECLOSED, INSURANCE_CLOSED, BALANCE_TRANSFERRED, LEGAL_RECOVERY, CLOSED, WRITTEN_OFF, CANCELLED]
+13:17:19.928 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Verifying full Balance Transfer flow: fill form → Confirm Transfer
+13:17:20.396 [TestNG-tests-1] INFO  tests.BalanceTransferTest - New Lender Name: HDFC Bank
+13:17:20.931 [TestNG-tests-1] INFO  tests.BalanceTransferTest - NOC Reference: NOC-20260630-001
+13:17:21.654 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Reason for Transfer entered
+13:17:22.397 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Clicked Confirm Transfer
+13:17:25.423 [TestNG-tests-1] INFO  tests.BalanceTransferTest - Post-transfer URL: https://lms.alfinnext.com/lms/accounts/210?tab=balance_transfer&product=VEHICLE_LOAN
+13:17:26.829 [TestNG-tests-1] INFO  tests.ForeclosureTest - Verifying full Foreclosure flow: generate quote → foreclose → fill form → confirm
+13:17:47.210 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying full LAN label contains 'LAN:' prefix
+13:17:47.324 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Full LAN text: LAN:
+VEHICLE_000031
+13:18:06.624 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:18:06.626 [main] INFO  tests.PaymentTest - Verifying close (×) button dismisses the Make Payment modal
+13:18:17.619 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:18:17.619 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+13:18:48.419 [TestNG-tests-1] INFO  tests.PaymentTest - Payment History row count: 0
+13:18:49.360 [TestNG-tests-1] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+13:18:52.110 [TestNG-tests-1] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+13:19:08.198 [main] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:19:08.205 [main] INFO  tests.PaymentTest - Testing full payment flow: Pay → click Scheduled EMI → submit
+13:19:09.143 [main] INFO  tests.PaymentTest - Make Payment modal opened, title: Make Payment
+13:19:10.324 [main] INFO  tests.PaymentTest - Payment Amount after clicking Scheduled EMI: 2806.64
+13:19:10.973 [main] INFO  tests.PaymentTest - Repayment Mode set to RTGS
+13:19:11.452 [main] INFO  tests.PaymentTest - Value Date set to 06/29/2026
+13:19:12.549 [main] INFO  tests.PaymentTest - Authorized By selected
+13:19:15.181 [main] INFO  tests.PaymentTest - Payment submitted — URL: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:19:17.605 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:19:17.662 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:19:17.768 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying full LAN label contains 'LAN:' prefix
+13:19:17.885 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Full LAN text: LAN:
+VEHICLE_000031
+13:19:22.757 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:19:22.759 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+13:19:33.600 [main] INFO  tests.SettlementTest - Detail page URL captured: https://lms.alfinnext.com/lms/accounts/212?product=VEHICLE_LOAN
+13:19:34.890 [main] INFO  tests.SettlementTest - Verifying Settlement modal opens from action menu
+13:19:48.300 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:19:48.302 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Payment History table row count is non-negative
+13:19:53.623 [TestNG-tests-1] INFO  tests.PaymentTest - No payment history rows — skipping row-data assertion
+13:19:54.523 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying status badge is visible
+13:19:54.768 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Status badge: Active
+13:19:55.689 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - Verifying AN text is visible in header
+13:19:55.862 [TestNG-tests-1] INFO  tests.AccountsDetailsTest - AN text: AN:
+APP60282932
+13:19:56.961 [TestNG-tests-1] INFO  tests.AccountsTest - Testing Status filter: OVERDUE
+13:19:59.705 [TestNG-tests-1] INFO  tests.AccountsTest - Rows with OVERDUE status: 10
+13:20:18.926 [TestNG-tests-1] INFO  tests.PaymentTest - Payment History row count: 0
+13:20:19.971 [TestNG-tests-1] INFO  tests.AccountsTest - Testing Status filter: ACTIVE
+13:20:22.765 [TestNG-tests-1] INFO  tests.AccountsTest - Rows with ACTIVE status: 10
+13:20:30.003 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:20:30.003 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Pay button opens Make Payment modal
+13:20:30.731 [TestNG-tests-1] INFO  tests.PaymentTest - Modal title: Make Payment
+13:20:31.665 [TestNG-tests-1] INFO  tests.AccountsTest - Testing Status filter: SETTLED
+13:20:34.360 [TestNG-tests-1] INFO  tests.AccountsTest - Rows with SETTLED status: 10
+13:20:42.291 [main] INFO  tests.SettlementTest - Verifying complete Settlement flow
+13:20:48.819 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:20:48.821 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying first Payment History row contains non-empty cell data
+13:20:55.281 [TestNG-tests-1] INFO  tests.PaymentTest - Navigated to Payment tab: https://lms.alfinnext.com/lms/accounts/208?tab=payment&product=VEHICLE_LOAN
+13:20:55.282 [TestNG-tests-1] INFO  tests.PaymentTest - Verifying Make Payment modal title is exactly 'Make Payment'
+13:20:58.494 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:20:58.517 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:21:10.749 [main] INFO  tests.ForeclosureTest - Navigated to account detail page: https://lms.alfinnext.com/lms/accounts/209?product=VEHICLE_LOAN
+13:21:11.708 [main] INFO  tests.ForeclosureTest - Verifying Foreclosure modal opens from action menu
+13:21:48.239 [main] INFO  tests.ForeclosureTest - Foreclosure modal title: Loan Foreclosure Payoff
+13:22:03.391 [main] INFO  tests.ForeclosureTest - Modal opened on: HISTORY view
+13:22:10.206 [main] INFO  tests.ForeclosureTest - Verifying modal content fields
+13:23:16.490 [main] INFO  tests.ForeclosureTest - History view — verifying first quote ID is present
+13:23:16.606 [main] INFO  tests.ForeclosureTest - First quote ID: FCL-20260630-E5AF9B
+13:23:22.992 [main] INFO  tests.ForeclosureTest - Verifying Generate Quote flow
+13:25:02.134 [main] INFO  tests.ForeclosureTest - Verifying Foreclose button opens payment form
+13:25:54.271 [main] INFO  tests.ForeclosureTest - Clicked Foreclose → on first active quote
+13:26:25.610 [main] INFO  tests.ForeclosureTest - Verifying full Foreclosure flow: generate quote → foreclose → fill form → confirm
+13:27:17.385 [main] INFO  tests.ForeclosureTest - Proceeding to foreclose quote: FCL-20260630-E5AF9B
+13:28:04.052 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:28:04.074 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:28:19.163 [main] INFO  tests.BalanceTransferTest - Navigated to Balance Transfer tab: https://lms.alfinnext.com/lms/accounts/210?tab=balance_transfer&product=VEHICLE_LOAN
+13:28:20.304 [main] INFO  tests.BalanceTransferTest - Verifying Balance Transfer Settlement section loads
+13:28:20.656 [main] INFO  tests.BalanceTransferTest - Section heading: Balance Transfer Settlement
+13:28:21.411 [main] INFO  tests.BalanceTransferTest - Verifying info notice text
+13:28:21.847 [main] INFO  tests.BalanceTransferTest - Info notice: LMS
+⌘
+K
+PRODUCT VERTICAL
+Vehicle Loan
+PK
+Pigok Kamac
+LAN:
+VEHICLE_000029
+AN:
+APP92656751
+Product Type:
+VEHICLE
+Disbursed On:
+30-06-2026
+Balance Transferred
+Loan Amount
+₹70,000
+Outstanding
+₹0
+Current DPD
+0
+Current Liability
+₹0
+Next EMI Due
+07 Jul 2026
+Lead no
+LD83299561
+Contact
+⋆⋆⋆⋆⋆⋆6849
+PAN
+NA
+Email
+NA
+Employment Type
+NA
+Residential Type
+NA
+Tenure
+24 Months
+Interest
+8%
+DISBURSED AMOUNT
+₹70,000
+NET OUTSTANDING BALANCE
+₹0
+PAID AMOUNT
+₹70,222
+OVERDUE AMOUNT
+₹0
+Overview
+Schedules
+Ledger
+Transaction
+Payment
+Nach Presentation
+Documents
+Tracking History
+Charges
+Disbursements
+Balance Transfer
+Insurance Claims
+Audit Trail
+Balance Transfer Settlement
+Transfer outstanding liability to a new lender
+The full outstanding liability of ₹0.00 will be settled by the new lender. Once processed, this loan account will be marked as BALANCE_TRANSFERRED and closed.
+New Lender Name
+NOC Reference (Optional)
+Reason for Transfer
+Reset
+Confirm Transfer
+13:28:22.863 [main] INFO  tests.BalanceTransferTest - Verifying form fields accept input
+13:28:23.275 [main] INFO  tests.BalanceTransferTest - Entered New Lender Name: HDFC Bank
+13:28:23.691 [main] INFO  tests.BalanceTransferTest - Entered NOC Reference: NOC-2026-001
+13:28:24.072 [main] INFO  tests.BalanceTransferTest - Entered Reason for Transfer
+13:28:24.825 [main] INFO  tests.BalanceTransferTest - Verifying Reset button clears the form
+13:28:25.900 [main] INFO  tests.BalanceTransferTest - Clicked Reset
+13:28:27.016 [main] INFO  tests.BalanceTransferTest - New Lender Name after reset: ''
+13:28:27.786 [main] INFO  tests.BalanceTransferTest - Verifying full Balance Transfer flow: fill form → Confirm Transfer
+13:28:28.176 [main] INFO  tests.BalanceTransferTest - New Lender Name: HDFC Bank
+13:28:28.648 [main] INFO  tests.BalanceTransferTest - NOC Reference: NOC-20260630-001
+13:28:29.135 [main] INFO  tests.BalanceTransferTest - Reason for Transfer entered
+13:28:29.432 [main] INFO  tests.BalanceTransferTest - Clicked Confirm Transfer
+13:28:32.456 [main] INFO  tests.BalanceTransferTest - Post-transfer URL: https://lms.alfinnext.com/lms/accounts/210?tab=balance_transfer&product=VEHICLE_LOAN
+13:28:32.969 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:28:32.997 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:29:16.798 [main] INFO  tests.LedgerTest - Navigated to Ledger tab: https://lms.alfinnext.com/lms/accounts/208?tab=ledger&product=VEHICLE_LOAN
+13:29:16.800 [main] INFO  tests.LedgerTest - Verifying Export button click on Ledger tab
+13:29:17.167 [main] INFO  tests.LedgerTest - Export button clicked successfully
+13:29:17.622 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+13:29:17.642 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\i-tech\.cache\selenium\chromedriver\win64\149.0.7827.155\chromedriver.exe
+13:29:30.073 [main] INFO  tests.ScheduleTest - Navigated to Schedule tab: https://lms.alfinnext.com/lms/accounts/208?tab=repayment_schedule&product=VEHICLE_LOAN
+13:29:30.074 [main] INFO  tests.ScheduleTest - Verifying Present EMI flow from Schedules tab
+13:29:31.235 [main] INFO  tests.ScheduleTest - Present EMI flow completed successfully

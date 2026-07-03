@@ -1,5 +1,4 @@
 package base;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,20 +24,17 @@ public class BaseClass {
         
         switch (browser.toLowerCase()) {
             case "firefox":
-                WebDriverManager.firefoxdriver().setup();
                 org.openqa.selenium.firefox.FirefoxOptions firefoxOptions = new org.openqa.selenium.firefox.FirefoxOptions();
                 if (System.getenv("CI") != null) firefoxOptions.addArguments("--headless");
                 webDriver = new org.openqa.selenium.firefox.FirefoxDriver(firefoxOptions);
                 break;
             case "edge":
-                WebDriverManager.edgedriver().setup();
                 org.openqa.selenium.edge.EdgeOptions edgeOptions = new org.openqa.selenium.edge.EdgeOptions();
                 if (System.getenv("CI") != null) edgeOptions.addArguments("--headless");
                 webDriver = new org.openqa.selenium.edge.EdgeDriver(edgeOptions);
                 break;
             case "chrome":
             default:
-                WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--remote-allow-origins=*");
                 if (System.getenv("CI") != null) {

@@ -1,0 +1,114 @@
+=================================================================
+          PRODUCT ACCOUNTS – TEST EXECUTION REPORT              
+=================================================================
+  Suite Name  : Cross Browser E2E Suite
+  Run Date    : 02-Jul-2026 13:20:56
+  Duration    : 18 min 54 sec
+-----------------------------------------------------------------
+
+  SUMMARY
+  -------
+  Total Test Scripts (Classes) Run  : 8
+  Total Test Methods Run            : 189
+  ✅ PASSED                         : 27
+  ❌ FAILED                         : 10
+  ⏭ SKIPPED                        : 152
+
+=================================================================
+  BREAKDOWN BY TEST SCRIPT
+=================================================================
+
+  [1] BalanceTransferTest  →  ✅ ALL PASSED
+       Methods: 15 total | 5 passed | 0 failed | 10 skipped
+       ✅ Passed  : testBalanceTransferTabLoads, testInfoNoticeText, testFormFieldsAcceptInput, testResetClearsForm, testConfirmTransferFullFlow
+       ⏭ Skipped : testBalanceTransferTabLoads, testInfoNoticeText, testFormFieldsAcceptInput, testResetClearsForm, testConfirmTransferFullFlow, testBalanceTransferTabLoads, testInfoNoticeText, testFormFieldsAcceptInput, testResetClearsForm, testConfirmTransferFullFlow
+
+  [2] LedgerTest  →  ✅ ALL PASSED
+       Methods: 3 total | 1 passed | 0 failed | 2 skipped
+       ✅ Passed  : testExportLedger
+       ⏭ Skipped : testExportLedger, testExportLedger
+
+  [3] ForeclosureTest  →  ❌ HAS FAILURES
+       Methods: 15 total | 2 passed | 3 failed | 10 skipped
+       ✅ Passed  : testOpenForeclosureModal, testLoanPayoffSummaryOrHistoryFields
+       ❌ Failed  :
+           - testGenerateForeclosureQuote
+             ↳ TimeoutException: Expected condition failed: waiting for accounts.ForeclosurePage$$Lambda/0x00000000863cf298@138ab455 (tried for 45 second…
+           - testForecloseButtonOpensPaymentForm
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//*[normalize-space(text())='QUOTE RE…
+           - testForeclosureFullFlow
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//*[normalize-space(text())='QUOTE RE…
+       ⏭ Skipped : testOpenForeclosureModal, testLoanPayoffSummaryOrHistoryFields, testGenerateForeclosureQuote, testForecloseButtonOpensPaymentForm, testForeclosureFullFlow, testOpenForeclosureModal, testLoanPayoffSummaryOrHistoryFields, testGenerateForeclosureQuote, testForecloseButtonOpensPaymentForm, testForeclosureFullFlow
+
+  [4] SettlementTest  →  ❌ HAS FAILURES
+       Methods: 6 total | 0 passed | 2 failed | 4 skipped
+       ❌ Failed  :
+           - testOpenSettlementModal
+             ↳ TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@role='di…
+           - testCompleteSettlementFlow
+             ↳ AssertionError: Settlement modal should be opened expected [true] but found [false]
+       ⏭ Skipped : testOpenSettlementModal, testCompleteSettlementFlow, testOpenSettlementModal, testCompleteSettlementFlow
+
+  [5] AccountsDetailsTest  →  ✅ ALL PASSED
+       Methods: 57 total | 7 passed | 0 failed | 50 skipped
+       ✅ Passed  : testPageLoadsSuccessfully, testUrlContainsAccountId, testBorrowerNameIsVisible, testLANNumberIsVisible, testLANTextContainsPrefix, testStatusBadgeIsVisible, testANTextIsVisible
+       ⏭ Skipped : testPageLoadsSuccessfully, testUrlContainsAccountId, testBorrowerNameIsVisible, testLANNumberIsVisible, testLANTextContainsPrefix, testStatusBadgeIsVisible, testANTextIsVisible, testProductTypeIsVisible, testDisbursedOnDateIsVisible, testLoanAmountIsDisplayed, testOutstandingIsDisplayed, testCurrentDPDIsDisplayed, testNextEMIDueIsDisplayed, testCurrentLiabilityIsDisplayed, testDisbursedAmountCardIsDisplayed, testNetOutstandingBalanceCardIsDisplayed, testPaidAmountCardIsDisplayed, testOverdueAmountCardIsDisplayed, testAllTabsOneByOne, testPageLoadsSuccessfully, testUrlContainsAccountId, testBorrowerNameIsVisible, testLANNumberIsVisible, testLANTextContainsPrefix, testStatusBadgeIsVisible, testANTextIsVisible, testProductTypeIsVisible, testDisbursedOnDateIsVisible, testLoanAmountIsDisplayed, testOutstandingIsDisplayed, testCurrentDPDIsDisplayed, testNextEMIDueIsDisplayed, testCurrentLiabilityIsDisplayed, testDisbursedAmountCardIsDisplayed, testNetOutstandingBalanceCardIsDisplayed, testPaidAmountCardIsDisplayed, testOverdueAmountCardIsDisplayed, testAllTabsOneByOne, testProductTypeIsVisible, testDisbursedOnDateIsVisible, testLoanAmountIsDisplayed, testOutstandingIsDisplayed, testCurrentDPDIsDisplayed, testNextEMIDueIsDisplayed, testCurrentLiabilityIsDisplayed, testDisbursedAmountCardIsDisplayed, testNetOutstandingBalanceCardIsDisplayed, testPaidAmountCardIsDisplayed, testOverdueAmountCardIsDisplayed, testAllTabsOneByOne
+
+  [6] PaymentTest  →  ❌ HAS FAILURES
+       Methods: 42 total | 6 passed | 2 failed | 34 skipped
+       ✅ Passed  : testPaymentTabLoads, testStagedRepaymentsSubTabVisible, testStagedRepaymentRowCount, testPaymentHistoryRowCount, testPaymentHistoryFirstRowData, testPayButtonOpensModal
+       ❌ Failed  :
+           - testPaymentHistorySubTabVisible
+             ↳ AssertionError: Payment History sub-tab should keep the PAYMENT HISTORY section visible expected [true] but found [false]
+           - testModalTitleIsCorrect
+             ↳ NoSuchSessionException: invalid session id
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: '…
+       ⏭ Skipped : testPaymentTabLoads, testPaymentHistorySubTabVisible, testStagedRepaymentsSubTabVisible, testStagedRepaymentRowCount, testPaymentHistoryRowCount, testPaymentHistoryFirstRowData, testPayButtonOpensModal, testModalTitleIsCorrect, testModalShowsScheduledEMI, testModalShowsRemainingDue, testModalShowsMaxPaymentLimit, testModalCancelClosesModal, testModalCloseButtonDismissesModal, testMakePaymentWithScheduledEMIAmount, testPaymentTabLoads, testPaymentHistorySubTabVisible, testStagedRepaymentsSubTabVisible, testStagedRepaymentRowCount, testPaymentHistoryRowCount, testPaymentHistoryFirstRowData, testPayButtonOpensModal, testModalTitleIsCorrect, testModalShowsScheduledEMI, testModalShowsRemainingDue, testModalShowsMaxPaymentLimit, testModalCancelClosesModal, testModalCloseButtonDismissesModal, testMakePaymentWithScheduledEMIAmount, testModalShowsScheduledEMI, testModalShowsRemainingDue, testModalShowsMaxPaymentLimit, testModalCancelClosesModal, testModalCloseButtonDismissesModal, testMakePaymentWithScheduledEMIAmount
+
+  [7] ScheduleTest  →  ✅ ALL PASSED
+       Methods: 3 total | 1 passed | 0 failed | 2 skipped
+       ✅ Passed  : testPresentEMI
+       ⏭ Skipped : testPresentEMI, testPresentEMI
+
+  [8] AccountsTest  →  ❌ HAS FAILURES
+       Methods: 48 total | 5 passed | 3 failed | 40 skipped
+       ✅ Passed  : testTableLoadsWithData, testSearchByBorrowerName, testSearchByLAN, testSearchInputNonExistentText, testAvailableStatusOptions
+       ❌ Failed  :
+           - testFilterByActiveStatus
+             ↳ AssertionError: Row 0 status 'Insurance Closed' should indicate ACTIVE expected [true] but found [false]
+           - testFilterByOverdueStatus
+             ↳ AssertionError: Row 0 status 'Insurance Closed' should indicate OVERDUE expected [true] but found [false]
+           - testFilterBySettledStatus
+             ↳ AssertionError: Row 0 status 'Insurance Closed' should indicate SETTLED expected [true] but found [false]
+       ⏭ Skipped : testTableLoadsWithData, testSearchByBorrowerName, testSearchByLAN, testSearchInputNonExistentText, testAvailableStatusOptions, testFilterByActiveStatus, testFilterByOverdueStatus, testFilterBySettledStatus, testLoginDateFilter, testCombinedStatusAndSearchFilter, testTableDataIntegrity, testSerialNumberSequence, testClickLANNavigatesToDetailPage, testClickFirstRowLAN, testPresentUpcomingEMIsButton, testViewActivePresentationsButton, testTableLoadsWithData, testSearchByBorrowerName, testSearchByLAN, testSearchInputNonExistentText, testAvailableStatusOptions, testFilterByActiveStatus, testFilterByOverdueStatus, testFilterBySettledStatus, testLoginDateFilter, testCombinedStatusAndSearchFilter, testTableDataIntegrity, testSerialNumberSequence, testClickLANNavigatesToDetailPage, testClickFirstRowLAN, testPresentUpcomingEMIsButton, testViewActivePresentationsButton, testLoginDateFilter, testCombinedStatusAndSearchFilter, testTableDataIntegrity, testSerialNumberSequence, testClickLANNavigatesToDetailPage, testClickFirstRowLAN, testPresentUpcomingEMIsButton, testViewActivePresentationsButton
+
+=================================================================
+  TEST SCRIPTS CONFIGURED IN testng_e2e.xml (8 Classes)
+=================================================================
+  1. AccountsTest
+  2. AccountsDetailsTest
+  3. PaymentTest
+  4. SettlementTest
+  5. ForeclosureTest
+  6. BalanceTransferTest
+  7. LedgerTest
+  8. ScheduleTest
+
+=================================================================
+  ALL TEST SCRIPT FILES IN /tests DIRECTORY (10 Files)
+=================================================================
+   1. AccountsTest.java
+   2. AccountsDetailsTest.java
+   3. PaymentTest.java
+   4. SettlementTest.java
+   5. ForeclosureTest.java
+   6. BalanceTransferTest.java
+   7. LedgerTest.java
+   8. ScheduleTest.java
+   9. ChargesTest.java
+  10. DomDumper.java
+
+=================================================================
+                       END OF REPORT                            
+=================================================================
